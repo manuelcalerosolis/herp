@@ -27,7 +27,9 @@ class LoginController extends BaseController {
          }
          else
          {
-            return "Fuera";
+            return Redirect::intended('/')
+                ->with('error_message', 'Error de autenticación') 
+                ->withInput();
          }
         
 
