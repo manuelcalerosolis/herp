@@ -18,7 +18,25 @@ Route::get('/', function()
 
 Route::post('login/check', 'LoginController@check');
 
-// Route::post('login/check',  function()
+Route::get('lang/{lang}', function($lang)
+{
+
+	Session::put('localeLang', $lang);
+	return Redirect::to('/');
+
+});
+
+// Route::get('en', function()
 // {
-// 	return 'login/check';
+
+// 	App::setlocale('en');
+// 	return View::make('login');
+
 // });
+
+
+
+// Route::post('login/check',  function()
+// // {
+// // 	return 'login/check';
+// // });
