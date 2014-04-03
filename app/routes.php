@@ -25,9 +25,12 @@ Route::get('register', function()
 
 Route::post('register/check', 'RegisterController@check');
 
+// Route::get('user/{id}/edit', 'UserController@edit');
+// Route::patch('user/update/{id}', 'UserController@update');
+Route::resource('user' , 'UserController' );
+
 Route::get('lang/{lang}', function($lang)
 {
-
 	Session::put('localeLang', $lang);
 	return Redirect::to('/');
 });
