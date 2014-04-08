@@ -7,13 +7,14 @@
 	<div class="container">
 	
 		@if(Session::has('errors'))
-			<div class="alert alert-danger">
-				<p>{{$errors->first('name')}}</p>
+			<div class="alert alert-danger form-signin">
+				@foreach ($errors->all() as $error)
+					<p>{{$error}}</p>
+				@endforeach
 			</div>
 		@endif
 	
 	    {{ Form::open(array('url' => 'register/check', 'class'=>'form-signin', 'role'=>'form')) }}
-
 	    	
 			{{ Form::email('email', '', array('class'=>'form-control', 'placeholder'=>Lang::get('messages.email')))}}
 			
@@ -21,7 +22,7 @@
 
 			{{ Form::password('password', array('class'=>'form-control', 'placeholder'=>Lang::get('messages.password'))) }}
 
-			{{ Form::password('password_check', array('class'=>'form-control', 'placeholder'=>Lang::get('messages.password_check'))) }}
+			{{ Form::password('password_confirmation', array('class'=>'form-control', 'placeholder'=>Lang::get('messages.password_confirmation'))) }}
 			
 			{{ Form::submit(Lang::get('messages.register'), array('class'=>'btn btn-lg btn-primary btn-block')) }}
 

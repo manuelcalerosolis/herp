@@ -7,11 +7,16 @@ class CreateUsersTable extends Migration {
 
 	public function up()
 	{
+		
+		//Schema::dropIfExist('Users');
+
 		Schema::create('Users', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name')->unique();
 			$table->string('email')->unique();
 			$table->string('password');
+			$table->boolean('active');
+			$table->string('confirmation');
 			$table->timestamps();
 			$table->softDeletes();
 		});
@@ -19,6 +24,6 @@ class CreateUsersTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('Users');
+		Schema::dropIfExist('Users');
 	}
 }
