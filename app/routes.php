@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', array( 'as' => 'login', function()
 {
 	return View::make('login');
-});
+}));
 
-Route::post('login/check', 'LoginController@check');
+Route::post('login/check', array( 'as' => 'loginCheck', 'uses' => 'LoginController@check'));
 
 Route::get('register', function()
 {
@@ -25,8 +25,6 @@ Route::get('register', function()
 
 Route::post('register/check', 'RegisterController@check');
 
-// Route::get('user/{id}/edit', 'UserController@edit');
-// Route::patch('user/update/{id}', 'UserController@update');
 Route::resource('user' , 'UserController' );
 
 Route::get('lang/{lang}', function($lang)

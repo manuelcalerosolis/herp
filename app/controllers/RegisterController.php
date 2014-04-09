@@ -48,7 +48,8 @@ class RegisterController extends BaseController {
         else
         {
             $this->createUser();
-            $this->sendMailConfirmation();    
+            $this->sendMailConfirmation();            
+            
             return 'Registrado';
         }
     }
@@ -56,10 +57,18 @@ class RegisterController extends BaseController {
     public function createUser()
     {
         $user               = new User;
+        
         $user->email        = Input::get('email');
         $user->name         = Input::get('name');
         $user->password     = Hash::make(Input::get('password'));
-        $user->save();
+
+        if ( !$user->save() )
+        {
+            return Redirect::intended('register')
+                ->withErrors($user->errors()->all(':message'))
+                ->withInput();            
+        }
+
     }
 
     public function sendMailConfirmation()
