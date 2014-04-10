@@ -31,7 +31,7 @@
 	</div>
 
 	<div class="footer"> 
-		<a href="./" class="btn btn-primary"> {{Lang::get('messages.submit')}} </a>
+		<a href="{{ URL::route('login')}}" class="btn btn-primary"> {{Lang::get('messages.submit')}} </a>
 	</div>
 
 @stop

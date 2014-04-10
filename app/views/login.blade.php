@@ -30,7 +30,7 @@
 	</div>
 
 	<div class="footer"> 
-		<a href="register" class="btn btn-primary"> {{Lang::get('messages.register')}} </a>
+		<a href="{{ URL::route('register')}}" class="btn btn-primary"> {{Lang::get('messages.register')}} </a>
 	</div>
 
 @stop

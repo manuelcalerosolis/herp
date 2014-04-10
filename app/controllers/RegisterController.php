@@ -6,8 +6,12 @@ class RegisterController extends BaseController {
      * Instantiate a new UserController instance.
      */
 
+    public $user ;
+
     public function __construct()
     {
+        
+
         $this->beforeFilter(function()
         {
             //
@@ -54,18 +58,32 @@ class RegisterController extends BaseController {
         }
     }
 
+    public function confirmation($confirmation){
+        
+        $user = User::where('confirmation', '=', $confirmation)->where('active', '=', 0)->first()
+        if ($user->id)
+        {
+            $user->active = 1;
+            $user->confirmation = '';
+            $user->save();            
+        }
+
+    }
+
     public function createUser()
     {
-        $user               = new User;
+        $this->user               = new User;
         
-        $user->email        = Input::get('email');
-        $user->name         = Input::get('name');
-        $user->password     = Hash::make(Input::get('password'));
+        $this->user->email        = Input::get('email');
+        $this->user->name         = Input::get('name');
+        $this->user->password     = Hash::make(Input::get('password'));
+        $this->user->confirmation = str_random(60);
+        $this->user->active       = 0;
 
-        if ( !$user->save() )
+        if ( !$this->user->save() )
         {
             return Redirect::intended('register')
-                ->withErrors($user->errors()->all(':message'))
+                ->withErrors($this->user->errors()->all(':message'))
                 ->withInput();            
         }
 
@@ -73,9 +91,10 @@ class RegisterController extends BaseController {
 
     public function sendMailConfirmation()
     {
-        Mail::send('emails.confirmation', Input::all(), function($message)
+        Mail::send('emails.confirmation', array( 'user' => $this->user ), function($message)
         {
-            $message->to(Input::get('email'), Input::get('name'))->subject('Welcome!');
+            $message->to($this->user->email, $this->user->name )
+                    ->subject('Welcome!');
         });       
     }
      

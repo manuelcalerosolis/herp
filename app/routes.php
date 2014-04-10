@@ -18,12 +18,14 @@ Route::get('/', array( 'as' => 'login', function()
 
 Route::post('login/check', array( 'as' => 'loginCheck', 'uses' => 'LoginController@check'));
 
-Route::get('register', function()
+Route::get('register',  array( 'as' => 'register', function()
 {
 	return View::make('register');
-});
+}));
 
 Route::post('register/check', 'RegisterController@check');
+
+Route::get('register/confirmation/{confirmation}', array('as' => 'registerConfirmation',  'uses' => 'RegisterController@confirmation' ));
 
 Route::resource('user' , 'UserController' );
 
@@ -32,3 +34,5 @@ Route::get('lang/{lang}', function($lang)
 	Session::put('localeLang', $lang);
 	return Redirect::to('/');
 });
+
+
