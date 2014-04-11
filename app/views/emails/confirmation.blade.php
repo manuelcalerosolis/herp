@@ -9,11 +9,13 @@
 		{{$user->confirmation}}
 
 		<div>
-		<p>{{URL::route('registerConfirmation', $confirmation)}}</p>
+		
 		<p>{{$user->confirmation}}</p>
-			Estimado {{$user->name}} para activar tu cuenta pincha en el siguente {{URL::route('registerConfirmation',$confirmation)}} {{$user->confirmation}}
 
-			 <a href="{{URL::route('registerConfirmation')}}/{{$user->confirmation}}"> enlace </a>
+			Estimado {{$user->name}} para activar tu cuenta pincha en el siguente {{$link}}
+
+			<a href="{{$link}}">Haga clikc aqui.</a>
+			
 		</div>
 	</body>
 </html>

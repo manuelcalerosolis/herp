@@ -10,8 +10,6 @@ class RegisterController extends BaseController {
 
     public function __construct()
     {
-        
-
         $this->beforeFilter(function()
         {
             //
@@ -41,7 +39,7 @@ class RegisterController extends BaseController {
             'password_confirmation.required' => Lang::get('messages.password_confirmation')
         );
 
-		$validator = Validator::make( Input::all(), $conditions, $messages );    	
+		$validator = Validator::make( Input::all(), User::getValidator(), User::getMessages() );    	
 
 		if ($validator->fails())
 		{
@@ -60,8 +58,9 @@ class RegisterController extends BaseController {
 
     public function confirmation($confirmation){
         
-        $user = User::where('confirmation', '=', $confirmation)->where('active', '=', 0)->first()
-        if ($user->id)
+        $user = User::where('confirmation', '=', $confirmation)->where('active', '=', 0)->first();
+        
+        if ($user)
         {
             $user->active = 1;
             $user->confirmation = '';
@@ -91,7 +90,10 @@ class RegisterController extends BaseController {
 
     public function sendMailConfirmation()
     {
-        Mail::send('emails.confirmation', array( 'user' => $this->user ), function($message)
+
+        $link   = URL::route('registerConfirmation', $this->user->confirmation);
+
+        Mail::send('emails.confirmation', array('link' => $link, 'user' => $this->user), function($message)
         {
             $message->to($this->user->email, $this->user->name )
                     ->subject('Welcome!');
