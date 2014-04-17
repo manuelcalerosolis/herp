@@ -27,12 +27,17 @@ Route::post('register/check', 'RegisterController@check');
 
 Route::get('register/confirmation/{confirmation}', array('as' => 'registerConfirmation',  'uses' => 'RegisterController@confirmation' ));
 
-Route::resource('user' , 'UserController' );
+// Lang------------------------------------------------------------------------
 
 Route::get('lang/{lang}', function($lang)
 {
 	Session::put('localeLang', $lang);
 	return Redirect::to('/');
 });
+
+// Resources ------------------------------------------------------------------
+
+Route::resource('user' , 'UserController' );
+
 
 

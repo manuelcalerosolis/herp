@@ -18,27 +18,6 @@ class RegisterController extends BaseController {
 
     public function Check()
     {
-
-        $conditions = array( 
-            'email'                 => 'required|email|unique:users',
-            'name'                  => 'required|unique:users',
-            'password'              => 'required|min:8|confirmed',
-            'password_confirmation' => 'required'
-
-        );
-
-        $messages = array(
-            'email.required'                 => Lang::get('messages.email_required'),
-            'email.email'                    => Lang::get('messages.email_email'),
-            'email.unique'                   => Lang::get('messages.email_unique'),
-            'name.required'                  => Lang::get('messages.name_required'),
-            'name.unique'                    => Lang::get('messages.name_unique'),
-            'password.required'              => Lang::get('messages.password_required'),
-            'password.min'                   => Lang::get('messages.password_min'),
-            'password.confirmed'             => Lang::get('messages.password_confirmed'),
-            'password_confirmation.required' => Lang::get('messages.password_confirmation')
-        );
-
 		$validator = Validator::make( Input::all(), User::getValidator(), User::getMessages() );    	
 
 		if ($validator->fails())
@@ -56,8 +35,8 @@ class RegisterController extends BaseController {
         }
     }
 
-    public function confirmation($confirmation){
-        
+    public function confirmation($confirmation)
+    {
         $user = User::where('confirmation', '=', $confirmation)->where('active', '=', 0)->first();
         
         if ($user)
@@ -66,7 +45,6 @@ class RegisterController extends BaseController {
             $user->confirmation = '';
             $user->save();            
         }
-
     }
 
     public function createUser()
@@ -85,12 +63,10 @@ class RegisterController extends BaseController {
                 ->withErrors($this->user->errors()->all(':message'))
                 ->withInput();            
         }
-
     }
 
     public function sendMailConfirmation()
     {
-
         $link   = URL::route('registerConfirmation', $this->user->confirmation);
 
         Mail::send('emails.confirmation', array('link' => $link, 'user' => $this->user), function($message)
@@ -99,7 +75,7 @@ class RegisterController extends BaseController {
                     ->subject('Welcome!');
         });       
     }
-     
+
 }
 
 ?>

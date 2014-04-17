@@ -9,7 +9,21 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+        // $users 	= User::all();
+
+		$sort 	= (!is_null(Input::get('sort')) ? Input::get('sort') : 'name');
+		$order 	= (!is_null(Input::get('order')) ? Input::get('order') : 'desc');
+
+		//'desc' is the default sort order.
+		$users 	= User::orderBy($sort, $order)->get();
+		
+		// $users 	= $users->orderBy($sort, $order);
+		// $users 	= $users->paginate(20);
+
+		//include $order and $sort when retrieving your layout/view
+		// $this->layout->nest('content', 'widgets.index',array('widgets' => $widgets, 'sort' => $sort, 'order' => $order));
+        
+        return View::make('user.index', array( 'users' => $users, 'sort' => $sort, 'order' => $order ) ); // ->with('users', $users);
 	}
 
 	/**
@@ -19,7 +33,7 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return 'user.create';
 	}
 
 	/**
@@ -53,7 +67,7 @@ class UserController extends \BaseController {
 	{
         $user = User::findOrFail($id);
 
-        return View::make('user', compact('user'));
+        return View::make('user/edit', compact('user'));
 	}
 
 	/**
