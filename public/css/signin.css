@@ -9,13 +9,16 @@ body {
   padding: 15px;
   margin: 0 auto;
 }
+
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
+
 .form-signin .checkbox {
   font-weight: normal;
 }
+
 .form-signin .form-control {
   position: relative;
   height: auto;
@@ -34,12 +37,4 @@ body {
 }
 .form-signin input[type="password"] {
   margin-bottom: 5px;
-
-}
-.form-signin input[type="text"] {
-  margin-bottom: 5px;
-
-
-
-
 }

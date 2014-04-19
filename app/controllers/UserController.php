@@ -65,8 +65,9 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-        $user = User::findOrFail($id);
+		// return 'edit:'.$id;
 
+        $user = User::findOrFail($id);
         return View::make('user/edit', compact('user'));
 	}
 
@@ -83,7 +84,7 @@ class UserController extends \BaseController {
         $user->fill(Input::all());
         $user->save();
 
-        Redirect::to('/');
+        Redirect::to('login');
 	}
 
 	/**
@@ -94,7 +95,7 @@ class UserController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		return 'destroy: ' . $id;
 	}
 
 }

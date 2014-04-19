@@ -38,8 +38,8 @@
 							</a>
 
 	        		    </th>
-	        		    <th>active</th>
-			            <th>actions</th>
+	        		    <th>Active</th>
+			            <th></th>
 	          		</tr>
 	        	</thead>
 	        
@@ -48,7 +48,7 @@
 				    <tr>
 				        <td>{{ $user->name }}</td>
 				        <td>{{ $user->email }}</td>
-				        <td>{{ $user->active }}</td>
+				        <td>{{ $user->getActive() }}</td>
 				        <td>
 				        	<a href="{{ route('user.edit', $user->id) }}" class="btn btn-primary">
 								<span class="glyphicon glyphicon-pencil"></span>

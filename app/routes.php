@@ -37,7 +37,11 @@ Route::get('lang/{lang}', function($lang)
 
 // Resources ------------------------------------------------------------------
 
-Route::resource('user' , 'UserController' );
-
+// Route::resource('user' , 'UserController' );
+Route::get('user' , 				array( 'as' => 'user.index', 	'uses' => 'UserController@index' ) );
+Route::get('user/create' , 			array( 'as' => 'user.create', 	'uses' => 'UserController@create' ) );
+Route::put('user/{user}' , 			array( 'as' => 'user.update', 	'uses' => 'UserController@update' ) );
+Route::get('user/{user}/edit' , 	array( 'as' => 'user.edit', 	'uses' => 'UserController@edit' ) );
+Route::get('user/{user}/destroy' , 	array( 'as' => 'user.destroy', 	'uses' => 'UserController@destroy' ) );
 
 
