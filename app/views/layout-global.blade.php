@@ -1,14 +1,6 @@
-<html>
-	<head>
-
-		{{ HTML::style('css/bootstrap.css') }}
-		{{ HTML::style('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css') }}
-		{{ HTML::style('http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600') }}
-        {{ HTML::style('css/signin.css') }}
+@extends('layout')
 
     <style>
-
-        /* http://css-tricks.com/perfect-full-page-background-image/ */
 
         body {
             padding-top: 20px;
@@ -32,16 +24,14 @@
             margin: 40px 0;
         }
 
-        #footer {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          height: 40px;
-          background-color: transparent;
-        }
-
     </style>
 
 	</head>
+
+    <body>
+        @yield('content')
+        
+        {{ HTML::script('js/bootstrap.js') }}
+    </body>
 
 </html>

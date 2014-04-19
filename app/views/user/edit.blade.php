@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout-global')
 
 {{ HTML::style('css/signin.css') }}
 
@@ -14,8 +14,11 @@
 	
 	    {{ Form::model($user, array( 'method' => 'PUT', 'route' => array( 'user.update', $user->id ))) }}
 	    	
+
+	    	{{ Form::label('email')}}
 			{{ Form::email('email', null, array('class'=>'form-control')) }}
 			
+	    	{{ Form::label('name')}}
 	    	{{ Form::text('name', null, array('class'=>'form-control')) }}
 
 			{{ Form::text('password', null, array('class'=>'form-control')) }}

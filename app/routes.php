@@ -18,6 +18,8 @@ Route::get('/', array( 'as' => 'login', function()
 
 Route::post('login/check', array( 'as' => 'loginCheck', 'uses' => 'LoginController@check'));
 
+// Register--------------------------------------------------------------------
+
 Route::get('register',  array( 'as' => 'register', function()
 {
 	return View::make('register');
@@ -29,11 +31,11 @@ Route::get('register/confirmation/{confirmation}', array('as' => 'registerConfir
 
 // Lang------------------------------------------------------------------------
 
-Route::get('lang/{lang}', function($lang)
+Route::get('lang/{lang}', array('as' => 'lang', function($lang)
 {
 	Session::put('localeLang', $lang);
 	return Redirect::to('/');
-});
+}));
 
 // Resources ------------------------------------------------------------------
 
