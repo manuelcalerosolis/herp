@@ -1,4 +1,4 @@
-@extends('layout-global')
+@extends('layout.main')
 
 @section('content')
 
@@ -48,7 +48,7 @@
 				    <tr>
 				        <td>{{ $user->name }}</td>
 				        <td>{{ $user->email }}</td>
-				        <td>{{ $user->getActive() }}</td>
+				        <td>{{ $user->getTextActive() }}</td>
 				        <td>
 				        	<a href="{{ route('user.edit', $user->id) }}" class="btn btn-primary">
 								<span class="glyphicon glyphicon-pencil"></span>

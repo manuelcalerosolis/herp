@@ -1,6 +1,5 @@
 <?php
 
-
 class LoginController extends BaseController {
 
     /**
@@ -27,8 +26,8 @@ class LoginController extends BaseController {
          }
          else
          {
-            return Redirect::intended('/')
-                ->with('error_message', 'Error de autenticación') 
+            return Redirect::route('login')
+                ->with('error_message', Lang::get('messages.error_auth') ) 
                 ->withInput();
          }
         

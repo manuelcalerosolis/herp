@@ -29,6 +29,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 				        'password_confirmation' => 'required' ) ;
 	}
 
+    public static function getEditValidator()
+	{
+		return array(   'email'                 => 'required',
+				        'name'                  => 'required' ) ;
+	}
+
     public static function getMessages()
     {
     	return  array(	'email.required'                 => Lang::get('messages.email_required'),
@@ -41,6 +47,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 				        'password.confirmed'             => Lang::get('messages.password_confirmed'),
 				        'password_confirmation.required' => Lang::get('messages.password_confirmation') );
     }
+
+    public static function getEditMessages()
+    {
+    	return  array(	'email.required'                 => 'messages.email_required',
+				        'email.email'                    => 'messages.email_email',
+				        'name.required'                  => 'messages.name_required' );
+    }
+
 
 	/**
 	 * Get the unique identifier for the user.
@@ -72,7 +86,22 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
-	public function getActive()
+	public function getRememberToken()
+	{
+	    return $this->remember_token;
+	}
+
+	public function setRememberToken($value)
+	{
+	    $this->remember_token = $value;
+	}
+
+	public function getRememberTokenName()
+	{
+	    return 'remember_token';
+	}
+
+	public function getTextActive()
 	{
 		return ($this->active ? 'active' : 'inactive');
 	}

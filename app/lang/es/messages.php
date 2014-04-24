@@ -15,6 +15,7 @@ return array(
     'name_unique' => 'Nombre de usuario ya registrado',
     'password_required' => 'Contraseña requerida',
     'password_min' => 'La contraseña debe contener minimo 8 caracteres',
-    'password_confirmed' => 'Las contraseñas no coinciden'
+    'password_confirmed' => 'Las contraseñas no coinciden',
+    'error_auth' => 'Error de autenticación'
 
     );

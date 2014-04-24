@@ -79,12 +79,25 @@ class UserController extends \BaseController {
 	 */
 	public function update($id)
 	{
-        $user = User::findOrFail($id);
 
-        $user->fill(Input::all());
+		$validator = Validator::make( Input::all(), User::getEditValidator(), User::getMessages() );    	
+
+		if ($validator->fails())
+		{
+     		return Redirect::to( URL::previous() )
+                ->withErrors($validator) 
+                ->withInput();
+        }
+
+
+        $user 			= User::findOrFail($id);
+
+        $user->name 	= Input::get('name');
+        $user->email 	= Input::get('email');
+        $user->active 	= Input::has('active');
         $user->save();
 
-        Redirect::to('login');
+        return Redirect::route('user.index');
 	}
 
 	/**

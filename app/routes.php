@@ -25,7 +25,7 @@ Route::get('register',  array( 'as' => 'register', function()
 	return View::make('register');
 }));
 
-Route::post('register/check', 'RegisterController@check');
+Route::post('register/check', array('as'=>'registerCheck', 'uses'=> 'RegisterController@check'));
 
 Route::get('register/confirmation/{confirmation}', array('as' => 'registerConfirmation',  'uses' => 'RegisterController@confirmation' ));
 

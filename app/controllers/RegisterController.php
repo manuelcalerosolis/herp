@@ -18,11 +18,11 @@ class RegisterController extends BaseController {
 
     public function Check()
     {
-		$validator = Validator::make( Input::all(), User::getValidator(), User::getMessages() );    	
+        $validator = Validator::make( Input::all(), User::getValidator(), User::getMessages() );        
 
-		if ($validator->fails())
-		{
-     		return Redirect::intended('register')
+        if ($validator->fails())
+        {
+     		return Redirect::route( 'register' )
                 ->withErrors($validator) 
                 ->withInput();
         }
@@ -59,7 +59,7 @@ class RegisterController extends BaseController {
 
         if ( !$this->user->save() )
         {
-            return Redirect::intended('register')
+            return Redirect::route('register')
                 ->withErrors($this->user->errors()->all(':message'))
                 ->withInput();            
         }

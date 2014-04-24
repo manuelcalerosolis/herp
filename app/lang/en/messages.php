@@ -15,6 +15,7 @@ return array(
     'name_unique' => 'Name already registered',
     'password_required' => 'Password required',
     'password_min' => 'Password must be minimum 8 characters',
-    'password_confirmed' => 'Password not match'
+    'password_confirmed' => 'Password not match',
+    'error_auth' => 'Authentication error'
 
     );
