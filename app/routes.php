@@ -34,7 +34,7 @@ Route::get('register/confirmation/{confirmation}', array('as' => 'registerConfir
 Route::get('lang/{lang}', array('as' => 'lang', function($lang)
 {
 	Session::put('localeLang', $lang);
-	return Redirect::to('/');
+	return Redirect::to( URL::previous() );
 }));
 
 // Resources ------------------------------------------------------------------
