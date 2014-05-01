@@ -8,9 +8,9 @@
 
 			<div class="row">
 
-			    <h1>
-					<p class="text-center">hERP</p>
-			    </h1>
+			    
+					<img src="images/captura2.png">
+			    
 
 			
 			    {{ Form::open(array('url' => 'register/check', 'role'=>'form')) }}

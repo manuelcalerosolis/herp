@@ -8,9 +8,9 @@
 
 			<div class="row">
 
-			    <h1>
-					<p class="text-center">hERP</p>
-			    </h1>
+			    <div>
+					<img src="images/captura2.png">
+			    </div>
 
 
 		
