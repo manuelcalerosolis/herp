@@ -1,7 +1,5 @@
 @extends('layout.layout')
 
-	</head>
-
     <body>
         @yield('content')
         

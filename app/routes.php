@@ -37,6 +37,13 @@ Route::get('lang/{lang}', array('as' => 'lang', function($lang)
 	return Redirect::to( URL::previous() );
 }));
 
+// Dashboard-------------------------------------------------------------------
+
+Route::get('dashboard', array('as' => 'dashboard', function()
+{
+	return View::make('dashboard');
+}));
+
 // Resources ------------------------------------------------------------------
 
 // Route::resource('user' , 'UserController' );
