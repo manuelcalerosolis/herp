@@ -16,7 +16,15 @@ Route::get('/', array( 'as' => 'login', function()
 	return View::make('login');
 }));
 
+
+Route::get('login', array( 'as' => 'login', function()
+{
+	return View::make('login');
+}));
+
+
 Route::post('login/check', array( 'as' => 'loginCheck', 'uses' => 'LoginController@check'));
+
 
 // Register--------------------------------------------------------------------
 
@@ -37,12 +45,6 @@ Route::get('lang/{lang}', array('as' => 'lang', function($lang)
 	return Redirect::to( URL::previous() );
 }));
 
-// Dashboard-------------------------------------------------------------------
-
-Route::get('dashboard', array('as' => 'dashboard', function()
-{
-	return View::make('dashboard');
-}));
 
 // Resources ------------------------------------------------------------------
 
@@ -54,3 +56,20 @@ Route::get('user/{user}/edit' , 	array( 'as' => 'user.edit', 	'uses' => 'UserCon
 Route::get('user/{user}/destroy' , 	array( 'as' => 'user.destroy', 	'uses' => 'UserController@destroy' ) );
 
 
+
+
+Route::group(array('before' => 'auth'), function()
+{
+
+	// Logout----------------------------------------------------------------------
+
+	Route::get('logout', array('as' => 'logout', 'uses'=> 'LoginController@Logout'));
+	
+	// Dashboard-------------------------------------------------------------------
+
+	Route::get('dashboard', array('as' => 'dashboard', function()
+	{
+		return View::make('dashboard');
+	}));
+
+});
