@@ -12,7 +12,7 @@
 namespace Symfony\Component\Security\Core\Exception;
 
 /**
- * Base RuntimeException for the Security component.
+ * Base RuntimeException for the Security Components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

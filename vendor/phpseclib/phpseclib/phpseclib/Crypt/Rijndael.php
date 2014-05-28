@@ -911,7 +911,7 @@ class Crypt_Rijndael extends Crypt_Base
             $state[] = $word ^ $w[0][++$i];
         }
 
-        // fips-197.pdf#page=19, "Figure 5. Pseudo Code for the Cipher", states that this loop has four components -
+        // fips-197.pdf#page=19, "Figure 5. Pseudo Code for the Cipher", states that this loop has four Components -
         // subBytes, shiftRows, mixColumns, and addRoundKey. fips-197.pdf#page=30, "Implementation Suggestions Regarding
         // Various Platforms" suggests that performs enhanced implementations are described in Rijndael-ammended.pdf.
         // Rijndael-ammended.pdf#page=20, "Implementation aspects / 32-bit processor", discusses such an optimization.

@@ -6,14 +6,7 @@ use Illuminate\Database\Grammar as BaseGrammar;
 class Grammar extends BaseGrammar {
 
 	/**
-	 * The keyword identifier wrapper format.
-	 *
-	 * @var string
-	 */
-	protected $wrapper = '"%s"';
-
-	/**
-	 * The components that make up a select clause.
+	 * The Components that make up a select clause.
 	 *
 	 * @var array
 	 */
@@ -46,7 +39,7 @@ class Grammar extends BaseGrammar {
 	}
 
 	/**
-	 * Compile the components necessary for a select clause.
+	 * Compile the Components necessary for a select clause.
 	 *
 	 * @param  \Illuminate\Database\Query\Builder
 	 * @return array
@@ -476,7 +469,7 @@ class Grammar extends BaseGrammar {
 	{
 		// If the having clause is "raw", we can just return the clause straight away
 		// without doing any more processing on it. Otherwise, we will compile the
-		// clause into SQL based on the components that make it up from builder.
+		// clause into SQL based on the Components that make it up from builder.
 		if ($having['type'] === 'raw')
 		{
 			return $having['boolean'].' '.$having['sql'];

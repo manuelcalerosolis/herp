@@ -18,7 +18,7 @@ final class SecurityEvents
      * interactively for authentication based on http, cookies or X509.
      *
      * The event listener method receives a
-     * Symfony\Component\Security\Http\Event\InteractiveLoginEvent instance.
+     * Symfony\Components\Security\Http\Event\InteractiveLoginEvent instance.
      *
      * @var string
      */
@@ -29,7 +29,7 @@ final class SecurityEvents
      * before exit from an already switched user.
      *
      * The event listener method receives a
-     * Symfony\Component\Security\Http\Event\SwitchUserEvent instance.
+     * Symfony\Components\Security\Http\Event\SwitchUserEvent instance.
      *
      * @var string
      */

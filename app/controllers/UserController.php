@@ -1,5 +1,7 @@
 <?php
 
+use Components\fileBuilder;
+
 class UserController extends \BaseController {
 
 	/**
@@ -33,7 +35,7 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		return 'user.create';
+        return View::make( 'user/create' );
 	}
 
 	/**

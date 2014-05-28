@@ -41,7 +41,7 @@ abstract class AbstractLogger implements LoggerInterface
     /**
      * Critical conditions.
      *
-     * Example: Application component unavailable, unexpected exception.
+     * Example: Application Components unavailable, unexpected exception.
      *
      * @param string $message
      * @param array $context

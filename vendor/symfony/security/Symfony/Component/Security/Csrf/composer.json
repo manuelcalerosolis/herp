@@ -1,7 +1,7 @@
 {
     "name": "symfony/security-csrf",
     "type": "library",
-    "description": "Symfony Security Component - CSRF Library",
+    "description": "Symfony Security Components - CSRF Library",
     "keywords": [],
     "homepage": "http://symfony.com",
     "license": "MIT",
@@ -28,7 +28,7 @@
     "autoload": {
         "psr-0": { "Symfony\\Component\\Security\\Csrf\\": "" }
     },
-    "target-dir": "Symfony/Component/Security/Csrf",
+    "target-dir": "Symfony/Components/Security/Csrf",
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {

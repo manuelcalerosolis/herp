@@ -65,8 +65,8 @@ class AuthenticationTrustResolverTest extends \PHPUnit_Framework_TestCase
     protected function getResolver()
     {
         return new AuthenticationTrustResolver(
-            'Symfony\\Component\\Security\\Core\\Authentication\\Token\\AnonymousToken',
-            'Symfony\\Component\\Security\\Core\\Authentication\\Token\\RememberMeToken'
+            'Symfony\\Components\\Security\\Core\\Authentication\\Token\\AnonymousToken',
+            'Symfony\\Components\\Security\\Core\\Authentication\\Token\\RememberMeToken'
         );
     }
 }

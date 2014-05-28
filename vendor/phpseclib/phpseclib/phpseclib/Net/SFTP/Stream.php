@@ -500,7 +500,7 @@ class Net_SFTP_Stream
             return false;
         }
 
-        $path_to = $path_to['path']; // the $component part of parse_url() was added in PHP 5.1.2
+        $path_to = $path_to['path']; // the $Components part of parse_url() was added in PHP 5.1.2
         // "It is an error if there already exists a file with the name specified by newpath."
         //  -- http://tools.ietf.org/html/draft-ietf-secsh-filexfer-02#section-6.5
         if (!$this->sftp->rename($path_from, $path_to)) {

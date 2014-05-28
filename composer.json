@@ -4,9 +4,13 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.1.*"
+		"laravel/framework": "4.1.*",
+        "webpatser/laravel-countries": "dev-master"
 	},
 	"autoload": {
+        "psr-4":{
+            "hErp\\": "app/hErp"
+        },
 		"classmap": [
 			"app/commands",
 			"app/controllers",

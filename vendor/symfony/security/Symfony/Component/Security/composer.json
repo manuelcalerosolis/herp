@@ -1,7 +1,7 @@
 {
     "name": "symfony/security",
     "type": "library",
-    "description": "Symfony Security Component",
+    "description": "Symfony Security Components",
     "keywords": [],
     "homepage": "http://symfony.com",
     "license": "MIT",
@@ -48,7 +48,7 @@
     "autoload": {
         "psr-0": { "Symfony\\Component\\Security\\": "" }
     },
-    "target-dir": "Symfony/Component/Security",
+    "target-dir": "Symfony/Components/Security",
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {

@@ -67,7 +67,7 @@ abstract class ServiceProvider {
 			$this->app['config']->package($package, $config, $namespace);
 		}
 
-		// Next we will check for any "language" components. If language files exist
+		// Next we will check for any "language" Components. If language files exist
 		// we will register them with this given package's namespace so that they
 		// may be accessed using the translation facilities of the application.
 		$lang = $path.'/lang';
@@ -89,7 +89,7 @@ abstract class ServiceProvider {
 
 		// Finally we will register the view namespace so that we can access each of
 		// the views available in this package. We use a standard convention when
-		// registering the paths to every package's views and other components.
+		// registering the paths to every package's views and other Components.
 		$view = $path.'/views';
 
 		if ($this->app['files']->isDirectory($view))

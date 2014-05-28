@@ -1898,7 +1898,7 @@ class File_X509
      * the certificate (e.g., more than one dNSName name, a match in any one
      * of the set is considered acceptable.) Names may contain the wildcard
      * character * which is considered to match any single domain name
-     * component or component fragment. E.g., *.a.com matches foo.a.com but
+     * Components or Components fragment. E.g., *.a.com matches foo.a.com but
      * not bar.foo.a.com. f*.com matches foo.com but not bar.com.
      *
      * @param String $url
@@ -3570,7 +3570,7 @@ class File_X509
      * Get a reference to a subarray
      *
      * @param array $root
-     * @param String $path  absolute path with / as component separator
+     * @param String $path  absolute path with / as Components separator
      * @param Boolean $create optional
      * @access private
      * @return array item ref or false
@@ -3606,7 +3606,7 @@ class File_X509
      * Get a reference to an extension subarray
      *
      * @param array $root
-     * @param String $path optional absolute path with / as component separator
+     * @param String $path optional absolute path with / as Components separator
      * @param Boolean $create optional
      * @access private
      * @return array ref or false

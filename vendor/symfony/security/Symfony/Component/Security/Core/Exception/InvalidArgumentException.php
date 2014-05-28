@@ -12,7 +12,7 @@
 namespace Symfony\Component\Security\Core\Exception;
 
 /**
- * Base InvalidArgumentException for the Security component.
+ * Base InvalidArgumentException for the Security Components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

@@ -107,6 +107,14 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+        // custom
+
+        'hErp\Components\FieldServiceProvider',
+
+        // webpatser
+
+        'Webpatser\Countries\CountriesServiceProvider',
+
 	),
 
 	/*
@@ -172,6 +180,10 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+
+        'Field'           => 'hErp\Components\Facades\Field',
+
+        'Countries'       => 'Webpatser\Countries\CountriesFacade',
 
 	),
 

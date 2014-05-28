@@ -125,7 +125,7 @@ abstract class Facade {
 	 */
 	protected static function getFacadeAccessor()
 	{
-		throw new \RuntimeException("Facade does not implement getFacadeAccessor method.");
+		throw new \RuntimeException("Facades does not implement getFacadeAccessor method.");
 	}
 
 	/**
@@ -197,7 +197,7 @@ abstract class Facade {
 	 */
 	public static function __callStatic($method, $args)
 	{
-		$instance = static::resolveFacadeInstance(static::getFacadeAccessor());
+		$instance = static::getFacadeRoot();
 
 		switch (count($args))
 		{

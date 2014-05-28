@@ -17,7 +17,7 @@ use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterfac
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 
 /**
- * SecurityContext is the main entry point of the Security component.
+ * SecurityContext is the main entry point of the Security Components.
  *
  * It gives access to the token representing the current user authentication.
  *

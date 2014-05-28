@@ -25,8 +25,8 @@ class ExpressionLanguageTest extends \PHPUnit_Framework_TestCase
      */
     public function testIsAuthenticated($token, $expression, $result, array $roles = array())
     {
-        $anonymousTokenClass = 'Symfony\\Component\\Security\\Core\\Authentication\\Token\\AnonymousToken';
-        $rememberMeTokenClass = 'Symfony\\Component\\Security\\Core\\Authentication\\Token\\RememberMeToken';
+        $anonymousTokenClass = 'Symfony\\Components\\Security\\Core\\Authentication\\Token\\AnonymousToken';
+        $rememberMeTokenClass = 'Symfony\\Components\\Security\\Core\\Authentication\\Token\\RememberMeToken';
         $expressionLanguage = new ExpressionLanguage();
         $trustResolver = new AuthenticationTrustResolver($anonymousTokenClass, $rememberMeTokenClass);
 

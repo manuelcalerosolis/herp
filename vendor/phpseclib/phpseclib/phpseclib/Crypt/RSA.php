@@ -923,7 +923,7 @@ class Crypt_RSA
     }
 
     /**
-     * Break a public or private key down into its constituant components
+     * Break a public or private key down into its constituant Components
      *
      * @access private
      * @see _convertPublicKey()

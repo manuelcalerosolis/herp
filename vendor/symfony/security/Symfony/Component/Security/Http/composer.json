@@ -1,7 +1,7 @@
 {
     "name": "symfony/security-http",
     "type": "library",
-    "description": "Symfony Security Component - HTTP Integration",
+    "description": "Symfony Security Components - HTTP Integration",
     "keywords": [],
     "homepage": "http://symfony.com",
     "license": "MIT",
@@ -34,7 +34,7 @@
     "autoload": {
         "psr-0": { "Symfony\\Component\\Security\\Http\\": "" }
     },
-    "target-dir": "Symfony/Component/Security/Http",
+    "target-dir": "Symfony/Components/Security/Http",
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {

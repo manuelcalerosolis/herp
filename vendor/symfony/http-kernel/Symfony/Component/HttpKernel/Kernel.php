@@ -32,6 +32,7 @@ use Symfony\Component\Config\Loader\LoaderResolver;
 use Symfony\Component\Config\Loader\DelegatingLoader;
 use Symfony\Component\Config\ConfigCache;
 use Symfony\Component\ClassLoader\ClassCollectionLoader;
+use Symfony\Component\Filesystem\Filesystem;
 
 /**
  * The Kernel is the heart of the Symfony system.
@@ -59,25 +60,25 @@ abstract class Kernel implements KernelInterface, TerminableInterface
     protected $startTime;
     protected $loadClassCache;
 
-    const VERSION         = '2.4.3';
-    const VERSION_ID      = '20403';
+    const VERSION         = '2.4.5';
+    const VERSION_ID      = '20405';
     const MAJOR_VERSION   = '2';
     const MINOR_VERSION   = '4';
-    const RELEASE_VERSION = '3';
+    const RELEASE_VERSION = '5';
     const EXTRA_VERSION   = '';
 
     /**
      * Constructor.
      *
      * @param string  $environment The environment
-     * @param Boolean $debug       Whether to enable debugging or not
+     * @param bool    $debug       Whether to enable debugging or not
      *
      * @api
      */
     public function __construct($environment, $debug)
     {
         $this->environment = $environment;
-        $this->debug = (Boolean) $debug;
+        $this->debug = (bool) $debug;
         $this->rootDir = $this->getRootDir();
         $this->name = $this->getName();
 
@@ -260,7 +261,7 @@ abstract class Kernel implements KernelInterface, TerminableInterface
      *
      * @param string  $name  A resource name to locate
      * @param string  $dir   A directory where to look for the resource first
-     * @param Boolean $first Whether to return the first path or paths for all matching bundles
+     * @param bool    $first Whether to return the first path or paths for all matching bundles
      *
      * @return string|array The absolute path of the resource or an array if $first is false
      *
@@ -714,7 +715,45 @@ abstract class Kernel implements KernelInterface, TerminableInterface
             $content = static::stripComments($content);
         }
 
+        $content = $this->removeAbsolutePathsFromContainer($content);
+
         $cache->write($content, $container->getResources());
+    }
+
+    /**
+     * Converts absolute paths to relative ones in the dumped container.
+     */
+    private function removeAbsolutePathsFromContainer($content)
+    {
+        if (!class_exists('Symfony\Component\Filesystem\Filesystem')) {
+            return $content;
+        }
+
+        // find the "real" root dir (by finding the composer.json file)
+        $rootDir = $this->getRootDir();
+        $previous = $rootDir;
+        while (!file_exists($rootDir.'/composer.json')) {
+            if ($previous === $rootDir = realpath($rootDir.'/..')) {
+                // unable to detect the project root, give up
+                return $content;
+            }
+
+            $previous = $rootDir;
+        }
+
+        $rootDir = rtrim($rootDir, '/');
+        $cacheDir = $this->getCacheDir();
+        $filesystem = new Filesystem();
+
+        return preg_replace_callback("{'([^']*)(".preg_quote($rootDir)."[^']*)'}", function ($match) use ($filesystem, $cacheDir) {
+            $prefix = isset($match[1]) && $match[1] ? "'$match[1]'.__DIR__" : "__DIR__";
+
+            if ('.' === $relativePath = rtrim($filesystem->makePathRelative($match[2], $cacheDir), '/')) {
+                return $prefix;
+            }
+
+            return $prefix.".'/".$relativePath."'";
+        }, $content);
     }
 
     /**

@@ -2,6 +2,7 @@
 
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use Illuminate\Support\Facades\Lang;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
@@ -20,6 +21,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = array('password');
+
+    protected $rules = array(   'email'                 => 'required|email|unique:users',
+                                'name'                  => 'required|unique:users',
+                                'password'              => 'required|min:8|confirmed',
+                                'password_confirmation' => 'required');
 
     public static function getValidator()
 	{

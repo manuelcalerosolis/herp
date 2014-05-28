@@ -1,7 +1,7 @@
 {
     "name": "symfony/security-acl",
     "type": "library",
-    "description": "Symfony Security Component - ACL (Access Control List)",
+    "description": "Symfony Security Components - ACL (Access Control List)",
     "keywords": [],
     "homepage": "http://symfony.com",
     "license": "MIT",
@@ -32,7 +32,7 @@
     "autoload": {
         "psr-0": { "Symfony\\Component\\Security\\Acl\\": "" }
     },
-    "target-dir": "Symfony/Component/Security/Acl",
+    "target-dir": "Symfony/Components/Security/Acl",
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
