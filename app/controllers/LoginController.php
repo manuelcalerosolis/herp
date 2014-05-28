@@ -22,7 +22,7 @@ class LoginController extends BaseController {
 
          if ( Auth::attempt(array('email' => $email, 'password' => $password)))
          {
-             return "Bienvenido";
+             return Redirect::route('dashboard');
          }
          else
          {
@@ -32,6 +32,13 @@ class LoginController extends BaseController {
          }
         
 
+    }
+
+    public function Logout()
+    {
+
+        Auth::Logout();
+        return Redirect::route('login');
     }
 
 }
