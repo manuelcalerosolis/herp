@@ -1,15 +1,14 @@
 @extends('layout.menu')
 
 @section('title')
-	Dashboard
+	Contact
 @stop
 
 @section('subtitle')
-	subtitulo dashboard
+	subtitulo contacto
 @stop
 
 @section('content')
-	
 	CONTENIDO
 
 @stop
