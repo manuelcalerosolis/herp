@@ -2,425 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d00590e0-b6d0-49ba-a755-a457b9f38ac6" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\CHANGES" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\README" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\config.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\index.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\Reporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\Reporter\CliReporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\Reporter\CliTestCaseReporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\Reporter\HtmlReporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\Reporter\HtmlTestCaseReporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\Runner.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\Runner\AbstractTestRunner.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\Runner\CliRunner.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\Runner\HtmlRunner.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\TestLocator.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\Sweety\TestLocator\PearStyleLocator.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\HELP_MY_TESTS_DONT_WORK_ANYMORE" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\README" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\TODO.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\VERSION" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\authentication.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\autorun.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\browser.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\collector.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\compatibility.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\cookies.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\default_reporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\detached.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\en\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\fr\docs.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\lastcraft\README" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\onpk\README" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\pkg\README" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\README" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\book-domain-driven-design.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\book-guide-to-php-design-patterns.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\book-the-php-anthology-object-oriented-php-solutions.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\quote.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-contribute.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-download.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-external-bottom.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-external-middle.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-external-top.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-internal-bottom.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-internal-middle.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-internal-top.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-start-testing.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\simpletest-support.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\test-in-cli.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\test-with-1-fail.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\images\test-with-1-pass.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\js\jquery-1.2.1.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\js\jquery-speakers_coaches_consultants.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\js\jquery.heartbeat.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\js\jquery.sparkline.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\simpletest.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\views\heartbeat.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\simpletest.org\views\photos_stream.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\about.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\authentication_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\books_website.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\boundary_classes_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\browser_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\changelog.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\coding_standards.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\display_subclass_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\download_website.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\expectation_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\experimental_dom_tester.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\experimental_intro.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\experimental_recorder.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\extension_eclipse.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\first_test_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\form_testing_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\gain_control_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\group_test_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\group_test_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\heartbeat.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\ideas.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\improving_design_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\index.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\intro.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\mock_objects_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\mock_objects_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\overview.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\partial_mocks_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\photos_stream.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\reporter_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\screencasts.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\simple_test.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\softwares_using_simpletest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\speakers_coaches_consultancy.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\subclass_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\support_website.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\unit_test_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\web_tester_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\en\writing_extensions.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\authentication_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\books_website.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\boundary_classes_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\browser_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\display_subclass_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\download_website.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\expectation_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\extension_eclipse.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\first_test_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\form_testing_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\gain_control_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\group_test_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\group_test_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\improving_design_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\index.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\intro.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\logiciels_utilisant_simpletest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\mock_objects_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\mock_objects_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\overview.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\partial_mocks_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\reporter_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\simple_test.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\subclass_tutorial.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\support_website.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\unit_test_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\docs\source\fr\web_tester_documentation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\dumper.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\eclipse.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\encoding.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\errors.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\exceptions.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\expectation.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\colortext_reporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\css\webunit.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\dom_tester.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\dom_tester\css_selector.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\dom_tester\test\dom_tester_doc_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\dom_tester\test\dom_tester_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\dom_tester\test\support\child_adjacent.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\dom_tester\test\support\dom_tester.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\img\wait.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\js\tests\TestOfWebunit.js.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\js\webunit.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\js\x.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\junit_xml_reporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\pear_test_case.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\recorder.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\recorder\test\sample.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\recorder\test\test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\selenese_tester.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\selenium.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\selenium\remote-control.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\selenium\test\remote-control_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\testdox.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\testdox\test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\treemap_reporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\treemap_reporter\jquery.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\treemap_reporter\test\treemap_node_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\treemap_reporter\treemap_recorder.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\extensions\webunit_reporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\form.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\frames.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\http.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\invoker.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\mock_objects.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\README" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\build_tarball.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\bundled_docs.xslt" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\bundled_map.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\extension.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\generate_package.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\lastcraft.xslt" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\make_bundled_docs.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\make_bundled_docs_with_xalan.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\make_lastcraft_docs.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\make_phpdoc_docs.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\onpk\map_onpk.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\onpk\onpk.xslt" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\onpk\transform_all_onpk.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\package.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\pear_package_create.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\phpdoc_docs.xslt" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.ini" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\index.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\integration.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\map.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\package.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\template.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\content_without_section.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\en\synchronisation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\fr\no-synchronisation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\fr\synchronisation.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\here_download.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\here_overview.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\here_simpletest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\here_start_testing.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\here_support.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\here_unit-tester.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\map.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\one_section_changelogged.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\one_section_milestoned.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\one_section_with_autorum_php.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package\one_section_with_php_code.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\simpletest.org\test\package_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\site_map.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\packages\transform_all_lastcraft.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\page.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\parser.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\reflection_php4.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\reflection_php5.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\remote.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\reporter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\scorer.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\selector.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\shell_tester.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\simpletest.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\socket.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tag.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\acceptance_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\adapter_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\all_tests.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\authentication_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\autorun_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\bad_test_suite.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\browser_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\collector_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\command_line_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\compatibility_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\cookies_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\detached_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\dumper_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\eclipse_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\encoding_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\errors_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\exceptions_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\expectation_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\extensions_tests.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\form_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\frames_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\http_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\interfaces_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\interfaces_test_php5_1.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\live_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\mock_objects_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\page_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\parse_error_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\parser_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\reflection_php4_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\reflection_php5_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\remote_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\shell_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\shell_tester_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\simpletest_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\1.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\3.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\base_change_redirect.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\base_tag\base_link.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\base_tag\form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\base_tag\frameset.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\base_tag\frameset_with_base_tag.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\base_tag\page_1.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\base_tag\page_2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\base_tag\relative_link.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\cookie_based_counter.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\counting_frameset.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\double_base_change_redirect.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\file.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\form_data_encoded_form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\form_with_array_based_inputs.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\form_with_false_defaults.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\form_with_mixed_post_and_get.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\form_with_quoted_values.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\form_with_radio_buttons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\form_with_tricky_defaults.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\form_with_unnamed_submit.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\form_without_action.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\frame_a.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\frame_b.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\frame_links.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\frameset.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\front_controller_style\a_page.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\front_controller_style\index.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\front_controller_style\show_request.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\link_confirm.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\local_redirect.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\messy_frameset.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\multiple_widget_form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\nested_frameset.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\network_confirm.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\one_page_frameset.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\page_request.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\path\base_change_redirect.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\path\network_confirm.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\path\show_cookies.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\protected\.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\protected\.htpasswd" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\protected\1.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\protected\2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\protected\3.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\protected\htaccess" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\protected\local_redirect.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\protected\network_confirm.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\redirect.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\savant_style_form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\search.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\self.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\self_form.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\set_cookies.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\slow_page.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\temp\.stop_cvs_removing_temp" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\timestamp.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\upload_form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\site\upload_handler.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\socket_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\support\collector\collectable.1" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\support\collector\collectable.2" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\support\empty_test_file.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\support\latin1_sample" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\support\spl_examples.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\support\supplementary_upload_sample.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\support\test1.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\support\upload_sample.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\tag_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\unit_tester_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\unit_tests.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\url_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\user_agent_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\utf8_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\visual\visual_errors.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\visual_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\web_tester_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test\xml_test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\test_case.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\Expectations.pkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\FormTesting.pkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\GroupTests.pkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\MockObjects.pkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\PartialMock.pkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\Reporting.pkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\ServerStubs.pkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\SimpleTest.pkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\SimpleTest.pkg.ini" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\UnitTestCase.pkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\tutorials\SimpleTest\WebTester.pkg" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\unit_tester.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\url.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\user_agent.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\web_tester.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\simpletest\xml.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Action.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Actions\CallbackAction.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Actions\ReturnReferenceAction.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Actions\ReturnValueAction.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Actions\ThrowAction.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Description.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Expectation.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\ExpectationProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Expectations.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Expectations\AbstractExpectation.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Expectations\AtLeastExpectation.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Expectations\AtMostExpectation.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Expectations\BetweenExpectation.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Expectations\ExactlyExpectation.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Invocation.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\InvocationHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\InvocationProxy.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\InvocationRecorder.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Matcher.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Matchers\AnyMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Matchers\BoundsMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Matchers\EqualMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Matchers\IdenticalMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Matchers\OptionalMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Matchers\PatternMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Matchers\ReferenceMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\MockGenerator.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\MockObject.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Mockery.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\NotSatisfiedException.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\SelfDescribing.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\Sequence.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\SimpleDescription.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\SimpleInvocation.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\SimpleSequence.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\SimpleState.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\SimpleStatePredicate.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\State.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\StateMachine.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\StatePredicate.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\classes\Yay\States.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\mock.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\yay_convenience.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\lib\yaymock\yay_mock.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\run.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\sweety.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\css\main.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\images\darr.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\images\group.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\images\htmlicon.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\images\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\images\network.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\images\rarr.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\images\runicon.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\images\xmlicon.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\js\sweety-template.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\suite-ui-noajax.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\templates\sweety\suite-ui.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\test-suite\xpath-legacy.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\tests\helpers\Swift\Tests\IdenticalBinaryExpectation.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\tests\helpers\Swift\Tests\SwiftSmokeTestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\herp\vendor\swiftmailer\swiftmailer\tests\helpers\Swift\Tests\SwiftUnitTestCase.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Contact.php" afterPath="$PROJECT_DIR$/app/models/Contact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ContactController.php" afterPath="$PROJECT_DIR$/app/controllers/ContactController.php" />
     </list>
     <ignored path="herp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -444,31 +27,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="fieldBuilder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/hErp/Components/fieldBuilder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.838709" vertical-offset="1625" max-vertical-offset="2464">
-              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/dashboard.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.645162" vertical-offset="330" max-vertical-offset="2024">
-              <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.096774" vertical-offset="0" max-vertical-offset="2662">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state vertical-scroll-proportion="-18.451612" vertical-offset="198" max-vertical-offset="2662">
+              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/user/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.7096774" vertical-offset="0" max-vertical-offset="1628">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SetupHErpSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/database/seeds/SetupHErpSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.967742" vertical-offset="0" max-vertical-offset="1452">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contact.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Contact.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="726">
+              <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-29.806452" vertical-offset="0" max-vertical-offset="2596">
+              <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -477,8 +80,8 @@
       <file leaf-file-name="ContactController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ContactController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48604652" vertical-offset="0" max-vertical-offset="860">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.25581396" vertical-offset="0" max-vertical-offset="860">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -507,8 +110,8 @@
       <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="462" max-vertical-offset="1012">
-              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1100">
+              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -563,6 +166,7 @@
         <option value="$PROJECT_DIR$/app/database/seeds/SetupHErpSeeder.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/models/Contact.php" />
         <option value="$PROJECT_DIR$/app/controllers/ContactController.php" />
       </list>
     </option>
@@ -705,7 +309,91 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -814,20 +502,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/lang/en/messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lang/en/pagination.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/lang/en/reminders.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
@@ -942,13 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2052">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5510204" vertical-offset="837" max-vertical-offset="3186">
-          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1102,8 +769,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="462" max-vertical-offset="1012">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1100">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1138,32 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/SetupHErpSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="1100">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7096774" vertical-offset="330" max-vertical-offset="2178">
-          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.645162" vertical-offset="330" max-vertical-offset="2024">
-          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.903226" vertical-offset="264" max-vertical-offset="1892">
@@ -1180,18 +821,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.806452" vertical-offset="0" max-vertical-offset="2596">
+          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1764004" vertical-offset="1317" max-vertical-offset="2156">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38961038" vertical-offset="330" max-vertical-offset="2024">
+          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="726">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/SetupHErpSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.967742" vertical-offset="0" max-vertical-offset="1452">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.096774" vertical-offset="0" max-vertical-offset="2662">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state vertical-scroll-proportion="-18.451612" vertical-offset="198" max-vertical-offset="2662">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/user/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7096774" vertical-offset="0" max-vertical-offset="1628">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ContactController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48604652" vertical-offset="0" max-vertical-offset="860">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.25581396" vertical-offset="0" max-vertical-offset="860">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -7,7 +7,7 @@ class Contact extends Eloquent  {
 	protected $fillable = array('name', 'fiscal_number', 'user_id');
 
 	public function User(){
-        return $this->hasMany('User', 'user_id');
+        return $this->belongsTo('User', 'user_id');
     }
 
 	protected $rules = array(   'name'                  	=> 'required',
