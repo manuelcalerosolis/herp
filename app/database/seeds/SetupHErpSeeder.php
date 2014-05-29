@@ -4,13 +4,14 @@ class SetupHErpSeeder extends Seeder {
 
 	public function run()
 	{
-		//DB::table('Users')->delete();
+		DB::table('Users')->delete();
 
 		// users
 		User::create(array(
 				'name' => 'demo',
 				'email' => 'demo@demo.com',
-				'password' => Hash::make('demo')
+				'password' => Hash::make('demo'),
+                'active'   => 1
 			));
 
         //Empty the countries table
@@ -39,6 +40,21 @@ class SetupHErpSeeder extends Seeder {
                 'sub_region_code' => $country['sub-region-code'],
                 'eea' => (bool)$country['eea']
             ));
+        }
+
+
+        DB::table('contacts')->delete();
+
+        $faker = new Faker\Generator();
+        $faker->addProvider(new Faker\Provider\pl_PL\Person($faker));
+         
+        for ($i = 0; $i < 50; $i++)
+        {
+          $contacts = Contact::create(array(
+            'name' => $faker->name,
+            'fiscal_number' => $faker->personalIdentityNumber,
+            'user_id' => 1
+          ));
         }
 
 	}
