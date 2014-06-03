@@ -1,14 +1,13 @@
 @extends('layout.menu')
 
 @section('title')
-	Contact
+    {{ Lang::get('contacts.contact')}}
 @stop
 
 @section('subtitle')
-	subtitulo contacto
+    {{ Lang::get('contacts.contact_list')}}
 @stop
 
 @section('content')
-	CONTENIDO
-
+    CONTENIDO
 @stop

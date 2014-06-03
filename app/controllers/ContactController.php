@@ -4,8 +4,7 @@ class ContactController extends \BaseController{
 
     public function index()
     {
-    $usuario = Contact::find(10)->User()->first()->name ;
-        return "el contacto con id 10 ha sido creado por el usuario ".$usuario;
+        return View::Make( 'contact.index');
 
     }
 

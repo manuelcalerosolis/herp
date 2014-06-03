@@ -18,5 +18,4 @@ return array(
     'password_confirmed' => 'Las contraseñas no coinciden',
     'error_auth' => 'Error de autenticación',
     'logout' => 'Cerrar sesión'
-
     );
