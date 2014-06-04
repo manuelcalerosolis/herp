@@ -20,7 +20,7 @@ class ViewServiceProvider extends ServiceProvider {
 
 		$this->registerViewFinder();
 
-		// Once the other Components have been registered we're ready to include the
+		// Once the other components have been registered we're ready to include the
 		// view environment and session binder. The session binder will bind onto
 		// the "before" application event and add errors into shared view data.
 		$this->registerEnvironment();

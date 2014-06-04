@@ -3,8 +3,61 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "7cd80bcc92c00e15857a0b2f12024ae1",
+    "hash": "0fb3faf2b4664ddb95454ef17bab3cc9",
     "packages": [
+        {
+            "name": "chumper/datatable",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Chumper/Datatable.git",
+                "reference": "891a4c6615d2da6c70a6c234ade3f6acb6f8e282"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Chumper/Datatable/zipball/891a4c6615d2da6c70a6c234ade3f6acb6f8e282",
+                "reference": "891a4c6615d2da6c70a6c234ade3f6acb6f8e282",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "4.*",
+                "illuminate/support": "4.*",
+                "illuminate/view": "4.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "orchestra/testbench": "2.1.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Chumper\\Datatable": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Plaschke",
+                    "email": "github@nilsplaschke.de",
+                    "homepage": "http://nilsplaschke.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is a laravel 4 package for the server and client side of datatablaes at http://datatables.net/",
+            "homepage": "http://github.com/Chumper/datatable",
+            "keywords": [
+                "ajax",
+                "datatables",
+                "jquery",
+                "laravel"
+            ],
+            "time": "2014-05-24 10:24:09"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "1.0.2",
@@ -226,16 +279,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v4.1.29",
+            "version": "v4.1.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7481b32fbfc6cdf17be193cdf79ebbf9288cb599"
+                "reference": "1bbb6f16aa03c1de6d89ccbf4ca81bf98e1330ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7481b32fbfc6cdf17be193cdf79ebbf9288cb599",
-                "reference": "7481b32fbfc6cdf17be193cdf79ebbf9288cb599",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/1bbb6f16aa03c1de6d89ccbf4ca81bf98e1330ab",
+                "reference": "1bbb6f16aa03c1de6d89ccbf4ca81bf98e1330ab",
                 "shasum": ""
             },
             "require": {
@@ -286,6 +339,7 @@
                 "illuminate/pagination": "self.version",
                 "illuminate/queue": "self.version",
                 "illuminate/redis": "self.version",
+                "illuminate/remote": "self.version",
                 "illuminate/routing": "self.version",
                 "illuminate/session": "self.version",
                 "illuminate/support": "self.version",
@@ -338,7 +392,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2014-05-20 13:22:03"
+            "time": "2014-06-01 18:30:26"
         },
         {
             "name": "monolog/monolog",
@@ -835,7 +889,7 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/BrowserKit",
             "source": {
                 "type": "git",
@@ -892,7 +946,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
@@ -947,7 +1001,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/CssSelector",
             "source": {
                 "type": "git",
@@ -1000,7 +1054,7 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/Debug",
             "source": {
                 "type": "git",
@@ -1057,17 +1111,17 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/DomCrawler",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/DomCrawler.git",
-                "reference": "5e8ad4367af467b9e40d6bb27d58a76a87cebb79"
+                "reference": "77881ef11c064a490515a9fb1729b695c632ffe5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/5e8ad4367af467b9e40d6bb27d58a76a87cebb79",
-                "reference": "5e8ad4367af467b9e40d6bb27d58a76a87cebb79",
+                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/77881ef11c064a490515a9fb1729b695c632ffe5",
+                "reference": "77881ef11c064a490515a9fb1729b695c632ffe5",
                 "shasum": ""
             },
             "require": {
@@ -1108,28 +1162,31 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-21 15:50:42"
+            "time": "2014-05-31 02:02:48"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.4.5",
+            "version": "v2.5.0",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "e539602e5455aa086c0e81e604745af7789e4d8a"
+                "reference": "cb62ec8dd05893fc8e4f0e6e21e326e1fc731fe8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/e539602e5455aa086c0e81e604745af7789e4d8a",
-                "reference": "e539602e5455aa086c0e81e604745af7789e4d8a",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/cb62ec8dd05893fc8e4f0e6e21e326e1fc731fe8",
+                "reference": "cb62ec8dd05893fc8e4f0e6e21e326e1fc731fe8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "symfony/dependency-injection": "~2.0"
+                "psr/log": "~1.0",
+                "symfony/config": "~2.0",
+                "symfony/dependency-injection": "~2.0",
+                "symfony/stopwatch": "~2.2"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -1138,7 +1195,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -1164,21 +1221,21 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-16 10:34:31"
+            "time": "2014-04-29 10:13:57"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.4.5",
+            "version": "v2.5.0",
             "target-dir": "Symfony/Component/Filesystem",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem.git",
-                "reference": "a3af8294bcce4a7c1b2892363b0c9d8109affad4"
+                "reference": "98e831eac836a0a5911626ce82684155f21d0e4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/a3af8294bcce4a7c1b2892363b0c9d8109affad4",
-                "reference": "a3af8294bcce4a7c1b2892363b0c9d8109affad4",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/98e831eac836a0a5911626ce82684155f21d0e4d",
+                "reference": "98e831eac836a0a5911626ce82684155f21d0e4d",
                 "shasum": ""
             },
             "require": {
@@ -1187,7 +1244,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -1213,11 +1270,11 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-16 10:34:31"
+            "time": "2014-04-16 10:36:21"
         },
         {
             "name": "symfony/finder",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/Finder",
             "source": {
                 "type": "git",
@@ -1266,7 +1323,7 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/HttpFoundation",
             "source": {
                 "type": "git",
@@ -1321,17 +1378,17 @@
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/HttpKernel",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "bd6ab7a7e5691f531b2617f55359217dc3c0c10c"
+                "reference": "084a126a36ed011b098158d4d28daa9883ecc8f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/bd6ab7a7e5691f531b2617f55359217dc3c0c10c",
-                "reference": "bd6ab7a7e5691f531b2617f55359217dc3c0c10c",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/084a126a36ed011b098158d4d28daa9883ecc8f7",
+                "reference": "084a126a36ed011b098158d4d28daa9883ecc8f7",
                 "shasum": ""
             },
             "require": {
@@ -1347,7 +1404,6 @@
                 "symfony/config": "~2.0",
                 "symfony/console": "~2.2",
                 "symfony/dependency-injection": "~2.0",
-                "symfony/filesystem": "~2.4",
                 "symfony/finder": "~2.0",
                 "symfony/process": "~2.0",
                 "symfony/routing": "~2.2",
@@ -1360,7 +1416,6 @@
                 "symfony/config": "",
                 "symfony/console": "",
                 "symfony/dependency-injection": "",
-                "symfony/filesystem": "",
                 "symfony/finder": ""
             },
             "type": "library",
@@ -1392,11 +1447,11 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-22 21:04:05"
+            "time": "2014-05-31 18:42:13"
         },
         {
             "name": "symfony/process",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/Process",
             "source": {
                 "type": "git",
@@ -1445,7 +1500,7 @@
         },
         {
             "name": "symfony/routing",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/Routing",
             "source": {
                 "type": "git",
@@ -1513,7 +1568,7 @@
         },
         {
             "name": "symfony/security-core",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/Security/Core",
             "source": {
                 "type": "git",
@@ -1577,7 +1632,7 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "target-dir": "Symfony/Component/Translation",
             "source": {
                 "type": "git",
@@ -1739,6 +1794,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "webpatser/laravel-countries": 20,
+        "chumper/datatable": 20,
         "fzaninotto/faker": 20
     },
     "platform": [

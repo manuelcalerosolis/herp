@@ -6,6 +6,16 @@ class Contact extends Eloquent  {
 
 	protected $fillable = array('name', 'fiscal_number', 'user_id');
 
+    public function row(){
+        $row =  '<tr>';
+        $row .= '<td>' . $this->id . '</td>';
+        $row .= '<td>' . $this->name . '</td>';
+        $row .= '<td>' . $this->fiscal_number . '</td>';
+        $row .=  '<tr>';
+
+        return $row;
+    }
+
 	public function User(){
         return $this->belongsTo('User', 'user_id');
     }

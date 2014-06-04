@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.*",
-        "webpatser/laravel-countries": "dev-master"
+        "webpatser/laravel-countries": "dev-master",
+        "chumper/datatable": "dev-master"
 	},
 	"autoload": {
         "psr-4":{

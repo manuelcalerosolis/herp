@@ -307,7 +307,7 @@ class UrlGeneratorTest extends \PHPUnit_Framework_TestCase
 
     public function testUrlEncoding()
     {
-        // This tests the encoding of reserved characters that are used for delimiting of URI Components (defined in RFC 3986)
+        // This tests the encoding of reserved characters that are used for delimiting of URI components (defined in RFC 3986)
         // and other special ASCII chars. These chars are tested as static text path, variable path and query param.
         $chars = '@:[]/()*\'" +,;-._~&$<>|{}%\\^`!?foo=bar#id';
         $routes = $this->getRoutes('test', new Route("/$chars/{varpath}", array(), array('varpath' => '.+')));

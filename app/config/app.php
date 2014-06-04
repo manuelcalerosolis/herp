@@ -115,6 +115,10 @@ return array(
 
         'Webpatser\Countries\CountriesServiceProvider',
 
+        //datatable
+
+        'Chumper\Datatable\DatatableServiceProvider',
+
 	),
 
 	/*
@@ -184,6 +188,8 @@ return array(
         'Field'           => 'hErp\Components\Facades\Field',
 
         'Countries'       => 'Webpatser\Countries\CountriesFacade',
+
+        'Datatable'       => 'Chumper\Datatable\Facades\DatatableFacade'
 
 	),
 

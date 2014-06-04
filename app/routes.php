@@ -60,6 +60,7 @@ Route::get('contact/create' , 			array( 'as' => 'contact.create', 	'uses' => 'Co
 Route::put('contact/{contact}' , 		array( 'as' => 'contact.update', 	'uses' => 'ContactController@update' ) );
 Route::get('contact/{contact}/edit' , 	array( 'as' => 'contact.edit', 	    'uses' => 'ContactController@edit' ) );
 Route::get('contact/{contact}/destroy', array( 'as' => 'contact.destroy', 	'uses' => 'ContactController@destroy' ) );
+Route::get('api/contact',	            array( 'as' => 'api.contact',	    'uses' => 'ContactController@getDatatable' ) );
 
 Route::group(array('before' => 'auth'), function()
 {

@@ -4,7 +4,8 @@ class ContactController extends \BaseController{
 
     public function index()
     {
-        return View::Make( 'contact.index');
+
+        return View::Make('contact.index');
 
     }
 
@@ -26,6 +27,17 @@ class ContactController extends \BaseController{
     public function destroy($id)
     {
         return "borrar contacto con id " . $id;
+
+    }
+
+    public function getDatatable()
+    {
+
+            return Datatable::collection(Contact::all())
+                ->showColumns('id', 'name')
+                ->searchColumns('name')
+                ->orderColumns('id', 'name')
+                ->make();
 
     }
 }

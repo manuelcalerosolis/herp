@@ -5,7 +5,7 @@ use Illuminate\Database\Query\Builder;
 class MySqlGrammar extends Grammar {
 
 	/**
-	 * The Components that make up a select clause.
+	 * The components that make up a select clause.
 	 *
 	 * @var array
 	 */
