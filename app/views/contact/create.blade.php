@@ -1,4 +1,5 @@
 <h1>Hola</h1>
+
 <!-- 
 @extends('layout.menu')
 

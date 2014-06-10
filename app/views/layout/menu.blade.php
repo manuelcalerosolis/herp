@@ -24,6 +24,7 @@
 		    <div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav side-nav">
 					<li class="active"><a href=" {{ URL::route('dashboard') }} "><i class="fa fa-dashboard"></i> Dashboard</a></li>
+					<li><a href=" {{ URL::route('contact.index') }} "><i class="fa fa-user"></i> {{ Lang::get('contacts.contacts') }}</a></li>
 					<li class="dropdown">
 				  		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Dropdown <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -37,7 +38,7 @@
 
 				<ul class="nav navbar-nav navbar-right navbar-user">
 					<li class="dropdown user-dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Auth::user()->name <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{ Auth::user()->name }} <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
 							<li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
