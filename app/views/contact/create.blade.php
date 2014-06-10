@@ -1,6 +1,3 @@
-<h1>Hola</h1>
-
-<!-- 
 @extends('layout.menu')
 
 @section('title')
@@ -12,17 +9,29 @@
 @stop
 
 @section('content')
-	
 
-	{{ Form::open(array('url' => 'contact/create', 'role'=>'form')) }}
-		
-		{{ Form::text('name', '', array('class'=>'form-control', 'placeholder'=>Lang::get('contacts.contact_name')))}}
-		
-		{{ Form::text('fiscal_number', array('class'=>'form-control', 'placeholder'=>Lang::get('contacts.fiscal_number'))) }}
-	
+	<div class="col-xs-12">	
 
-		{{ Form::submit(Lang::get('messages.submit'), array('class'=>'btn btn-lg btn-primary btn-block')) }}
+		{{ Form::open(array('url' => '#', 'role'=>'form')) }}
 
-	{{ Form::close() }}
+			<div class="col-xs-5">
 
-@stop -->
+				<h4>{{ Lang::get('contacts.contact_name') }}</h4>
+				
+				{{ Form::text('name', '', array('class'=>'form-control')) }}
+
+				<h4>{{ Lang::get('contacts.fiscal_number') }}</h4>
+				
+				{{ Form::text('fiscal_number', '', array('class'=>'form-control')) }}		
+
+			</div>
+
+
+
+
+
+		{{ Form::close() }}
+
+	</div>
+
+@stop

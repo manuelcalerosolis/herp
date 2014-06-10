@@ -23,7 +23,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav side-nav">
-					<li class="active"><a href=" {{ URL::route('dashboard') }} "><i class="fa fa-dashboard"></i> Dashboard</a></li>
+					<li><a href=" {{ URL::route('dashboard') }} "><i class="fa fa-dashboard"></i> Dashboard</a></li>
 					<li><a href=" {{ URL::route('contact.index') }} "><i class="fa fa-user"></i> {{ Lang::get('contacts.contacts') }}</a></li>
 					<li class="dropdown">
 				  		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Dropdown <b class="caret"></b></a>
