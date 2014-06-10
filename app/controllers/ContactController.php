@@ -11,7 +11,7 @@ class ContactController extends \BaseController{
 
     public function create(){
 
-        return "crear nuevo contacto";
+        return View::Make('contact.create');
     }
 
     public function edit($id)
