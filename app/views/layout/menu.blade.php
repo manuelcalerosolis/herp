@@ -1,4 +1,8 @@
-@extends('layout.layout')
+@include('layout.style')
+@include('layout.script')
+
+<html>
+
 
 	<div id="wrapper">
 
@@ -19,7 +23,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav side-nav">
-					<li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+					<li class="active"><a href=" {{ URL::route('dashboard') }} "><i class="fa fa-dashboard"></i> Dashboard</a></li>
 					<li class="dropdown">
 				  		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Dropdown <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -45,22 +49,22 @@
 	        </div><!-- /.navbar-collapse -->
       	</nav>
 
+        <div id="page-wrapper">
+            <div class="col-lg-12">
+                <h1> @yield('title')
+                    <small> @yield('subtitle') </small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i>
+                        @yield('title')
+                    </li>
+                </ol>
+            </div>
 
-    <div id="page-wrapper">
-		<div class="col-lg-12">
-			<h1> @yield('title') 
-				<small> @yield('subtitle') </small>
-			</h1>
-			<ol class="breadcrumb">
-				<li class="active">
-					<i class="fa fa-dashboard"></i>
-					@yield('title')
-				</li>
-			</ol>
-		</div>
+            @yield('content')
 
-		@yield('content')
+        </div>
 
 	</div>
 
-	</div>

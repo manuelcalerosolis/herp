@@ -1,18 +1,53 @@
-@extends('layout.login')
+@extends('layout.main')
 
 @section('content')
 
-	<div class="container" >
+	<style>
 
-		<div class="col-md-4 col-md-offset-4 offset4 span4" ><!--  panel panel-default"> -->	
+        /* http://css-tricks.com/perfect-full-page-background-image/ */
+        #img-background {
+            background: url(images/wall2.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100%;
+        }
 
-			<div class="row">
+        body{
+        	margin: 0;
+        	padding: 0;
+        }
 
-			    
-					<img src="images/captura2.png">
-			    
+        .form-signin{
+        	max-width: 370px;
+        	padding: 15px;
+        	margin: 0 auto;
+        }
+        	
+        .title{
+        	font-family:  "Abel", Arial, sans-serif;
+        	font-size: 7em;
+        	color: white;
+        	margin-top: 70px;
+        	text-align: center;
+        	-webkit-text-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+          		text-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+        }
+
+
+
+	</style>
+
+	<div id="img-background">
+	
+		<div class="container" >
+
+				<p class="title"><b>h-ERP</b></p>    
 
 			
+			<div class="form-signin" ><!--  panel panel-default"> -->	
+
 			    {{ Form::open(array('url' => 'register/check', 'role'=>'form')) }}
 			    	
 					{{ Form::email('email', '', array('class'=>'form-control', 'placeholder'=>Lang::get('messages.email')))}}
@@ -40,13 +75,13 @@
 
 		</div>
 
-	</div>
+		<footer>
+			<a href="{{ URL::route('login') }}" class="btn btn-primary"> {{Lang::get('messages.submit')}} </a>
+			<a href="{{ URL::route('lang', array( 'es') ) }}" class="btn btn-default"> español </a>
+			<a href="{{ URL::route('lang', array( 'en') ) }}" class="btn btn-default"> english </a>
+	    </footer>
 
-	<footer>
-		<a href="{{ URL::route('login') }}" class="btn btn-primary"> {{Lang::get('messages.submit')}} </a>
-		<a href="{{ URL::route('lang', array( 'es') ) }}" class="btn btn-default"> español </a>
-		<a href="{{ URL::route('lang', array( 'en') ) }}" class="btn btn-default"> english </a>
-    </footer>
+	</div>
 
 @stop
 

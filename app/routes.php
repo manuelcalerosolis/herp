@@ -55,13 +55,6 @@ Route::put('user/{user}' , 			array( 'as' => 'user.update', 	'uses' => 'UserCont
 Route::get('user/{user}/edit' , 	array( 'as' => 'user.edit', 	'uses' => 'UserController@edit' ) );
 Route::get('user/{user}/destroy' , 	array( 'as' => 'user.destroy', 	'uses' => 'UserController@destroy' ) );
 
-Route::get('contact' , 				    array( 'as' => 'contact.index', 	'uses' => 'ContactController@index' ) );
-Route::get('contact/create' , 			array( 'as' => 'contact.create', 	'uses' => 'ContactController@create' ) );
-Route::put('contact/{contact}' , 		array( 'as' => 'contact.update', 	'uses' => 'ContactController@update' ) );
-Route::get('contact/{contact}/edit' , 	array( 'as' => 'contact.edit', 	    'uses' => 'ContactController@edit' ) );
-Route::get('contact/{contact}/destroy', array( 'as' => 'contact.destroy', 	'uses' => 'ContactController@destroy' ) );
-Route::get('api/contact',	            array( 'as' => 'api.contact',	    'uses' => 'ContactController@getDatatable' ) );
-
 Route::group(array('before' => 'auth'), function()
 {
 
@@ -75,5 +68,14 @@ Route::group(array('before' => 'auth'), function()
 	{
 		return View::make('dashboard');
 	}));
+
+    // Contact----------------------------------------------------------------------
+
+    Route::get('contact' , 				    array( 'as' => 'contact.index', 	'uses' => 'ContactController@index' ) );
+    Route::get('contact/create' , 			array( 'as' => 'contact.create', 	'uses' => 'ContactController@create' ) );
+    Route::get('contact/{contact}/edit' , 	array( 'as' => 'contact.edit', 	    'uses' => 'ContactController@edit' ) );
+    Route::put('contact/{contact}' , 		array( 'as' => 'contact.update', 	'uses' => 'ContactController@update' ) );
+    Route::get('contact/{contact}/destroy', array( 'as' => 'contact.destroy', 	'uses' => 'ContactController@destroy' ) );
+    Route::get('api/contact',	            array( 'as' => 'api.contact',	    'uses' => 'ContactController@getDatatable' ) );
 
 });

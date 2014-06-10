@@ -33,10 +33,10 @@ class ContactController extends \BaseController{
     public function getDatatable()
     {
 
-            return Datatable::collection(Contact::all())
-                ->showColumns('id', 'name')
-                ->searchColumns('name')
-                ->orderColumns('id', 'name')
+            return Datatable::collection(Contact::all( array('id', 'name', 'fiscal_number')))
+                ->showColumns('id', 'name', 'fiscal_number')
+                ->searchColumns('name', 'fiscal_number')
+                ->orderColumns('id', 'name', 'fiscal_number')
                 ->make();
 
     }
