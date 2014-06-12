@@ -4,6 +4,10 @@
 	<i class="fa fa-user"></i>
 @stop
 
+@section('create')
+	<a class="btn btn-success pull-right" href="{{ URL::route('contact.create') }}"><i class="glyphicon glyphicon-plus"></i> {{ Lang::get('contacts.create') }} </a>
+@stop
+
 @section('title')
     {{ Lang::get('contacts.contact')}}
 @stop
