@@ -21,7 +21,7 @@ return array(
         |
         */
 
-        'class' => 'table table-bordered',
+        'class' => 'table table-bordered col-lg-12',
 
         /*
         |--------------------------------------------------------------------------
@@ -50,7 +50,7 @@ return array(
 
         'options' => array(
 
-            "sPaginationType" => "full_numbers",
+            "sPaginationType" => "two_button",
 
             "bProcessing" => false
 

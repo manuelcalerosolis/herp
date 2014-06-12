@@ -1,5 +1,5 @@
 <table id="{{ $id }}" class="{{ $class }}">
-
+<h1>Fuck</h1>
     <colgroup>
         @for ($i = 0; $i < count($columns); $i++)
         <col class="con{{ $i }}" />

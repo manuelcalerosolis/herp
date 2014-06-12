@@ -18,7 +18,7 @@
         ->addColumn('id', 'Name', 'Nif')        // these are the column headings to be shown
         ->setUrl(route('api.contact'))          // this is the route where data will be retrieved
         ->setOptions(array( 'paging' => true ) )
-        ->render() }}
+        ->render('layout.datatable') }}
 
 @stop
 
