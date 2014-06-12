@@ -1,5 +1,9 @@
 @extends('layout.menu')
 
+@section('ico')
+	<i class="fa fa-user"></i>
+@stop
+
 @section('title')
     {{ Lang::get('contacts.contact')}}
 @stop

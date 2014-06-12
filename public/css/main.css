@@ -95,3 +95,7 @@ footer {
   white-space:nowrap;
   margin:0.1em 0;
 }
+
+.btn-floatR{
+  float: right;
+}

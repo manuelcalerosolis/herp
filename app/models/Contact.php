@@ -20,9 +20,24 @@ class Contact extends Eloquent  {
         return $this->belongsTo('User', 'user_id');
     }
 
-	protected $rules = array(   'name'                  	=> 'required',
-                                'fiscal_number'             => 'required',
-                                'user_id' 					=> 'required');
+	protected $rules = array(   'name'              => 'required',
+                                'fiscal_number'     => 'required',
+                                //'user_id' 		    => 'required'
+                                );
+
+    public static function getValidator()
+    {
+        return array(   'name'                      => 'required',
+                        'fiscal_number'             => 'required' );
+    }
+
+    public static function getMessages()
+    {
+        return  array(  'name.required'             => Lang::get('contacts.name_required'),
+                        'fiscal_number.required'    => Lang::get('contacts.fiscal_number_required') );
+    }
+
+    
 
     
 }
