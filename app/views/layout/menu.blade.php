@@ -51,10 +51,19 @@
       	</nav>
 
         <div id="page-wrapper">
+
             <div class="col-lg-12">
+
                 <h1> @yield('title')
-                    <small> @yield('subtitle') </small>
+
+                    <small> 
+                    	@yield('subtitle')
+                    </small>
+
+	                @yield('create')
+
                 </h1>
+
                 <ol class="breadcrumb">
                     <li class="active">
                     	@yield('ico')

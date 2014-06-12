@@ -20,14 +20,6 @@
 
 			<div class="col-xs-5">
 
-				<h4>{{ Lang::get('contacts.contact_name') }}</h4>
-				
-				{{ Form::text('name', '', array('class'=>'form-control')) }}
-
-				<h4>{{ Lang::get('contacts.fiscal_number') }}</h4>
-				
-				{{ Form::text('fiscal_number', '', array('class'=>'form-control')) }}
-
 				@if(Session::has('errors'))
 					<div class="alert alert-warning alert-dismissable">
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -37,8 +29,16 @@
 					</div>
 				@endif
 
-				{{ Form::submit(Lang::get('contacts.create'), array('class'=>'btn btn-lg btn-primary btn-floatR')) }}
+				<h4>{{ Lang::get('contacts.contact_name') }}</h4>
 				
+				{{ Form::text('name', '', array('class'=>'form-control')) }}
+
+				<h4>{{ Lang::get('contacts.fiscal_number') }}</h4>
+				
+				{{ Form::text('fiscal_number', '', array('class'=>'form-control')) }}
+
+				{{ Form::submit(Lang::get('contacts.create'), array('id'=>'btn-margin', 'class'=>'btn btn-lg btn-primary pull-right')) }}
+
 			</div>
 
 		{{ Form::close() }}

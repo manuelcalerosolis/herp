@@ -96,6 +96,6 @@ footer {
   margin:0.1em 0;
 }
 
-.btn-floatR{
-  float: right;
+#btn-margin{
+  margin-top: 0.5em;
 }
