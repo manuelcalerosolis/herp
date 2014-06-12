@@ -57,7 +57,7 @@
                 </h1>
                 <ol class="breadcrumb">
                     <li class="active">
-                        <i class="fa fa-dashboard"></i>
+                    	@yield('ico')
                         @yield('title')
                     </li>
                 </ol>

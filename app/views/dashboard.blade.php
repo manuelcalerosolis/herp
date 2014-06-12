@@ -1,5 +1,9 @@
 @extends('layout.menu')
 
+@section('ico')
+	<i class="fa fa-dashboard"></i>
+@stop
+
 @section('title')
 	Dashboard
 @stop

@@ -14,6 +14,39 @@ class ContactController extends \BaseController{
         return View::Make('contact.create');
     }
 
+    public function store(){
+
+        $validator = Validator::make( Input::all(), Contact::getValidator(), Contact::getMessages() );  
+
+
+        if ($validator->fails())
+        {
+            return Redirect::to( URL::previous() )
+                ->withErrors($validator) 
+                ->withInput();
+        }
+        else
+        {
+
+            $contact                    = new Contact;
+
+            $contact->name              = Input::get('name');
+            $contact->fiscal_number     = Input::get('fiscal_number');
+
+            if ( !$contact->save() )
+            {
+                return Redirect::to( URL::previous() )
+                    ->withErrors($contact->errors()->all(':message'))
+                    ->withInput();            
+            }
+
+
+            return Redirect::route('contact.index');
+        }      
+
+
+    }
+
     public function edit($id)
     {
         return "editar el contacto ".$id;
