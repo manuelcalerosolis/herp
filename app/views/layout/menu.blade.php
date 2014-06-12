@@ -3,7 +3,6 @@
 
 <html>
 
-
 	<div id="wrapper">
 
 		<!-- Sidebar --> 
@@ -77,4 +76,6 @@
         </div>
 
 	</div>
+
+</html>
 

@@ -12,6 +12,8 @@
 	{{ Lang::get('contacts.create')}}
 @stop
 
+<<<<<<< HEAD
+=======
 @section('content')
 
 	<div class="col-xs-12">	
@@ -46,3 +48,4 @@
 	</div>
 
 @stop
+>>>>>>> origin/master

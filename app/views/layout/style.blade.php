@@ -11,4 +11,5 @@
 <!----------------------------------------------------------------------------->
 
 {{ HTML::style('css/jquery.dataTables.css') }}
-{{ HTML::style('css/dataTables.bootstrap.css') }}
+
+
