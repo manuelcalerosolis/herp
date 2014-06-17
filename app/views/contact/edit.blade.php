@@ -16,7 +16,7 @@
 
 	<div class="col-xs-12">	
 
-		{{ Form::open(array('route' => 'contact.store', 'role'=>'form')) }}
+		{{ Form::open(array('url' => 'contact/'. $contact->id, 'role'=>'form')) }}
 
 			<div class="col-xs-5">
 
@@ -31,13 +31,13 @@
 
 				<h4>{{ Lang::get('contacts.contact_name') }}</h4>
 				
-				{{ Form::text('name', '', array('class'=>'form-control')) }}
+				{{ Form::text('name', $contact->name, array('class'=>'form-control')) }}
 
 				<h4>{{ Lang::get('contacts.fiscal_number') }}</h4>
 				
-				{{ Form::text('fiscal_number', '', array('class'=>'form-control')) }}
+				{{ Form::text('fiscal_number', $contact->fiscal_number, array('class'=>'form-control')) }}
 
-				{{ Form::submit(Lang::get('contacts.create'), array('id'=>'btn-margin', 'class'=>'btn btn-lg btn-primary pull-right')) }}
+				{{ Form::submit(Lang::get('contacts.edit'), array('id'=>'btn-margin', 'class'=>'btn btn-lg btn-primary pull-right')) }}
 
 			</div>
 

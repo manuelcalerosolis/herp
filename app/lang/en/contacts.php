@@ -8,6 +8,7 @@ return array(
     'fiscal_number' => 'Fiscal number',
     'create' => 'Create contact',
     'name_required' => 'Name required',
-    'fiscal_number_required' => 'CIF required'
+    'fiscal_number_required' => 'CIF required',
+    'edit' => 'Edit contact'
 
 );

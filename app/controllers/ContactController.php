@@ -49,11 +49,42 @@ class ContactController extends \BaseController{
 
     public function edit($id)
     {
-        return "editar el contacto ".$id;
+
+        $contact    = Contact::find($id);
+
+        return View::Make('contact.edit')->with('contact', $contact);
+
     }
 
     public function update($id)
     {
+        $validator = Validator::make( Input::all(), Contact::getValidator(), Contact::getMessages() );  
+
+
+        if ($validator->fails())
+        {
+            return Redirect::to( URL::previous() )
+                ->withErrors($validator) 
+                ->withInput();
+        }
+        else
+        {
+
+            $contact                    = Contact::find($id);
+
+            $contact->name              = Input::get('name');
+            $contact->fiscal_number     = Input::get('fiscal_number');
+
+            if ( !$contact->save() )
+            {
+                return Redirect::to( URL::previous() )
+                    ->withErrors($contact->errors()->all(':message'))
+                    ->withInput();            
+            }
+
+
+            return Redirect::route('contact.index');
+        }
 
     }
 
