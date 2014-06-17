@@ -21,7 +21,7 @@ return array(
         |
         */
 
-        'class' => 'table table-bordered',
+        'class' => 'table col-lg-12',
 
         /*
         |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return array(
         |
         */
 
-        'id' => '',
+        'id' => 'idTable',
 
         /*
         |--------------------------------------------------------------------------
@@ -50,9 +50,42 @@ return array(
 
         'options' => array(
 
-            "sPaginationType" => "full_numbers",
+            "sPaginationType" => "simple_numbers",
 
-            "bProcessing" => false
+            "bProcessing" => false,
+
+            "bAutoWidth" => false,
+
+            "paging" => true,
+
+            'language' => array(
+
+                'processing'=>     'Procesando...',
+                'lengthMenu'=>     'Mostrar _MENU_ registros',
+                'zeroRecords'=>    'No se encontraron resultados',
+                'emptyTable'=>     'Ningún dato disponible en esta tabla',
+                'info'=>           'Del _START_ al _END_ de _TOTAL_ registros',
+                'infoEmpty'=>      'Del 0 al 0 de un total de 0 registros',
+                'infoFiltered'=>   '(filtrado de un total de _MAX_ registros)',
+                'infoPostFix'=>    '',
+                'search'=>         'Buscar',
+                'url'=>            '',
+                'infoThousands'=>  ',',
+                'loadingRecords'=> 'Cargando...',
+
+                'paginate'=> array(
+                    'first'=>    '<<',
+                    'last'=>     '>>',
+                    'next'=>     '>',
+                    'previous'=> '<'
+                ),
+
+                'aria'=> array(
+                    'sortAscending' =>  'Activar para ordenar la columna de manera ascendente',
+                    'sortDescending' => 'Activar para ordenar la columna de manera descendente'
+                ),
+
+            ),
 
         ),
 
@@ -107,7 +140,6 @@ return array(
         */
 
         'script_view' => 'datatable::javascript',
-
 
     ),
 

@@ -20,9 +20,9 @@
 
     {{ Datatable::table()
         ->addColumn('id', 'Name', 'Nif')        // these are the column headings to be shown
+        ->setId('fooId')
         ->setUrl(route('api.contact'))          // this is the route where data will be retrieved
-        ->setOptions(array( 'paging' => true ) )
-        ->render('layout.datatable') }}
+        ->render() }}
 
 @stop
 

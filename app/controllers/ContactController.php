@@ -67,7 +67,15 @@ class ContactController extends \BaseController{
     {
 
             return Datatable::collection(Contact::all( array('id', 'name', 'fiscal_number')))
-                ->showColumns('id', 'name', 'fiscal_number')
+                ->showColumns('id')
+                ->addColumn('name',function($model)
+                {
+                    return link_to_route('contact.edit', $model->name, $model->id );
+                })
+                ->addColumn('fiscal_number',function($model)
+                {
+                    return link_to_route('contact.edit', $model->fiscal_number, $model->id );
+                })
                 ->searchColumns('name', 'fiscal_number')
                 ->orderColumns('id', 'name', 'fiscal_number')
                 ->make();

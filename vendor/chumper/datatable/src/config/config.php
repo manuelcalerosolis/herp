@@ -34,7 +34,7 @@ return array(
         |
         */
 
-        'id' => '',
+        'id' => 'idTable',
 
         /*
         |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
         |
         */
 
-        'table_view' => 'datatable::template',
+        'table_view' => 'layout.datatable', // ''datatable::template',
 
 
         /*
