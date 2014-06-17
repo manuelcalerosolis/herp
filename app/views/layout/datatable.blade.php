@@ -8,7 +8,17 @@
     <thead>
     <tr>
         @foreach($columns as $i => $c)
-        <th align="center" valign="middle" class="head{{ $i }}">{{ $c }}</th>
+            <th align="center" valign="middle" class="head{{ $i }}"
+                @if ($c == 'Checkbox')
+                    style="width:20px"
+                @endif
+            >
+                @if ($c == 'Checkbox')
+                    <input type="checkbox" class="selectAll" />
+                @else
+                    {{ $c }}
+                @endif
+            </th>
         @endforeach
     </tr>
     </thead>

@@ -19,10 +19,12 @@
 @section('content')
 
     {{ Datatable::table()
-        ->addColumn('id', 'Name', 'Nif')        // these are the column headings to be shown
-        ->setId('fooId')
+        ->addColumn('Checkbox',
+                    'Name',
+                    'Nif')                      // these are the column headings to be shown
+        ->setId('datatableId')
         ->setUrl(route('api.contact'))          // this is the route where data will be retrieved
-        ->render() }}
+        ->render('layout.datatable') }}
 
 @stop
 

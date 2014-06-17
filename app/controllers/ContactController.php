@@ -98,17 +98,21 @@ class ContactController extends \BaseController{
     {
 
             return Datatable::collection(Contact::all( array('id', 'name', 'fiscal_number')))
-                ->showColumns('id')
+                ->addColumn('checkbox', function($model)
+                {
+                    // return  '<input type="checkbox" class="selectAll"/>';
+                    return Form::checkbox('id', $model->id);
+                })
                 ->addColumn('name',function($model)
                 {
                     return link_to_route('contact.edit', $model->name, $model->id );
                 })
                 ->addColumn('fiscal_number',function($model)
                 {
-                    return link_to_route('contact.edit', $model->fiscal_number, $model->id );
+                    return $model->fiscal_number;
                 })
                 ->searchColumns('name', 'fiscal_number')
-                ->orderColumns('id', 'name', 'fiscal_number')
+                ->orderColumns('name', 'fiscal_number')
                 ->make();
 
     }

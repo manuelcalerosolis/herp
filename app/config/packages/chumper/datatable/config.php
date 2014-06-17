@@ -21,7 +21,7 @@ return array(
         |
         */
 
-        'class' => 'table col-lg-12',
+        'class' => 'table',
 
         /*
         |--------------------------------------------------------------------------
@@ -61,7 +61,7 @@ return array(
             'language' => array(
 
                 'processing'=>     'Procesando...',
-                'lengthMenu'=>     'Mostrar _MENU_ registros',
+                'lengthMenu'=>     'Mostrar _MENU_',
                 'zeroRecords'=>    'No se encontraron resultados',
                 'emptyTable'=>     'Ningún dato disponible en esta tabla',
                 'info'=>           'Del _START_ al _END_ de _TOTAL_ registros',
