@@ -9,7 +9,7 @@
 @stop
 
 @section('subtitle')
-	{{ Lang::get('contacts.create')}}
+	{{ Lang::get('contacts.edit')}}
 @stop
 
 @section('content')
