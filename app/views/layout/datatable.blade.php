@@ -10,10 +10,10 @@
         @foreach($columns as $i => $c)
             <th align="center" valign="middle" class="head{{ $i }}"
                 @if ($c == 'Checkbox')
-                    style="width:20px"
+                    style="width:20px; padding:10px"
                 @endif
             >
-                @if ($c == 'Checkbox')
+                @if ($c == 'Checkbox' && $hasCheckboxes = true)
                     <input type="checkbox" class="selectAll" />
                 @else
                     {{ $c }}
@@ -22,17 +22,59 @@
         @endforeach
     </tr>
     </thead>
+
     <tbody>
     @foreach($data as $d)
     <tr>
         @foreach($d as $dd)
-        <td>{{ $dd }}</td>
+            <td>{{ $dd }}</td>
         @endforeach
     </tr>
     @endforeach
     </tbody>
+
 </table>
 
-@if (!$noScript)
-    @include('datatable::javascript', array('id' => $id, 'options' => $options, 'callbacks' =>  $callbacks))
-@endif
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        // dynamic table
+        jQuery('.{{ $class }}').dataTable({
+            "bAutoWidth": false,
+            @if (isset($hasCheckboxes) && $hasCheckboxes)
+            'aaSorting': [['1', 'asc']],
+            // Disable sorting on the first column
+            "aoColumnDefs": [ {
+            'bSortable': false,
+            'aTargets': [ 0, {{ count($columns) - 1 }} ]
+    } ],
+    @endif
+    @foreach ($options as $k => $o)
+    {{ json_encode($k) }}: {{ json_encode($o) }},
+    @endforeach
+    @foreach ($callbacks as $k => $o)
+    {{ json_encode($k) }}: {{ $o }},
+    @endforeach
+    "fnDrawCallback": function(oSettings) {
+        if (window.onDatatableReady) {
+            window.onDatatableReady();
+        }
+    }
+    });
+    });
+</script>
+
+<!--
+//@if (!$noScript)
+//    @include('datatable::javascript', array('id' => $id, 'options' => $options, 'callbacks' =>  $callbacks))
+// @endif
+-->
+
+@section('script')
+
+$('.selectAll').click(function() {
+    $(this).closest('table').find(':checkbox').prop('checked', this.checked);
+});
+
+@stop
+

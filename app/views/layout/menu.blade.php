@@ -64,7 +64,7 @@
                 </h1>
 
                 <ol class="breadcrumb">
-                    <li class="active">
+                    <liclass="active">
                     	@yield('ico')
                         @yield('title')
                     </li>
@@ -76,6 +76,12 @@
         </div>
 
 	</div>
+
+    <script type="text/javascript">
+
+        @yield('script')
+
+    </script>
 
 </html>
 

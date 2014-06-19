@@ -81,8 +81,8 @@ return array(
                 ),
 
                 'aria'=> array(
-                    'sortAscending' =>  'Activar para ordenar la columna de manera ascendente',
-                    'sortDescending' => 'Activar para ordenar la columna de manera descendente'
+                    'sortAscending' =>  'Ordenar la columna de manera ascendente',
+                    'sortDescending' => 'Ordenar la columna de manera descendente'
                 ),
 
             ),
