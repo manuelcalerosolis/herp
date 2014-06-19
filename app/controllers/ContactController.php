@@ -16,41 +16,31 @@ class ContactController extends \BaseController{
 
     public function store(){
 
-        $validator = Validator::make( Input::all(), Contact::getValidator(), Contact::getMessages() );  
-
-
-        if ($validator->fails())
+        if (Contact::ValidatorFails())
         {
             return Redirect::to( URL::previous() )
-                ->withErrors($validator) 
+                ->withErrors(Contact::getValidator()) 
                 ->withInput();
         }
         else
         {
 
-            $contact                    = new Contact;
-
-            $contact->name              = Input::get('name');
-            $contact->fiscal_number     = Input::get('fiscal_number');
-
-            if ( !$contact->save() )
+            if (Contact::StoreFails() )
             {
                 return Redirect::to( URL::previous() )
                     ->withErrors($contact->errors()->all(':message'))
                     ->withInput();            
             }
 
-
             return Redirect::route('contact.index');
-        }      
-
+        }
 
     }
 
     public function edit($id)
     {
 
-        $contact    = Contact::find($id);
+        $contact    = Contact::findOrFail($id);
 
         return View::Make('contact.edit')->with('contact', $contact);
 
@@ -58,13 +48,11 @@ class ContactController extends \BaseController{
 
     public function update($id)
     {
-        $validator = Validator::make( Input::all(), Contact::getValidator(), Contact::getMessages() );  
 
-
-        if ($validator->fails())
+        if (Contact::ValidatorFails())
         {
             return Redirect::to( URL::previous() )
-                ->withErrors($validator) 
+                ->withErrors(Contact::getValidator()) 
                 ->withInput();
         }
         else

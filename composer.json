@@ -40,6 +40,9 @@
 	"require-dev": {
 	  "fzaninotto/faker": "1.3.*@dev"
 	},
+	"require": {  
+    	"euantorano/validation': '1.0.*"
+	},
 	"minimum-stability": "stable"
 }
 

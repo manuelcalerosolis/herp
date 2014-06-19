@@ -6,26 +6,13 @@ class Contact extends Eloquent  {
 
 	protected $fillable = array('name', 'fiscal_number', 'user_id');
 
-    public function row(){
-        $row =  '<tr>';
-        $row .= '<td>' . $this->id . '</td>';
-        $row .= '<td>' . $this->name . '</td>';
-        $row .= '<td>' . $this->fiscal_number . '</td>';
-        $row .=  '<tr>';
-
-        return $row;
-    }
+    protected $validator;
 
 	public function User(){
         return $this->belongsTo('User', 'user_id');
     }
 
-	protected $rules = array(   'name'              => 'required',
-                                'fiscal_number'     => 'required',
-                                //'user_id' 		    => 'required'
-                                );
-
-    public static function getValidator()
+    public static function getRules()
     {
         return array(   'name'                      => 'required',
                         'fiscal_number'             => 'required' );
@@ -37,8 +24,33 @@ class Contact extends Eloquent  {
                         'fiscal_number.required'    => Lang::get('contacts.fiscal_number_required') );
     }
 
-    
+    public static function storeFails()
+    {
 
+        $contact                    = new Contact;
+
+        $contact->name              = Input::get('name');
+        $contact->fiscal_number     = Input::get('fiscal_number');
+
+        return !$contact->save();
+
+    }
+
+    public function validatorFails()
+    {
+
+        $this->validator = Validator::make( Input::all(), $this->getRules(), $this->getMessages() ); 
+
+        return $this->validator->fails();
+
+    }
+
+    public function getValidator()
+    {
+
+        return $this->validator;
+
+    }
     
 }
 
