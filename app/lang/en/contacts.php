@@ -9,6 +9,7 @@ return array(
     'create' => 'Create contact',
     'name_required' => 'Name required',
     'fiscal_number_required' => 'CIF required',
-    'edit' => 'Edit contact'
+    'edit' => 'Edit contact',
+    'delete' => 'Delete contact'
 
 );

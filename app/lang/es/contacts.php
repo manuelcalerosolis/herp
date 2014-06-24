@@ -9,6 +9,7 @@ return array(
     'create' => 'Crear contacto',
     'name_required' => 'Nombre requerido',
     'fiscal_number_required' => 'CIF requerido',
-    'edit' => 'Editar contacto'
+    'edit' => 'Editar contacto',
+    'delete' => 'Eliminar contacto'
 
 );

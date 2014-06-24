@@ -59,16 +59,16 @@
                     	@yield('subtitle')
                     </small>
 
-	                @yield('create')
+
 
                 </h1>
 
-                <ol class="breadcrumb">
-                    <liclass="active">
-                    	@yield('ico')
-                        @yield('title')
-                    </li>
-                </ol>
+                <dl>
+                    <dt>
+                        @yield('create')
+                        @yield('delete')
+                    </dt>
+                </dl>
             </div>
 
             @yield('content')

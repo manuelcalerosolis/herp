@@ -5,7 +5,11 @@
 @stop
 
 @section('create')
-	<a class="btn btn-success pull-right" href="{{ URL::route('contact.create') }}"><i class="glyphicon glyphicon-plus"></i> {{ Lang::get('contacts.create') }} </a>
+	<a class="btn btn-success" href="{{ URL::route('contact.create') }}"><i class="glyphicon glyphicon-plus"></i> {{ Lang::get('contacts.create') }} </a>
+@stop
+
+@section('delete')
+<a class="btn btn-danger" id="btnDelete"  href="{{ URL::route('contact.destroy') }}"><i class="glyphicon glyphicon-remove"></i> {{ Lang::get('contacts.delete') }} </a>
 @stop
 
 @section('title')

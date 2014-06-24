@@ -57,13 +57,49 @@
     {{ json_encode($k) }}: {{ $o }},
     @endforeach
 
+
+    /*
     "fnDrawCallback": function(oSettings) {
         if (window.onDatatableReady) {
             window.onDatatableReady();
         }
     }
+
+    */
+
+
+    window.onDatatableReady = function() {
+        $(':checkbox').click(function () {
+            setDeleteEnabled();
+        });
+
+        $('tbody tr').click(function (event) {
+            if (event.target.type !== 'checkbox' && event.target.type !== 'button' && event.target.tagName.toLowerCase() !== 'a') {
+                $checkbox = $(this).closest('tr').find(':checkbox');
+                var checked = $checkbox.prop('checked');
+                $checkbox.prop('checked', !checked);
+                setDeleteEnabled();
+            }
+        });
+    };
+
+    function setDeleteEnabled() {
+
+        var checked = $('tbody :checkbox:checked').length > 0;
+
+        $('#btnDelete > button').prop('disabled', !checked);
+    }
+
+
     });
     });
+
+
+/*
+
+*/
+
+
 </script>
 
 <!--
@@ -77,6 +113,8 @@
 $('.selectAll').click(function() {
     $(this).closest('table').find(':checkbox').prop('checked', this.checked);
 });
+
+
 
 @stop
 
