@@ -4,8 +4,13 @@ use Closure;
 use DateTime;
 use ArrayAccess;
 use Carbon\Carbon;
+use Illuminate\Support\Traits\MacroableTrait;
 
 class Repository implements ArrayAccess {
+
+	use MacroableTrait {
+		__call as macroCall;
+	}
 
 	/**
 	 * The cache store implementation.
@@ -20,13 +25,6 @@ class Repository implements ArrayAccess {
 	 * @var int
 	 */
 	protected $default = 60;
-
-	/**
-	 * An array of registered Cache macros.
-	 *
-	 * @var array
-	 */
-	protected $macros = array();
 
 	/**
 	 * Create a new cache repository instance.
@@ -50,6 +48,17 @@ class Repository implements ArrayAccess {
 	}
 
 	/**
+	 * Remove an item from the cache.
+	 *
+	 * @param  string $key
+	 * @return bool
+	 */
+	public function forget($key)
+	{
+		return $this->store->forget($key);
+	}
+
+	/**
 	 * Retrieve an item from the cache by key.
 	 *
 	 * @param  string  $key
@@ -61,6 +70,22 @@ class Repository implements ArrayAccess {
 		$value = $this->store->get($key);
 
 		return ! is_null($value) ? $value : value($default);
+	}
+
+	/**
+	 * Retrieve an item from the cache and delete it.
+	 *
+	 * @param  string  $key
+	 * @param  mixed   $default
+	 * @return mixed
+	 */
+	public function pull($key, $default = null)
+	{
+		$value = $this->get($key, $default);
+
+		$this->forget($key);
+
+		return $value;
 	}
 
 	/**
@@ -239,26 +264,10 @@ class Repository implements ArrayAccess {
 	{
 		if ($duration instanceof DateTime)
 		{
-			$duration = Carbon::instance($duration);
-
-			return max(0, Carbon::now()->diffInMinutes($duration, false));
+			return max(0, Carbon::instance($duration)->diffInMinutes());
 		}
-		else
-		{
-			return is_string($duration) ? intval($duration) : $duration;
-		}
-	}
 
-	/**
-	 * Register a macro with the Cache class.
-	 *
-	 * @param  string    $name
-	 * @param  callable  $callback
-	 * @return void
-	 */
-	public function macro($name, $callback)
-	{
-		$this->macros[$name] = $callback;
+		return is_string($duration) ? intval($duration) : $duration;
 	}
 
 	/**
@@ -270,9 +279,9 @@ class Repository implements ArrayAccess {
 	 */
 	public function __call($method, $parameters)
 	{
-		if (isset($this->macros[$method]))
+		if (static::hasMacro($method))
 		{
-			return call_user_func_array($this->macros[$method], $parameters);
+			return $this->macroCall($method, $parameters);
 		}
 		else
 		{

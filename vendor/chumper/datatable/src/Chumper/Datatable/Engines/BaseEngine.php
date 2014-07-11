@@ -47,6 +47,13 @@ abstract class BaseEngine {
     protected $fieldSearches = array();
 
     /**
+     * @var array
+     * support for DB::raw fields on where
+     * sburkett - added for column-based exact matching                                                                                                            
+     */                                                                                                                                                            
+    protected $columnSearchExact = array(); 
+
+    /**
      * @var
      */
     protected  $sEcho;
@@ -205,7 +212,9 @@ abstract class BaseEngine {
             }
             else
             {
-                $this->columns->put($property, new FunctionColumn($property, function($model) use($property){return is_array($model)?$model[$property]:$model->$property;}));
+                $this->columns->put($property, new FunctionColumn($property, function($model) use($property){
+                    try{return is_array($model)?$model[$property]:$model->$property;}catch(Exception $e){return null;}    
+                }));
             }
             $this->showColumns[] = $property;
         }
@@ -289,6 +298,18 @@ abstract class BaseEngine {
     {
         $this->exactWordSearch = $value;
         return $this;
+    }
+    
+    /**
+     * @param $columnNames Sets up a lookup table for which columns should use exact matching -sburkett
+     * @return $this
+     */
+    public function setExactMatchColumns($columnNames)
+    {
+      foreach($columnNames as $columnIndex)
+        $this->columnSearchExact[ $columnIndex ] = true;
+
+      return $this;
     }
 
     public function getRowClass()

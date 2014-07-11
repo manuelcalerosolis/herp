@@ -47,7 +47,7 @@ class CrawlerTest extends \PHPUnit_Framework_TestCase
 
         $crawler = new Crawler();
         $crawler->add($this->createNodeList()->item(0));
-        $this->assertEquals('foo', $crawler->filterXPath('//div')->attr('class'), '->add() adds nodes from an \DOMNode');
+        $this->assertEquals('foo', $crawler->filterXPath('//div')->attr('class'), '->add() adds nodes from a \DOMElement');
 
         $crawler = new Crawler();
         $crawler->add('<html><body>Foo</body></html>');
@@ -284,7 +284,7 @@ EOF
         $crawler = new Crawler();
         $crawler->addNode($this->createNodeList()->item(0));
 
-        $this->assertEquals('foo', $crawler->filterXPath('//div')->attr('class'), '->addNode() adds nodes from an \DOMNode');
+        $this->assertEquals('foo', $crawler->filterXPath('//div')->attr('class'), '->addNode() adds nodes from a \DOMElement');
     }
 
     public function testClear()
@@ -567,6 +567,48 @@ EOF
 
         $this->assertEquals(1, $crawler->selectButton('FooBarValue')->count(), '->selectButton() selects buttons with form attribute too');
         $this->assertEquals(1, $crawler->selectButton('FooBarName')->count(), '->selectButton() selects buttons with form attribute too');
+    }
+
+    public function testSelectButtonWithSingleQuotesInNameAttribute()
+    {
+        $html = <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="action">
+        <a href="/index.php?r=site/login">Login</a>
+    </div>
+    <form id="login-form" action="/index.php?r=site/login" method="post">
+        <button type="submit" name="Click 'Here'">Submit</button>
+    </form>
+</body>
+</html>
+HTML;
+
+        $crawler = new Crawler($html);
+
+        $this->assertCount(1, $crawler->selectButton('Click \'Here\''));
+    }
+
+    public function testSelectButtonWithDoubleQuotesInNameAttribute()
+    {
+        $html = <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="action">
+        <a href="/index.php?r=site/login">Login</a>
+    </div>
+    <form id="login-form" action="/index.php?r=site/login" method="post">
+        <button type="submit" name='Click "Here"'>Submit</button>
+    </form>
+</body>
+</html>
+HTML;
+
+        $crawler = new Crawler($html);
+
+        $this->assertCount(1, $crawler->selectButton('Click "Here"'));
     }
 
     public function testLink()

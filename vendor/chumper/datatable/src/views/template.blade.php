@@ -4,7 +4,6 @@
         <col class="con{{ $i }}" />
         @endfor
     </colgroup>
-
     <thead>
     <tr>
         @foreach($columns as $i => $c)

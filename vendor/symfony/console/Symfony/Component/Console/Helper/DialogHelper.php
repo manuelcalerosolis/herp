@@ -18,6 +18,9 @@ use Symfony\Component\Console\Formatter\OutputFormatterStyle;
  * The Dialog class provides helpers to interact with the user.
  *
  * @author Fabien Potencier <fabien@symfony.com>
+ *
+ * @deprecated Deprecated since version 2.5, to be removed in 3.0.
+ *             Use the question helper instead.
  */
 class DialogHelper extends InputAwareHelper
 {
@@ -154,7 +157,7 @@ class DialogHelper extends InputAwareHelper
                     $c .= fread($inputStream, 2);
 
                     // A = Up Arrow. B = Down Arrow
-                    if ('A' === $c[2] || 'B' === $c[2]) {
+                    if (isset($c[2]) && ('A' === $c[2] || 'B' === $c[2])) {
                         if ('A' === $c[2] && -1 === $ofs) {
                             $ofs = 0;
                         }
@@ -331,7 +334,7 @@ class DialogHelper extends InputAwareHelper
      *
      * @return mixed
      *
-     * @throws \Exception When any of the validators return an error
+     * @throws \Exception When any of the validation return an error
      */
     public function askAndValidate(OutputInterface $output, $question, $validator, $attempts = false, $default = null, array $autocomplete = null)
     {
@@ -359,7 +362,7 @@ class DialogHelper extends InputAwareHelper
      *
      * @return string         The response
      *
-     * @throws \Exception        When any of the validators return an error
+     * @throws \Exception        When any of the validation return an error
      * @throws \RuntimeException In case the fallback is deactivated and the response can not be hidden
      *
      */

@@ -2,6 +2,13 @@
 
 class ContactController extends \BaseController{
 
+    protected $contactRepository;
+
+    public function __construct(ContactRepository $contactRepository)
+    {
+        $this->contactRepository = $contactRepository;
+    }
+
     public function index()
     {
 
@@ -9,38 +16,32 @@ class ContactController extends \BaseController{
 
     }
 
-    public function create(){
-
+    public function create()
+    {
         return View::Make('contact.create');
     }
 
-    public function store(){
-
-        if (Contact::ValidatorFails())
+    public function store()
+    {
+        try
         {
-            return Redirect::to( URL::previous() )
-                ->withErrors(Contact::getValidator()) 
-                ->withInput();
-        }
-        else
-        {
-
-            if (Contact::StoreFails() )
-            {
-                return Redirect::to( URL::previous() )
-                    ->withErrors($contact->errors()->all(':message'))
-                    ->withInput();            
-            }
-
-            return Redirect::route('contact.index');
+            $this->contactRepository->store(Input::all());
         }
 
+        catch ( validation\ValidationException $e)
+        {
+            return Redirect::back()
+                ->withInput()
+                ->withErrors($e->getMessages());
+        }
+
+        return Redirect::route('contact.index');
     }
 
     public function edit($id)
     {
 
-        $contact    = Contact::findOrFail($id);
+        $contact    = $this->contactRepository->findOrFail($id);
 
         return View::Make('contact.edit')->with('contact', $contact);
 
@@ -49,36 +50,37 @@ class ContactController extends \BaseController{
     public function update($id)
     {
 
-        if (Contact::ValidatorFails())
+        $contact                    = $this->contactRepository->findOrFail($id);
+
+        $contact->name              = Input::get('name');
+        $contact->fiscal_number     = Input::get('fiscal_number');
+
+        if ( !$contact->save() )
         {
             return Redirect::to( URL::previous() )
-                ->withErrors(Contact::getValidator()) 
+                ->withErrors($contact->errors()->all(':message'))
                 ->withInput();
         }
-        else
-        {
 
-            $contact                    = Contact::find($id);
-
-            $contact->name              = Input::get('name');
-            $contact->fiscal_number     = Input::get('fiscal_number');
-
-            if ( !$contact->save() )
-            {
-                return Redirect::to( URL::previous() )
-                    ->withErrors($contact->errors()->all(':message'))
-                    ->withInput();            
-            }
-
-
-            return Redirect::route('contact.index');
-        }
-
+        return Redirect::route('contact.index');
     }
 
-    public function destroy($id)
+    public function destroy()
     {
-        return "borrar contacto con id " . $id;
+
+        $input = Input::get('ids');
+
+        dd( $input );
+
+        foreach ( $input as $id)
+        {
+            $contact = Contact::find($id);
+            $contact->delete();
+        }
+
+        return Redirect::route('contact.index' );
+
+       // dd( $input );
 
     }
 
@@ -89,7 +91,7 @@ class ContactController extends \BaseController{
                 ->addColumn('checkbox', function($model)
                 {
                     // return  '<input type="checkbox" class="selectAll"/>';
-                    return Form::checkbox('id', $model->id);
+                    return Form::checkbox('ids[]', $model->id);
                 })
                 ->addColumn('name',function($model)
                 {
@@ -104,4 +106,12 @@ class ContactController extends \BaseController{
                 ->make();
 
     }
+
+    public function test()
+    {
+
+        return View::Make('contact.test');
+
+    }
+
 }

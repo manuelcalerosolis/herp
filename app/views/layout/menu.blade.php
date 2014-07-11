@@ -49,6 +49,8 @@
 	        </div><!-- /.navbar-collapse -->
       	</nav>
 
+        @yield('openForm')
+
         <div id="page-wrapper">
 
             <div class="col-lg-12">
@@ -59,8 +61,6 @@
                     	@yield('subtitle')
                     </small>
 
-
-
                 </h1>
 
                 <dl>
@@ -69,11 +69,14 @@
                         @yield('delete')
                     </dt>
                 </dl>
+
             </div>
 
             @yield('content')
 
         </div>
+
+        @yield('closeForm')
 
 	</div>
 

@@ -4,7 +4,7 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.1.*",
+		"laravel/framework": "dev-master",
         "webpatser/laravel-countries": "dev-master",
         "chumper/datatable": "dev-master"
 	},
@@ -18,6 +18,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
+            "app/repositories",
+            "app/validation",
 			"app/tests/TestCase.php"
 		]
 	},
@@ -39,9 +41,6 @@
 	},
 	"require-dev": {
 	  "fzaninotto/faker": "1.3.*@dev"
-	},
-	"require": {  
-    	"euantorano/validation': '1.0.*"
 	},
 	"minimum-stability": "stable"
 }

@@ -1,0 +1,60 @@
+
+
+<link media="all" type="text/css" rel="stylesheet" href="http://localhost/herp/public/css/bootstrap.css">
+<link media="all" type="text/css" rel="stylesheet" href="http://localhost/herp/public/css/main.css">
+
+<!-- custom style of our template --------------------------------------------->
+
+<link media="all" type="text/css" rel="stylesheet" href="http://localhost/herp/public/css/css.css">
+<link media="all" type="text/css" rel="stylesheet" href="http://localhost/herp/public/css/sb-admin.css">
+<link media="all" type="text/css" rel="stylesheet" href="http://localhost/herp/public/fonts/css/font-awesome.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="http://localhost/herp/public/css/morris-0.4.3.min.css">
+
+<!----------------------------------------------------------------------------->
+
+<link media="all" type="text/css" rel="stylesheet" href="http://localhost/herp/public/css/jquery.dataTables.css">
+
+<script type="text/javascript" src="http://localhost/herp/public/js/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="http://localhost/herp/public/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://localhost/herp/public/js/jquery.dataTables.js"></script>
+
+<html>
+
+    <button class=" btn-default btn" id="btnArchive" type="button" disabled="">Archive</button>
+
+    <a class="btn btn-danger" id="btnDelete" disabled=""> 
+        <i class="glyphicon glyphicon-remove"></i>
+        Delete contact
+    </a>
+
+    <a class="btn btn-default" id="btnActive" > 
+        Active
+    </a>
+
+    <a class="btn btn-default" id="btnDeActive" > 
+        Deactive
+    </a>
+
+</html>
+
+<script type="text/javascript">
+    
+        $('#btnDelete').click(function() {
+            alert("delete");
+        });    
+
+        $('#btnActive').click(function() {
+            alert("Active");
+            $('#btnDelete').css( "border", "30px solid red" ) 
+            $('#btnArchive').prop("disabled", false);           
+            $('#btnDelete').attr("disabled", false);
+        });    
+
+        $('#btnDeActive').click(function() {
+            alert("DeActive");
+            $('#btnDelete').css( "border", "30px solid green" )            
+            $('#btnArchive').prop("disabled", true);           
+            $('#btnDelete').attr("disabled", true);
+        });    
+
+</script>

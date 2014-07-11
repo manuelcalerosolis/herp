@@ -1,5 +1,13 @@
 @extends('layout.menu')
 
+@section('openForm')
+    {{ Form::open(array('route' => 'contact.destroy', 'id' => 'idForm', 'role' => 'form' )) }}
+@stop
+
+@section('closeForm')
+    {{ Form::close() }}
+@stop
+
 @section('ico')
 	<i class="fa fa-user"></i>
 @stop
@@ -9,7 +17,11 @@
 @stop
 
 @section('delete')
-<a class="btn btn-danger" id="btnDelete"  href="{{ URL::route('contact.destroy') }}"><i class="glyphicon glyphicon-remove"></i> {{ Lang::get('contacts.delete') }} </a>
+    <a class="btn btn-danger" id="btnDelete" disabled="" href=""><i class="glyphicon glyphicon-remove"></i> {{ Lang::get('contacts.delete') }} </a>
+@stop
+
+@section('deleteSubmit')
+    {{ Form::submit(Lang::get('contacts.delete'), array('id'=>'btnDelete', 'class'=>'btn btn-danger')) }}
 @stop
 
 @section('title')
@@ -32,3 +44,8 @@
 
 @stop
 
+<!-- 
+// {{ Form::open(array('url' => URL::route('contact.destroy'), 'role'=>'form')) }}
+// {{ Form::submit( Lang::get('contacts.delete'), array('id'=>'btnDelete', 'class'=>'btn btn-danger')) }}
+// {{ Form::close() }}
+ -->

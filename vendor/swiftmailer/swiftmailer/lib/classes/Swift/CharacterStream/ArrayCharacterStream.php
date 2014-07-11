@@ -44,7 +44,7 @@ class Swift_CharacterStream_ArrayCharacterStream implements Swift_CharacterStrea
     /**
      * Create a new CharacterStream with the given $chars, if set.
      *
-     * @param Swift_CharacterReaderFactory $factory for loading validators
+     * @param Swift_CharacterReaderFactory $factory for loading validation
      * @param string                       $charset used in the stream
      */
     public function __construct(Swift_CharacterReaderFactory $factory, $charset)

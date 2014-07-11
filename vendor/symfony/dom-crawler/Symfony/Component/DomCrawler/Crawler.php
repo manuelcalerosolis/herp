@@ -14,7 +14,7 @@ namespace Symfony\Component\DomCrawler;
 use Symfony\Component\CssSelector\CssSelector;
 
 /**
- * Crawler eases navigation of a list of \DOMNode objects.
+ * Crawler eases navigation of a list of \DOMElement objects.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  *
@@ -637,9 +637,7 @@ class Crawler extends \SplObjectStorage
     public function filter($selector)
     {
         if (!class_exists('Symfony\\Component\\CssSelector\\CssSelector')) {
-            // @codeCoverageIgnoreStart
             throw new \RuntimeException('Unable to filter with a CSS selector as the Symfony CssSelector is not installed (you can use filterXPath instead).');
-            // @codeCoverageIgnoreEnd
         }
 
         // The CssSelector already prefixes the selector with descendant-or-self::
@@ -676,8 +674,8 @@ class Crawler extends \SplObjectStorage
     {
         $translate = 'translate(@type, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz")';
         $xpath = sprintf('descendant-or-self::input[((contains(%s, "submit") or contains(%s, "button")) and contains(concat(\' \', normalize-space(string(@value)), \' \'), %s)) ', $translate, $translate, static::xpathLiteral(' '.$value.' ')).
-                         sprintf('or (contains(%s, "image") and contains(concat(\' \', normalize-space(string(@alt)), \' \'), %s)) or @id="%s" or @name="%s"] ', $translate, static::xpathLiteral(' '.$value.' '), $value, $value).
-                         sprintf('| descendant-or-self::button[contains(concat(\' \', normalize-space(string(.)), \' \'), %s) or @id="%s" or @name="%s"]', static::xpathLiteral(' '.$value.' '), $value, $value);
+                         sprintf('or (contains(%s, "image") and contains(concat(\' \', normalize-space(string(@alt)), \' \'), %s)) or @id=%s or @name=%s] ', $translate, static::xpathLiteral(' '.$value.' '), static::xpathLiteral($value), static::xpathLiteral($value)).
+                         sprintf('| descendant-or-self::button[contains(concat(\' \', normalize-space(string(.)), \' \'), %s) or @id=%s or @name=%s]', static::xpathLiteral(' '.$value.' '), static::xpathLiteral($value), static::xpathLiteral($value));
 
         return $this->filterRelativeXPath($xpath);
     }
@@ -911,9 +909,7 @@ class Crawler extends \SplObjectStorage
             if ($i == $position) {
                 return $node;
             }
-        // @codeCoverageIgnoreStart
         }
-        // @codeCoverageIgnoreEnd
     }
 
     /**

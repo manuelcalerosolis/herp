@@ -21,7 +21,7 @@ return array(
         |
         */
 
-        'class' => 'table table-bordered col-lg-12',
+        'class' => 'table table-bordered',
 
         /*
         |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return array(
         |
         */
 
-        'id' => 'idTable',
+        'id' => '',
 
         /*
         |--------------------------------------------------------------------------
@@ -50,7 +50,7 @@ return array(
 
         'options' => array(
 
-            "sPaginationType" => "two_button",
+            "sPaginationType" => "full_numbers",
 
             "bProcessing" => false
 
@@ -93,7 +93,7 @@ return array(
         |
         */
 
-        'table_view' => 'layout.datatable', // ''datatable::template',
+        'table_view' => 'datatable::template',
 
 
         /*

@@ -14,9 +14,9 @@
 
 @section('content')
 
-	<div class="col-xs-12">	
+	<div class="col-xs-12">
 
-		{{ Form::open(array('url' => 'contact/'. $contact->id, 'role'=>'form')) }}
+		{{ Form::open(array('route' => array('contact.update', $contact->id), 'role'=>'form')) }}
 
 			<div class="col-xs-5">
 

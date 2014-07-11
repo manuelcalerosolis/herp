@@ -106,7 +106,7 @@ class Swift_Mime_Headers_UnstructuredHeaderTest extends \SwiftMailerTestCase
          /* -- RFC 2047, 2.
         An 'encoded-word' is defined by the following ABNF grammar.  The
         notation of RFC 822 is used, with the exception that white space
-        characters MUST NOT appear between Components of an 'encoded-word'.
+        characters MUST NOT appear between components of an 'encoded-word'.
 
         encoded-word = "=?" charset "?" encoding "?" encoded-text "?="
         */
