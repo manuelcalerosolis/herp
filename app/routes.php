@@ -75,7 +75,7 @@ Route::group(array('before' => 'auth'), function()
     Route::get(	'contact/create', 			array( 'as' => 'contact.create', 	'uses' => 'ContactController@create' ) );
     Route::get(	'contact/{contact}/edit', 	array( 'as' => 'contact.edit', 	    'uses' => 'ContactController@edit' ) );
     Route::post('contact/{contact}/update',	array( 'as' => 'contact.update', 	'uses' => 'ContactController@update' ) );
-    Route::post('contact/destroy',          array( 'as' => 'contact.destroy', 	'uses' => 'ContactController@destroy' ) );
+    Route::post('contact/delete',           array( 'as' => 'contact.delete', 	'uses' => 'ContactController@delete' ) );
     Route::get(	'api/contact',	            array( 'as' => 'api.contact',	    'uses' => 'ContactController@getDatatable' ) );
     Route::post('contact', 					array( 'as' => 'contact.store',  	'uses' => 'ContactController@store' ) );
 

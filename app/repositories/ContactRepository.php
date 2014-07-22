@@ -6,16 +6,19 @@
  * Time: 21:16
  */
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
-class ContactRepository implements RepositoryInterface{
+
+class ContactRepository implements RepositoryInterface
+{
 
     protected $contact;
     protected $validator;
 
-    public function __construct( \Contact $contact, \Validation\ContactValidator $validator )
+    public function __construct(\Contact $contact, \Validation\ContactValidator $validator)
     {
-        $this->contact      = $contact;
-        $this->validator    = $validator;
+        $this->contact = $contact;
+        $this->validator = $validator;
     }
 
     public function all()
@@ -38,15 +41,55 @@ class ContactRepository implements RepositoryInterface{
         return $this->contact->findOrFail($id);
     }
 
+    public function delete($ids)
+    {
+
+        $deleted = true;
+
+        foreach ($ids as $id) {
+            $contact = $this->find($id);
+
+            if (isset($contact)) {
+                $contact->delete();
+            } else {
+                $deleted = false;
+            }
+
+        }
+
+        return ($deleted);
+
+    }
+
     public function store(array $input)
     {
         $this->validator->validate($input, 'create');
 
-        $contact                    = new Contact;
-        $contact->name              = $input[ 'name' ];
-        $contact->fiscal_number     = $input[ 'fiscal_number'];
+        $contact                = new Contact;
+        $contact->name          = $input['name'];
+        $contact->fiscal_number = $input['fiscal_number'];
 
         return $contact->save();
+    }
+
+    public function update($id)
+    {
+        try
+        {
+            $contact                = $this->findOrFail($id);
+
+            $contact->name          = Input::get('name');
+            $contact->fiscal_number = Input::get('fiscal_number');
+
+            return $contact->save();
+        }
+
+        catch (ModelNotFoundException $e)
+        {
+            dd($e->getMessage());
+            return false;
+        }
+
     }
 
 }

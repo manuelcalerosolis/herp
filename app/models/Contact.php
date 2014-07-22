@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class Contact extends Eloquent  {
+class Contact extends Eloquent
+{
 
     use SoftDeletingTrait;
 
@@ -15,17 +16,6 @@ class Contact extends Eloquent  {
 	public function User()
     {
         return $this->belongsTo('User', 'user_id');
-    }
-
-    public static function storeFails(array $input)
-    {
-
-        $contact                    = new Contact;
-
-        $contact->name              = $input[ 'name' ];
-        $contact->fiscal_number     = $input[ 'fiscal_number'];
-
-        return !$contact->save();
     }
 
 }

@@ -12,18 +12,6 @@
 
 <script type="text/javascript">
 
-/*
-    function onDeleteClick()
-    {
-        if (!confirm('¿Desea borrar los registros seleccionados?'))
-        {
-            return;
-        }
-
-        $('#idForm').submit();
-    }
-*/
-
     $(function() {
         $('#btnDelete').click(function() {
             if (!confirm('¿Desea borrar los registros seleccionados?'))
@@ -34,6 +22,7 @@
             $('#idForm').submit();
         });
     });
+
 </script>
 
 @stop

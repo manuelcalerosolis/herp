@@ -1,7 +1,7 @@
 @extends('layout.menu')
 
 @section('openForm')
-    {{ Form::open(array('route' => 'contact.destroy', 'id' => 'idForm', 'role' => 'form' )) }}
+    {{ Form::open(array('route' => 'contact.delete', 'id' => 'idForm', 'role' => 'form' )) }}
 @stop
 
 @section('closeForm')
@@ -43,9 +43,3 @@
         ->render('layout.datatable') }}
 
 @stop
-
-<!-- 
-// {{ Form::open(array('url' => URL::route('contact.destroy'), 'role'=>'form')) }}
-// {{ Form::submit( Lang::get('contacts.delete'), array('id'=>'btnDelete', 'class'=>'btn btn-danger')) }}
-// {{ Form::close() }}
- -->
