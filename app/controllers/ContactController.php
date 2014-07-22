@@ -43,19 +43,22 @@ class ContactController extends \BaseController{
 
         $contact    = $this->contactRepository->findOrFail($id);
 
-        return View::Make('contact.edit')->with('contact', $contact);
+        if( isset($contact))
+        {
+            return View::Make('contact.edit')->with('contact', $contact);
+        }
 
     }
 
     public function update($id)
     {
-
+/*
         $contact                    = $this->contactRepository->findOrFail($id);
 
         $contact->name              = Input::get('name');
         $contact->fiscal_number     = Input::get('fiscal_number');
-
-        if ( !$contact->save() )
+*/
+        if ( !$this->contactRepository->update($id) )
         {
             return Redirect::to( URL::previous() )
                 ->withErrors($contact->errors()->all(':message'))
@@ -65,21 +68,20 @@ class ContactController extends \BaseController{
         return Redirect::route('contact.index');
     }
 
-    public function destroy()
+    public function delete()
     {
 
-        $input = Input::get('ids');
+        $ids = Input::get('ids');
 
-        dd( $input );
-
-        foreach ( $input as $id)
+        if ($this->contactRepository->delete($ids))
         {
-            $contact = Contact::find($id);
-            $contact->delete();
+            return Redirect::route('contact.index');
         }
-
-        return Redirect::route('contact.index' );
-
+        else
+        {
+            return Redirect::route('contact.index')
+                ->withErrors('Error al borrarlo');
+        }
        // dd( $input );
 
     }

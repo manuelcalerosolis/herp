@@ -107,10 +107,6 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-        // custom
-
-        'hErp\Components\FieldServiceProvider',
-
         // webpatser
 
         'Webpatser\Countries\CountriesServiceProvider',
