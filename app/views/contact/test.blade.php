@@ -8,14 +8,12 @@
 
 {{ Form::close() }}
 
-<a class="btn btn-danger" id="btnDelete" href=""><i class="glyphicon glyphicon-remove"></i> {{ Lang::get('contacts.delete') }} </a>
+<a class="btn btn-danger" id="btnDelete" href="" ><i class="glyphicon glyphicon-remove"></i> {{ Lang::get('contacts.delete') }} </a>
 
-<!--
-<button id="btnDelete" class="btn btn-primary">Eliminar!</button>
--->
+<script type="text/javascript">
 
-<script>
-    $('#btnDelete').click(function()
+/*
+    function onDeleteClick()
     {
         if (!confirm('¿Desea borrar los registros seleccionados?'))
         {
@@ -23,6 +21,18 @@
         }
 
         $('#idForm').submit();
+    }
+*/
+
+    $(function() {
+        $('#btnDelete').click(function() {
+            if (!confirm('¿Desea borrar los registros seleccionados?'))
+            {
+                return;
+            }
+
+            $('#idForm').submit();
+        });
     });
 </script>
 

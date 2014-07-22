@@ -17,7 +17,7 @@
 @stop
 
 @section('delete')
-    <a class="btn btn-danger" id="btnDelete" disabled="" href=""><i class="glyphicon glyphicon-remove"></i> {{ Lang::get('contacts.delete') }} </a>
+    <a class="btn btn-danger" id="btnDelete" disabled="" href="javascript:onClickDelete()"><i class="glyphicon glyphicon-remove"></i> {{ Lang::get('contacts.delete') }} </a>
 @stop
 
 @section('deleteSubmit')

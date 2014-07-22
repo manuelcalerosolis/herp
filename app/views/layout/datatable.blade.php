@@ -67,17 +67,15 @@
         setDeleteEnabled();
     });
 
-    $('#btnDelete').click(function()
+    function onClickDelete()
     {
         if (!confirm('¿Desea borrar los registros seleccionados?'))
         {
             return;
         }
 
-        alert('envio de formulario');
-
         $('#idForm').submit();
-    });
+    };
 
     function setDeleteEnabled()
     {
