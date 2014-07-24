@@ -42,19 +42,20 @@ class SetupHErpSeeder extends Seeder {
             ));
         }
 
-
         DB::table('contacts')->delete();
 
         $faker = new Faker\Generator();
         $faker->addProvider(new Faker\Provider\pl_PL\Person($faker));
+        $faker->addProvider(new Faker\Provider\Internet($faker));
          
         for ($i = 0; $i < 50; $i++)
         {
-          $contacts = Contact::create(array(
-            'name' => $faker->name,
-            'fiscal_number' => $faker->personalIdentityNumber,
-            'user_id' => 1
-          ));
+            $contacts = Contact::create(array(
+                'name' => $faker->name,
+                'fiscal_number' => $faker->personalIdentityNumber,
+                'email' => 'manuelcalerosolis@gmail.com',
+                'user_id' => 1
+            ));
         }
 
 	}

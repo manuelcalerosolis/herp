@@ -72,6 +72,7 @@ class SetupHErpTable extends Migration {
             $table->increments('id');
             $table->string('name');
             $table->string('fiscal_number');
+            $table->string('email');
 
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('address_id')->nullable();

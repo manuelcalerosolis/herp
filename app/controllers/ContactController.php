@@ -41,28 +41,41 @@ class ContactController extends \BaseController{
     public function edit($id)
     {
 
-        $contact    = $this->contactRepository->findOrFail($id);
-
-        if( isset($contact))
+        try
         {
-            return View::Make('contact.edit')->with('contact', $contact);
+            $contact    = $this->contactRepository->findOrFail($id);
+
+            if( isset($contact))
+            {
+                return View::Make('contact.edit')->with('contact', $contact);
+            }
+
         }
+
+        catch ( validation\ValidationException $e)
+        {
+            return Redirect::back()
+                ->withInput()
+                ->withErrors($e->getMessages());
+        }
+
+        return Redirect::route('contact.index');
 
     }
 
     public function update($id)
     {
-/*
-        $contact                    = $this->contactRepository->findOrFail($id);
 
-        $contact->name              = Input::get('name');
-        $contact->fiscal_number     = Input::get('fiscal_number');
-*/
-        if ( !$this->contactRepository->update($id) )
+        try
         {
-            return Redirect::to( URL::previous() )
-                ->withErrors($contact->errors()->all(':message'))
-                ->withInput();
+            $this->contactRepository->update($id, Input::all());
+        }
+
+        catch ( validation\ValidationException $e)
+        {
+            return Redirect::back()
+                ->withInput()
+                ->withErrors($e->getMessages());
         }
 
         return Redirect::route('contact.index');
@@ -82,37 +95,28 @@ class ContactController extends \BaseController{
             return Redirect::route('contact.index')
                 ->withErrors('Error al borrarlo');
         }
-       // dd( $input );
 
     }
 
     public function getDatatable()
     {
 
-            return Datatable::collection(Contact::all( array('id', 'name', 'fiscal_number')))
-                ->addColumn('checkbox', function($model)
-                {
-                    // return  '<input type="checkbox" class="selectAll"/>';
-                    return Form::checkbox('ids[]', $model->id);
-                })
-                ->addColumn('name',function($model)
-                {
-                    return link_to_route('contact.edit', $model->name, $model->id );
-                })
-                ->addColumn('fiscal_number',function($model)
-                {
-                    return $model->fiscal_number;
-                })
-                ->searchColumns('name', 'fiscal_number')
-                ->orderColumns('name', 'fiscal_number')
-                ->make();
-
-    }
-
-    public function test()
-    {
-
-        return View::Make('contact.test');
+        return Datatable::collection(Contact::all( array('id', 'name', 'fiscal_number')))
+            ->addColumn('checkbox', function($model)
+            {
+                return Form::checkbox('ids[]', $model->id);
+            })
+            ->addColumn('name',function($model)
+            {
+                return link_to_route('contact.edit', $model->name, $model->id );
+            })
+            ->addColumn('fiscal_number',function($model)
+            {
+                return $model->fiscal_number;
+            })
+            ->searchColumns('name', 'fiscal_number')
+            ->orderColumns('name', 'fiscal_number')
+            ->make();
 
     }
 

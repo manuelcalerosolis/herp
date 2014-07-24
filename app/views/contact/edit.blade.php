@@ -37,7 +37,11 @@
 				
 				{{ Form::text('fiscal_number', $contact->fiscal_number, array('class'=>'form-control')) }}
 
-				{{ Form::submit(Lang::get('contacts.edit'), array('id'=>'btn-margin', 'class'=>'btn btn-lg btn-primary pull-right')) }}
+                <h4>{{ Lang::get('contacts.email') }}</h4>
+
+                {{ Form::text('email', $contact->email, array('class'=>'form-control')) }}
+
+                {{ Form::submit(Lang::get('contacts.edit'), array('id'=>'btn-margin', 'class'=>'btn btn-lg btn-primary pull-right')) }}
 
 			</div>
 
