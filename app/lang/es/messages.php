@@ -17,5 +17,7 @@ return array(
     'password_min' => 'La contraseña debe contener minimo 8 caracteres',
     'password_confirmed' => 'Las contraseñas no coinciden',
     'error_auth' => 'Error de autenticación',
-    'logout' => 'Cerrar sesión'
-    );
+    'logout' => 'Cerrar sesión',
+    'action' => 'Acción',
+    'edit' => 'Editar'
+);

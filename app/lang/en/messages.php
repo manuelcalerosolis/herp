@@ -17,6 +17,7 @@ return array(
     'password_min' => 'Password must be minimum 8 characters',
     'password_confirmed' => 'Password not match',
     'error_auth' => 'Authentication error',
-    'logout' => 'Log out'
-
+    'logout' => 'Log out',
+    'action' => 'Action',
+    'edit' => 'Edit'
     );

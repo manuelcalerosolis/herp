@@ -37,7 +37,9 @@
     {{ Datatable::table()
         ->addColumn('Checkbox',
                     'Name',
-                    'Nif')                      // these are the column headings to be shown
+                    'Nif',
+                    'Mail',
+                    'action')                      // these are the column headings to be shown
         ->setId('datatableId')
         ->setUrl(route('api.contact'))          // this is the route where data will be retrieved
         ->render('layout.datatable') }}
