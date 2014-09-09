@@ -18,6 +18,11 @@ class Contact extends Eloquent
         return $this->belongsTo('User', 'user_id');
     }
 
+    public function Adresses()
+    {
+        return$this->hasMany('Adress', 'id');
+    }
+
 }
 
 ?>

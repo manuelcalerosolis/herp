@@ -46,7 +46,7 @@ class SetupHErpTable extends Migration {
 
         // Address
 
-        Schema::create('Address', function(Blueprint $table)
+        Schema::create('Addreses', function(Blueprint $table)
         {
             $table->increments('id');
             $table->string('name');
@@ -80,7 +80,7 @@ class SetupHErpTable extends Migration {
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('address_id')->references('id')->on('Address')->onDelete('cascade');
+            $table->foreign('address_id')->references('id')->on('Addreses')->onDelete('cascade');
         });
 
 	}
