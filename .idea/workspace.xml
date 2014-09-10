@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d00590e0-b6d0-49ba-a755-a457b9f38ac6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Adress.php" afterPath="$PROJECT_DIR$/app/models/Adress.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Contact.php" afterPath="$PROJECT_DIR$/app/models/Contact.php" />
     </list>
     <ignored path="herp.iws" />
@@ -46,8 +46,8 @@
       <file leaf-file-name="Contact.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57687724" vertical-offset="0" max-vertical-offset="902">
-              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.50178784" vertical-offset="63" max-vertical-offset="902">
+              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -66,8 +66,8 @@
       <file leaf-file-name="2014_03_20_175914_setup_herp_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.548388" vertical-offset="990" max-vertical-offset="2178">
-              <caret line="82" column="71" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
+            <state vertical-scroll-proportion="-19.870968" vertical-offset="1056" max-vertical-offset="2178">
+              <caret line="77" column="47" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -77,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/app/models/Adress.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-12.064516" vertical-offset="0" max-vertical-offset="638">
-              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -213,8 +213,8 @@
         <option value="$PROJECT_DIR$/app/lang/en/messages.php" />
         <option value="$PROJECT_DIR$/app/lang/es/messages.php" />
         <option value="$PROJECT_DIR$/app/controllers/ContactController.php" />
-        <option value="$PROJECT_DIR$/app/models/Adress.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php" />
+        <option value="$PROJECT_DIR$/app/models/Adress.php" />
         <option value="$PROJECT_DIR$/app/models/Contact.php" />
       </list>
     </option>
@@ -991,6 +991,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Adress.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.064516" vertical-offset="0" max-vertical-offset="638">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="56.677418" vertical-offset="1757" max-vertical-offset="2596">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.870968" vertical-offset="1056" max-vertical-offset="2178">
+          <caret line="77" column="47" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contact/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.354838" vertical-offset="264" max-vertical-offset="1144">
@@ -1004,34 +1028,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.548388" vertical-offset="990" max-vertical-offset="2178">
-          <caret line="82" column="71" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="56.677418" vertical-offset="1757" max-vertical-offset="2596">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Adress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.064516" vertical-offset="0" max-vertical-offset="638">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57687724" vertical-offset="0" max-vertical-offset="902">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.50178784" vertical-offset="63" max-vertical-offset="902">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
           <folding />
         </state>
       </provider>

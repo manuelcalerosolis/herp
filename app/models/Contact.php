@@ -20,7 +20,7 @@ class Contact extends Eloquent
 
     public function Adresses()
     {
-        return$this->hasMany('Adress', 'id');
+        return$this->hasMany('Adress', 'id', 'address_id');
     }
 
 }

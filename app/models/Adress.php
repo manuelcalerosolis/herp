@@ -15,7 +15,7 @@ class Adress extends Eloquent
 
     public function Contact()
     {
-        return $this->belongsTo('Contact', 'address_id');
+        return $this->belongsTo('Contact', 'id', 'address_id');
     }
 
 }
