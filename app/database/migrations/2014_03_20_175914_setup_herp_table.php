@@ -44,6 +44,24 @@ class SetupHErpTable extends Migration {
             $table->boolean('eea')->default(0);
         });
 
+        // Contacts
+
+        Schema::create('Contacts', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('fiscal_number');
+            $table->string('email');
+
+            $table->timestamps();
+            $table->softDeletes();
+
+            $table->unsignedInteger('user_id');
+
+            $table->foreign('user_id')->references('id')->on('Users');
+
+        });
+
         // Address
 
         Schema::create('Addreses', function(Blueprint $table)
@@ -66,22 +84,6 @@ class SetupHErpTable extends Migration {
 
             $table->foreign('contact_id')->references('id')->on('Contacts');
             $table->foreign('country_id')->references('id')->on('Countries');
-        });
-
-        // Contacts
-
-        Schema::create('Contacts', function(Blueprint $table)
-        {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('fiscal_number');
-            $table->string('email');
-
-            $table->unsignedInteger('user_id');
-
-            $table->timestamps();
-            $table->softDeletes();
-
         });
 
 	}

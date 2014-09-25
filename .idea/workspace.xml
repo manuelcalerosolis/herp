@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d00590e0-b6d0-49ba-a755-a457b9f38ac6" name="Default" comment="" />
+    <list default="true" id="d00590e0-b6d0-49ba-a755-a457b9f38ac6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php" />
+    </list>
     <ignored path="herp.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -63,8 +65,8 @@
       <file leaf-file-name="2014_03_20_175914_setup_herp_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28372094" vertical-offset="1142" max-vertical-offset="2200">
-              <caret line="64" column="62" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.17906977" vertical-offset="154" max-vertical-offset="2244">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -1052,8 +1054,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_20_175914_setup_herp_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28372094" vertical-offset="1142" max-vertical-offset="2200">
-          <caret line="64" column="62" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.17906977" vertical-offset="154" max-vertical-offset="2244">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="37" />
           <folding />
         </state>
       </provider>
