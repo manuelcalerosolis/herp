@@ -57,11 +57,14 @@ class SetupHErpTable extends Migration {
             $table->string('website');
             $table->string('phone');
             $table->string('email');
-            $table->unsignedInteger('country_id')->nullable();
 
             $table->timestamps();
             $table->softDeletes();
 
+            $table->unsignedInteger('contact_id')->nullable();
+            $table->unsignedInteger('country_id')->nullable();
+
+            $table->foreign('contact_id')->references('id')->on('Contact');
             $table->foreign('country_id')->references('id')->on('Countries');
         });
 
@@ -75,12 +78,10 @@ class SetupHErpTable extends Migration {
             $table->string('email');
 
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('address_id')->nullable();
 
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('address_id')->references('id')->on('Addreses')->onDelete('cascade');
         });
 
 	}
