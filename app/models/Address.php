@@ -2,14 +2,14 @@
 
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class Adress extends Eloquent
+class Address extends Eloquent
 {
 
     use SoftDeletingTrait;
 
     protected $dates    = array('deleted_at');
 
-    protected $table    = "adresses";
+    protected $table    = "addreses";
 
     protected $fillable = array('name', 'address', 'city', 'state', 'postal_code', 'website', 'phone', 'email' );
 

@@ -18,9 +18,9 @@ class Contact extends Eloquent
         return $this->belongsTo('User', 'user_id');
     }
 
-    public function Adresses()
+    public function Addreses()
     {
-        return$this->hasMany('Adress', 'id', 'address_id');
+        return $this->hasMany('Address', 'id', 'address_id');
     }
 
 }
