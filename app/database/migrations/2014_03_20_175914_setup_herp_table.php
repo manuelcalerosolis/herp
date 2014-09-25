@@ -64,7 +64,7 @@ class SetupHErpTable extends Migration {
             $table->unsignedInteger('contact_id')->nullable();
             $table->unsignedInteger('country_id')->nullable();
 
-            $table->foreign('contact_id')->references('id')->on('Contact');
+            $table->foreign('contact_id')->references('id')->on('Contacts');
             $table->foreign('country_id')->references('id')->on('Countries');
         });
 
