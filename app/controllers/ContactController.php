@@ -11,9 +11,7 @@ class ContactController extends \BaseController{
 
     public function index()
     {
-
         return View::Make('contact.index');
-
     }
 
     public function create()
@@ -144,6 +142,18 @@ class ContactController extends \BaseController{
             ->orderColumns('name', 'fiscal_number', 'email')
             ->make();
 
+    }
+
+    public function test(){
+        $addreses = Contact::find(1)->Addreses();
+
+        echo '<p> cominezo foreach </p>';
+
+        foreach ($addreses as $address){
+            echo '<p>'.$address->name.'</p>';
+        }
+
+        echo '<p> fin foreach </p>';
     }
 
 }

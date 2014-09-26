@@ -81,5 +81,4 @@ Route::group(array('before' => 'auth'), function()
 
     Route::get(	'contact/test', 		    array( 'as' => 'contact.test', 	    'uses' => 'ContactController@test' ) );
 
-
 });
