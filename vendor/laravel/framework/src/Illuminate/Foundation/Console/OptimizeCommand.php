@@ -2,7 +2,6 @@
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Composer;
-use Illuminate\View\Engines\CompilerEngine;
 use ClassPreloader\Command\PreCompileCommand;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -65,10 +64,6 @@ class OptimizeCommand extends Command {
 			$this->info('Compiling common classes');
 
 			$this->compileClasses();
-
-			$this->info('Compiling views');
-
-			$this->compileViews();
 		}
 		else
 		{
@@ -116,34 +111,6 @@ class OptimizeCommand extends Command {
 	protected function registerClassPreloaderCommand()
 	{
 		$this->getApplication()->add(new PreCompileCommand);
-	}
-
-	/**
-	 * Compile all view files.
-	 *
-	 * @return void
-	 */
-	protected function compileViews()
-	{
-		foreach ($this->laravel['view']->getFinder()->getPaths() as $path)
-		{
-			foreach ($this->laravel['files']->allFiles($path) as $file)
-			{
-				try
-				{
-					$engine = $this->laravel['view']->getEngineFromPath($file);
-				}
-				catch (\InvalidArgumentException $e)
-				{
-					continue;
-				}
-
-				if ($engine instanceof CompilerEngine)
-				{
-					$engine->getCompiler()->compile($file);
-				}
-			}
-		}
 	}
 
 	/**

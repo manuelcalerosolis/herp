@@ -58,5 +58,26 @@ class SetupHErpSeeder extends Seeder {
             ));
         }
 
+        DB::table('addreses')->delete();
+         
+        for ($i = 0; $i < 10; $i++)
+        {
+            $contacts = Address::create(array(
+                'name' => 'Central',
+                'address_main' => "Cl. Real",
+                'contact_id' => 1
+            ));
+        }
+
+
+
+
+
+
+
+
+
+
+
 	}
 }

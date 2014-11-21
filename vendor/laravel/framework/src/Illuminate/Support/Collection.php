@@ -73,22 +73,6 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	}
 
 	/**
-	 * Determine if an item exists in the collection.
-	 *
-	 * @param  mixed  $value
-	 * @return bool
-	 */
-	public function contains($value)
-	{
-		if ($value instanceof Closure)
-		{
-			return ! is_null($this->first($value));
-		}
-
-		return in_array($value, $this->items);
-	}
-
-	/**
 	 * Diff the collection with the given items.
 	 *
 	 * @param  \Illuminate\Support\Collection|\Illuminate\Support\Contracts\ArrayableInterface|array  $items
@@ -156,21 +140,11 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	/**
 	 * Get a flattened array of the items in the collection.
 	 *
-	 * @return \Illuminate\Support\Collection
+	 * @return array
 	 */
 	public function flatten()
 	{
 		return new static(array_flatten($this->items));
-	}
-
-	/**
-	 * Flip the items in the collection.
-	 *
-	 * @return \Illuminate\Support\Collection
-	 */
-	public function flip()
-	{
-		return new static(array_flip($this->items));
 	}
 
 	/**
@@ -222,26 +196,6 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	}
 
 	/**
-	 * Key an associative array by a field.
-	 *
-	 * @param  string  $keyBy
-	 * @return \Illuminate\Support\Collection
-	 */
-	public function keyBy($keyBy)
-	{
-		$results = [];
-
-		foreach ($this->items as $item)
-		{
-			$key = data_get($item, $keyBy);
-
-			$results[$key] = $item;
-		}
-
-		return new static($results);
-	}
-
-	/**
 	 * Determine if an item exists in the collection by key.
 	 *
 	 * @param  mixed  $key
@@ -285,16 +239,6 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	public function isEmpty()
 	{
 		return empty($this->items);
-	}
-
-	/**
-	 * Get the keys of the collection items.
-	 *
-	 * @return array
-	 */
-	public function keys()
-	{
-		return array_keys($this->items);
 	}
 
 	/**
@@ -398,23 +342,10 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	}
 
 	/**
-	 * Get one or more items randomly from the collection.
-	 *
-	 * @param  int  $amount
-	 * @return mixed
-	 */
-	public function random($amount = 1)
-	{
-		$keys = array_rand($this->items, $amount);
-
-		return is_array($keys) ? array_intersect_key($this->items, array_flip($keys)) : $this->items[$keys];
-	}
-
-	/**
 	 * Reduce the collection to a single value.
 	 *
 	 * @param  callable  $callback
-	 * @param  mixed     $initial
+	 * @param  mixed  $initial
 	 * @return mixed
 	 */
 	public function reduce($callback, $initial = null)
@@ -423,31 +354,16 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	}
 
 	/**
-	 * Create a collection of all elements that do not pass a given truth test.
+	 * Get one or more items randomly from the collection.
 	 *
-	 * @param  \Closure|mixed  $callback
-	 * @return \Illuminate\Support\Collection
+	 * @param  int $amount
+	 * @return mixed
 	 */
-	public function reject($callback)
+	public function random($amount = 1)
 	{
-		$results = [];
+		$keys = array_rand($this->items, $amount);
 
-		foreach ($this->items as $key => $value)
-		{
-			if ($callback instanceof Closure)
-			{
-				if ( ! $callback($value))
-				{
-					$results[$key] = $value;
-				}
-			}
-			elseif ($callback != $value)
-			{
-				$results[$key] = $value;
-			}
-		}
-
-		return new static($results);
+		return is_array($keys) ? array_intersect_key($this->items, array_flip($keys)) : $this->items[$keys];
 	}
 
 	/**
@@ -498,7 +414,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	/**
 	 * Chunk the underlying collection array.
 	 *
-	 * @param  int   $size
+	 * @param  int $size
 	 * @param  bool  $preserveKeys
 	 * @return \Illuminate\Support\Collection
 	 */
@@ -531,8 +447,8 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	 * Sort the collection using the given Closure.
 	 *
 	 * @param  \Closure|string  $callback
-	 * @param  int   $options
-	 * @param  bool  $descending
+	 * @param  int              $options
+	 * @param  bool             $descending
 	 * @return \Illuminate\Support\Collection
 	 */
 	public function sortBy($callback, $options = SORT_REGULAR, $descending = false)
@@ -570,7 +486,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	 * Sort the collection in descending order using the given Closure.
 	 *
 	 * @param  \Closure|string  $callback
-	 * @param  int  $options
+	 * @param  int              $options
 	 * @return \Illuminate\Support\Collection
 	 */
 	public function sortByDesc($callback, $options = SORT_REGULAR)
@@ -595,7 +511,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	 * Get the sum of the given values.
 	 *
 	 * @param  \Closure  $callback
-	 * @param  string    $callback
+	 * @param  string  $callback
 	 * @return mixed
 	 */
 	public function sum($callback)
@@ -722,7 +638,6 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
 	/**
 	 * Get a CachingIterator instance.
 	 *
-	 * @param  int  $flags
 	 * @return \CachingIterator
 	 */
 	public function getCachingIterator($flags = CachingIterator::CALL_TOSTRING)

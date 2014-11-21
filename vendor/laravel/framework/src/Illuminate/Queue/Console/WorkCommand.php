@@ -90,8 +90,6 @@ class WorkCommand extends Command {
 	{
 		if ($daemon)
 		{
-			$this->worker->setCache($this->laravel['cache']->driver());
-
 			$this->worker->setDaemonExceptionHandler($this->laravel['exception']);
 
 			return $this->worker->daemon(
@@ -117,13 +115,15 @@ class WorkCommand extends Command {
 	 */
 	protected function writeOutput(Job $job, $failed)
 	{
+		$options = OutputInterface::OUTPUT_RAW;
+
 		if ($failed)
 		{
-			$this->output->writeln('<error>Failed:</error> '.$job->getName());
+			$this->output->writeln('<error>Failed:</error> '.$job->getName(), $options);
 		}
 		else
 		{
-			$this->output->writeln('<info>Processed:</info> '.$job->getName());
+			$this->output->writeln('<info>Processed:</info> '.$job->getName(), $options);
 		}
 	}
 

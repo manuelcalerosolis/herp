@@ -39,6 +39,7 @@ class QueryEngine extends BaseEngine {
         'searchWithAlias'   =>  false,
         'orderOrder'        =>  null,
         'counter'           =>  0,
+        'noGroupByOnCount'  =>  false,
     );
 
     function __construct($builder)
@@ -90,6 +91,12 @@ class QueryEngine extends BaseEngine {
         return $this;
     }
 
+    public function setNoGroupByOnCount()
+    {
+        $this->options['noGroupByOnCount'] = true;
+        return $this;
+    }
+
     //--------PRIVATE FUNCTIONS
 
     protected function internalMake(Collection $columns, array $searchColumns = array())
@@ -106,6 +113,9 @@ class QueryEngine extends BaseEngine {
         }
         else
         {
+            if ($this->options['noGroupByOnCount']) {
+                $countBuilder->groups = null;
+            }
             $this->options['counter'] = $countBuilder->count();
         }
 
@@ -205,6 +215,10 @@ class QueryEngine extends BaseEngine {
             if(!is_null($self->getRowId()) && is_callable($self->getRowId()))
             {
                 $entry['DT_RowId'] = call_user_func($self->getRowId(),$row);
+            }
+            if(!is_null($self->getRowData()) && is_callable($self->getRowData()))
+            {
+                $entry['DT_RowData'] = call_user_func($self->getRowData(),$row);
             }
             $i = 0;
             foreach ($columns as $col)

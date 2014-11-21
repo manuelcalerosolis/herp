@@ -63,9 +63,7 @@ class FileStore implements StoreInterface {
 		// this directory much cleaner for us as old files aren't hanging out.
 		if (time() >= $expire)
 		{
-			$this->forget($key);
-
-			return null;
+			return $this->forget($key);
 		}
 
 		return unserialize(substr($contents, 10));
@@ -150,7 +148,7 @@ class FileStore implements StoreInterface {
 	 * Remove an item from the cache.
 	 *
 	 * @param  string  $key
-	 * @return bool
+	 * @return void
 	 */
 	public function forget($key)
 	{
@@ -158,10 +156,8 @@ class FileStore implements StoreInterface {
 
 		if ($this->files->exists($file))
 		{
-			return $this->files->delete($file);
+			$this->files->delete($file);
 		}
-
-		return false;
 	}
 
 	/**

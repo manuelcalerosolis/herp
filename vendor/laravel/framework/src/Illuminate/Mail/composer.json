@@ -9,23 +9,24 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/container": "4.3.*",
-        "illuminate/log": "4.3.*",
-        "illuminate/support": "4.3.*",
-        "illuminate/view": "4.3.*",
+        "illuminate/container": "4.2.*",
+        "illuminate/log": "4.2.*",
+        "illuminate/support": "4.2.*",
+        "illuminate/view": "4.2.*",
         "swiftmailer/swiftmailer": "~5.1"
     },
     "require-dev": {
-        "illuminate/queue": "4.3.*"
+        "illuminate/queue": "4.2.*"
     },
     "autoload": {
-        "psr-4": {
-            "Illuminate\\Mail\\": ""
+        "psr-0": {
+            "Illuminate\\Mail": ""
         }
     },
+    "target-dir": "Illuminate/Mail",
     "extra": {
         "branch-alias": {
-            "dev-master": "4.3-dev"
+            "dev-master": "4.2-dev"
         }
     },
     "minimum-stability": "dev"

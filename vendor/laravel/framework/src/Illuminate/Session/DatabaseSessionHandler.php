@@ -59,9 +59,9 @@ class DatabaseSessionHandler implements \SessionHandlerInterface, ExistenceAware
 	 */
 	public function read($sessionId)
 	{
-		$session = (object) $this->getQuery()->find($sessionId);
+		$session = $this->getQuery()->find($sessionId);
 
-		if (isset($session->payload))
+		if ( ! is_null($session))
 		{
 			$this->exists = true;
 
@@ -101,7 +101,7 @@ class DatabaseSessionHandler implements \SessionHandlerInterface, ExistenceAware
 	 */
 	public function gc($lifetime)
 	{
-		$this->getQuery()->where('last_activity', '<=', time() - $lifetime)->delete();
+		$this->getQuery()->where('last_activity', '<=', $lifetime)->delete();
 	}
 
 	/**

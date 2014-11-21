@@ -111,9 +111,13 @@ return array(
 
         'Webpatser\Countries\CountriesServiceProvider',
 
-        //datatable
+        // datatable
 
         'Chumper\Datatable\DatatableServiceProvider',
+
+        // debuger
+
+        'Barryvdh\Debugbar\ServiceProvider',
 
 	),
 
@@ -181,11 +185,13 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
-        'Field'           => 'hErp\Components\Facades\Field',
+        'Field'         => 'hErp\Components\Facades\Field',
 
-        'Countries'       => 'Webpatser\Countries\CountriesFacade',
+        'Countries'     => 'Webpatser\Countries\CountriesFacade',
 
-        'Datatable'       => 'Chumper\Datatable\Facades\DatatableFacade'
+        'Datatable'     => 'Chumper\Datatable\Facades\DatatableFacade', 
+
+        'Debugbar' 		=> 'Barryvdh\Debugbar\Facade'
 
 	),
 

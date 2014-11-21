@@ -1,7 +1,7 @@
 <?php namespace Illuminate\Queue;
 
-use Pheanstalk\Pheanstalk;
-use Pheanstalk\Job as PheanstalkJob;
+use Pheanstalk_Job;
+use Pheanstalk_Pheanstalk as Pheanstalk;
 use Illuminate\Queue\Jobs\BeanstalkdJob;
 
 class BeanstalkdQueue extends Queue implements QueueInterface {
@@ -100,7 +100,7 @@ class BeanstalkdQueue extends Queue implements QueueInterface {
 
 		$job = $this->pheanstalk->watchOnly($queue)->reserve(0);
 
-		if ($job instanceof PheanstalkJob)
+		if ($job instanceof Pheanstalk_Job)
 		{
 			return new BeanstalkdJob($this->container, $this->pheanstalk, $job, $queue);
 		}

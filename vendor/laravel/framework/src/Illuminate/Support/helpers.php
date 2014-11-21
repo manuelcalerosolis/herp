@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Str;
-
 if ( ! function_exists('action'))
 {
 	/**
@@ -266,30 +264,29 @@ if ( ! function_exists('array_flatten'))
 if ( ! function_exists('array_forget'))
 {
 	/**
-	 * Remove one or many array items from a given array using "dot" notation.
+	 * Remove an array item from a given array using "dot" notation.
 	 *
-	 * @param  array        $array
-	 * @param  array|string $keys
+	 * @param  array   $array
+	 * @param  string  $key
 	 * @return void
 	 */
-	function array_forget(&$array, $keys)
+	function array_forget(&$array, $key)
 	{
-		foreach ((array) $keys as $key)
+		$keys = explode('.', $key);
+
+		while (count($keys) > 1)
 		{
-			$parts = explode('.', $key);
+			$key = array_shift($keys);
 
-			while (count($parts) > 1)
+			if ( ! isset($array[$key]) || ! is_array($array[$key]))
 			{
-				$part = array_shift($parts);
-
-				if (isset($array[$part]) && is_array($array[$part]))
-				{
-					$array =& $array[$part];
-				}
+				return;
 			}
 
-			unset($array[array_shift($parts)]);
+			$array =& $array[$key];
 		}
+
+		unset($array[array_shift($keys)]);
 	}
 }
 
@@ -510,7 +507,7 @@ if ( ! function_exists('camel_case'))
 	 */
 	function camel_case($value)
 	{
-		return Str::camel($value);
+		return Illuminate\Support\Str::camel($value);
 	}
 }
 
@@ -527,27 +524,6 @@ if ( ! function_exists('class_basename'))
 		$class = is_object($class) ? get_class($class) : $class;
 
 		return basename(str_replace('\\', '/', $class));
-	}
-}
-
-if ( ! function_exists('class_uses_recursive'))
-{
-	/**
-	 * Returns all traits used by a class, it's subclasses and trait of their traits
-	 *
-	 * @param  string $class
-	 * @return array
-	 */
-	function class_uses_recursive($class)
-	{
-		$results = [];
-
-		foreach (array_merge([$class => $class], class_parents($class)) as $class)
-		{
-			$results += trait_uses_recursive($class);
-		}
-
-		return array_unique($results);
 	}
 }
 
@@ -658,7 +634,7 @@ if ( ! function_exists('ends_with'))
 	 */
 	function ends_with($haystack, $needle)
 	{
-		return Str::endsWith($haystack, $needle);
+		return Illuminate\Support\Str::endsWith($haystack, $needle);
 	}
 }
 
@@ -875,7 +851,7 @@ if ( ! function_exists('snake_case'))
 	 */
 	function snake_case($value, $delimiter = '_')
 	{
-		return Str::snake($value, $delimiter);
+		return Illuminate\Support\Str::snake($value, $delimiter);
 	}
 }
 
@@ -890,7 +866,7 @@ if ( ! function_exists('starts_with'))
 	 */
 	function starts_with($haystack, $needle)
 	{
-		return Str::startsWith($haystack, $needle);
+		return Illuminate\Support\Str::startsWith($haystack, $needle);
 	}
 }
 
@@ -919,7 +895,7 @@ if ( ! function_exists('str_contains'))
 	 */
 	function str_contains($haystack, $needle)
 	{
-		return Str::contains($haystack, $needle);
+		return Illuminate\Support\Str::contains($haystack, $needle);
 	}
 }
 
@@ -934,7 +910,7 @@ if ( ! function_exists('str_finish'))
 	 */
 	function str_finish($value, $cap)
 	{
-		return Str::finish($value, $cap);
+		return Illuminate\Support\Str::finish($value, $cap);
 	}
 }
 
@@ -949,24 +925,24 @@ if ( ! function_exists('str_is'))
 	 */
 	function str_is($pattern, $value)
 	{
-		return Str::is($pattern, $value);
+		return Illuminate\Support\Str::is($pattern, $value);
 	}
 }
 
 if ( ! function_exists('str_limit'))
 {
-	/**
-	 * Limit the number of characters in a string.
-	 *
-	 * @param  string $value
-	 * @param  int    $limit
-	 * @param  string $end
-	 * @return string
-	 */
-	function str_limit($value, $limit = 100, $end = '...')
-	{
-		return Str::limit($value, $limit, $end);
-	}
+		/**
+		 * Limit the number of characters in a string.
+		 *
+		 * @param  string  $value
+		 * @param  int     $limit
+		 * @param  string  $end
+		 * @return string
+		 */
+		function str_limit($value, $limit = 100, $end = '...')
+		{
+				return Illuminate\Support\Str::limit($value, $limit, $end);
+		}
 }
 
 if ( ! function_exists('str_plural'))
@@ -980,7 +956,7 @@ if ( ! function_exists('str_plural'))
 	 */
 	function str_plural($value, $count = 2)
 	{
-		return Str::plural($value, $count);
+		return Illuminate\Support\Str::plural($value, $count);
 	}
 }
 
@@ -996,7 +972,7 @@ if ( ! function_exists('str_random'))
 	 */
 	function str_random($length = 16)
 	{
-		return Str::random($length);
+		return Illuminate\Support\Str::random($length);
 	}
 }
 
@@ -1031,7 +1007,7 @@ if ( ! function_exists('str_singular'))
 	 */
 	function str_singular($value)
 	{
-		return Str::singular($value);
+		return Illuminate\Support\Str::singular($value);
 	}
 }
 
@@ -1045,28 +1021,7 @@ if ( ! function_exists('studly_case'))
 	 */
 	function studly_case($value)
 	{
-		return Str::studly($value);
-	}
-}
-
-if ( ! function_exists('trait_uses_recursive'))
-{
-	/**
-	 * Returns all traits used by a trait and its traits
-	 *
-	 * @param  $trait
-	 * @return array
-	 */
-	function trait_uses_recursive($trait)
-	{
-		$traits = class_uses($trait);
-
-		foreach ($traits as $trait)
-		{
-			$traits += trait_uses_recursive($trait);
-		}
-
-		return $traits;
+		return Illuminate\Support\Str::studly($value);
 	}
 }
 

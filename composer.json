@@ -4,9 +4,10 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "dev-master",
+		"laravel/framework": "4.2",
         "webpatser/laravel-countries": "dev-master",
-        "chumper/datatable": "dev-master"
+        "chumper/datatable": "dev-master",
+        "barryvdh/laravel-debugbar": "1.*"
 	},
 	"autoload": {
         "psr-4":{

@@ -11,11 +11,11 @@ class Address extends Eloquent
 
     protected $table    = "addreses";
 
-    protected $fillable = array('name', 'address', 'city', 'state', 'postal_code', 'website', 'phone', 'email' );
+    protected $fillable = array('name', 'address_main', 'city', 'state', 'postal_code', 'website', 'phone', 'email' );
 
     public function Contact()
     {
-        return $this->belongsTo('Contact', 'id', 'address_id');
+        return $this->belongsTo('Contact');
     }
 
 }

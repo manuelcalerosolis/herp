@@ -12,13 +12,14 @@
         "symfony/console": "2.5.*"
     },
     "autoload": {
-        "psr-4": {
-            "Illuminate\\Console\\": ""
+        "psr-0": {
+            "Illuminate\\Console": ""
         }
     },
+    "target-dir": "Illuminate/Console",
     "extra": {
         "branch-alias": {
-            "dev-master": "4.3-dev"
+            "dev-master": "4.2-dev"
         }
     },
     "minimum-stability": "dev"

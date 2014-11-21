@@ -19,18 +19,6 @@ class BladeCompiler extends Compiler implements CompilerInterface {
 	protected $path;
 
 	/**
-	 * All of the available compiler functions.
-	 *
-	 * @var array
-	 */
-	protected $compilers = array(
-		'Extensions',
-		'Statements',
-		'Comments',
-		'Echos'
-	);
-
-	/**
 	 * Array of opening and closing tags for escaped echos.
 	 *
 	 * @var array
@@ -137,7 +125,7 @@ class BladeCompiler extends Compiler implements CompilerInterface {
 
 		if ($id == T_INLINE_HTML)
 		{
-			foreach ($this->compilers as $type)
+			foreach (['Extensions', 'Statements', 'Comments', 'Echos'] as $type)
 			{
 				$content = $this->{"compile{$type}"}($content);
 			}
@@ -223,13 +211,11 @@ class BladeCompiler extends Compiler implements CompilerInterface {
 	 */
 	protected function compileRegularEchos($value)
 	{
-		$pattern = sprintf('/(@)?%s\s*(.+?)\s*%s(\r?\n)?/s', $this->contentTags[0], $this->contentTags[1]);
+		$pattern = sprintf('/(@)?%s\s*(.+?)\s*%s/s', $this->contentTags[0], $this->contentTags[1]);
 
 		$callback = function($matches)
 		{
-			$whitespace = empty($matches[3]) ? '' : $matches[3].$matches[3];
-
-			return $matches[1] ? substr($matches[0], 1) : '<?php echo '.$this->compileEchoDefaults($matches[2]).'; ?>'.$whitespace;
+			return $matches[1] ? substr($matches[0], 1) : '<?php echo '.$this->compileEchoDefaults($matches[2]).'; ?>';
 		};
 
 		return preg_replace_callback($pattern, $callback, $value);
@@ -243,13 +229,11 @@ class BladeCompiler extends Compiler implements CompilerInterface {
 	 */
 	protected function compileEscapedEchos($value)
 	{
-		$pattern = sprintf('/%s\s*(.+?)\s*%s(\r?\n)?/s', $this->escapedTags[0], $this->escapedTags[1]);
+		$pattern = sprintf('/%s\s*(.+?)\s*%s/s', $this->escapedTags[0], $this->escapedTags[1]);
 
 		$callback = function($matches)
 		{
-			$whitespace = empty($matches[2]) ? '' : $matches[2].$matches[2];
-
-			return '<?php echo e('.$this->compileEchoDefaults($matches[1]).'); ?>'.$whitespace;
+			return '<?php echo e('.$this->compileEchoDefaults($matches[1]).'); ?>';
 		};
 
 		return preg_replace_callback($pattern, $callback, $value);

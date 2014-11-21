@@ -71,9 +71,7 @@ class DatabaseStore implements StoreInterface {
 
 			if (time() >= $cache->expiration)
 			{
-				$this->forget($key);
-
-				return null;
+				return $this->forget($key);
 			}
 
 			return $this->encrypter->decrypt($cache->value);
@@ -163,13 +161,11 @@ class DatabaseStore implements StoreInterface {
 	 * Remove an item from the cache.
 	 *
 	 * @param  string  $key
-	 * @return bool
+	 * @return void
 	 */
 	public function forget($key)
 	{
 		$this->table()->where('key', '=', $this->prefix.$key)->delete();
-		
-		return true;
 	}
 
 	/**

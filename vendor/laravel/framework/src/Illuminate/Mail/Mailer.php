@@ -127,7 +127,7 @@ class Mailer {
 	 * @param  string|array  $view
 	 * @param  array  $data
 	 * @param  Closure|string  $callback
-	 * @return void
+	 * @return int
 	 */
 	public function send($view, array $data, $callback)
 	{
@@ -147,7 +147,7 @@ class Mailer {
 
 		$message = $message->getSwiftMessage();
 
-		$this->sendSwiftMessage($message);
+		return $this->sendSwiftMessage($message);
 	}
 
 	/**
@@ -410,16 +410,6 @@ class Mailer {
 	public function pretend($value = true)
 	{
 		$this->pretending = $value;
-	}
-
-	/**
-	 * Check if the mailer is pretending to send messages.
-	 *
-	 * @return bool
-	 */
-	public function isPretending()
-	{
-		return $this->pretending;
 	}
 
 	/**

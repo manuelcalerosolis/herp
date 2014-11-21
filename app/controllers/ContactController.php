@@ -144,16 +144,24 @@ class ContactController extends \BaseController{
 
     }
 
-    public function test(){
-        $addreses = Contact::find(1)->Addreses();
+    public function test($id)
+    {
 
-        echo '<p> cominezo foreach </p>';
+        $contact        = $this->contactRepository->findOrFail($id);
 
-        foreach ($addreses as $address){
-            echo '<p>'.$address->name.'</p>';
+        if(isset($contact))
+        {
+            $addreses   = $contact->Addreses; // Contact::find(151)
+
+            echo '<p> cominezo foreach </p>';
+
+            foreach ($addreses as $address){
+                echo '<p>'.$address->name.'</p>';
+            }
+
+            echo '<p> fin foreach </p>';
         }
 
-        echo '<p> fin foreach </p>';
     }
 
 }

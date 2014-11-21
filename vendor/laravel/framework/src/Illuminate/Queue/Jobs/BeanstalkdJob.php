@@ -1,8 +1,8 @@
 <?php namespace Illuminate\Queue\Jobs;
 
-use Pheanstalk\Pheanstalk;
+use Pheanstalk_Job;
 use Illuminate\Container\Container;
-use Pheanstalk\Job as PheanstalkJob;
+use Pheanstalk_Pheanstalk as Pheanstalk;
 
 class BeanstalkdJob extends Job {
 
@@ -16,7 +16,7 @@ class BeanstalkdJob extends Job {
 	/**
 	 * The Pheanstalk job instance.
 	 *
-	 * @var PheanstalkJob
+	 * @var Pheanstalk_Job
 	 */
 	protected $job;
 
@@ -25,13 +25,13 @@ class BeanstalkdJob extends Job {
 	 *
 	 * @param  \Illuminate\Container\Container  $container
 	 * @param  Pheanstalk  $pheanstalk
-	 * @param  PheanstalkJob  $job
+	 * @param  Pheanstalk_Job  $job
 	 * @param  string  $queue
 	 * @return void
 	 */
 	public function __construct(Container $container,
                                 Pheanstalk $pheanstalk,
-                                PheanstalkJob $job,
+                                Pheanstalk_Job $job,
                                 $queue)
 	{
 		$this->job = $job;
@@ -140,7 +140,7 @@ class BeanstalkdJob extends Job {
 	/**
 	 * Get the underlying Pheanstalk job.
 	 *
-	 * @return PheanstalkJob
+	 * @return Pheanstalk_Job
 	 */
 	public function getPheanstalkJob()
 	{

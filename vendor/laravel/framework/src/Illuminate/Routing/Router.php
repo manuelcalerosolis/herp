@@ -142,7 +142,7 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	 */
 	public function get($uri, $action)
 	{
-		return $this->addRoute(['GET', 'HEAD'], $uri, $action);
+		return $this->addRoute(array('GET', 'HEAD'), $uri, $action);
 	}
 
 	/**
@@ -402,11 +402,11 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	{
 		if (isset($options['only']))
 		{
-			return array_intersect($defaults, (array) $options['only']);
+			return array_intersect($defaults, $options['only']);
 		}
 		elseif (isset($options['except']))
 		{
-			return array_diff($defaults, (array) $options['except']);
+			return array_diff($defaults, $options['except']);
 		}
 
 		return $defaults;
@@ -528,11 +528,9 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	 */
 	protected function addResourceIndex($name, $base, $controller, $options)
 	{
-		$uri = $this->getResourceUri($name);
-
 		$action = $this->getResourceAction($name, $controller, 'index', $options);
 
-		return $this->get($uri, $action);
+		return $this->get($this->getResourceUri($name), $action);
 	}
 
 	/**
@@ -546,11 +544,9 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	 */
 	protected function addResourceCreate($name, $base, $controller, $options)
 	{
-		$uri = $this->getResourceUri($name).'/create';
-
 		$action = $this->getResourceAction($name, $controller, 'create', $options);
 
-		return $this->get($uri, $action);
+		return $this->get($this->getResourceUri($name).'/create', $action);
 	}
 
 	/**
@@ -564,11 +560,9 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	 */
 	protected function addResourceStore($name, $base, $controller, $options)
 	{
-		$uri = $this->getResourceUri($name);
-
 		$action = $this->getResourceAction($name, $controller, 'store', $options);
 
-		return $this->post($uri, $action);
+		return $this->post($this->getResourceUri($name), $action);
 	}
 
 	/**
@@ -584,9 +578,7 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	{
 		$uri = $this->getResourceUri($name).'/{'.$base.'}';
 
-		$action = $this->getResourceAction($name, $controller, 'show', $options);
-
-		return $this->get($uri, $action);
+		return $this->get($uri, $this->getResourceAction($name, $controller, 'show', $options));
 	}
 
 	/**
@@ -602,9 +594,7 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	{
 		$uri = $this->getResourceUri($name).'/{'.$base.'}/edit';
 
-		$action = $this->getResourceAction($name, $controller, 'edit', $options);
-
-		return $this->get($uri, $action);
+		return $this->get($uri, $this->getResourceAction($name, $controller, 'edit', $options));
 	}
 
 	/**
@@ -636,9 +626,7 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	{
 		$uri = $this->getResourceUri($name).'/{'.$base.'}';
 
-		$action = $this->getResourceAction($name, $controller, 'update', $options);
-
-		return $this->put($uri, $action);
+		return $this->put($uri, $this->getResourceAction($name, $controller, 'update', $options));
 	}
 
 	/**
@@ -667,11 +655,9 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	 */
 	protected function addResourceDestroy($name, $base, $controller, $options)
 	{
-		$uri = $this->getResourceUri($name).'/{'.$base.'}';
-
 		$action = $this->getResourceAction($name, $controller, 'destroy', $options);
 
-		return $this->delete($uri, $action);
+		return $this->delete($this->getResourceUri($name).'/{'.$base.'}', $action);
 	}
 
 	/**
@@ -1230,20 +1216,6 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	}
 
 	/**
-	 * Set a group of global where patterns on all routes
-	 *
-	 * @param  array  $patterns
-	 * @return void
-	 */
-	public function patterns($patterns)
-	{
-		foreach ($patterns as $key => $pattern)
-		{
-			$this->pattern($key, $pattern);
-		}
-	}
-
-	/**
 	 * Call the given filter with the request and response.
 	 *
 	 * @param  string  $filter
@@ -1522,17 +1494,6 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	}
 
 	/**
-	 * Check if a route with the given name exists.
-	 *
-	 * @param  string  $name
-	 * @return bool
-	 */
-	public function has($name)
-	{
-		return $this->routes->hasNamedRoute($name);
-	}
-
-	/**
 	 * Get the current route name.
 	 *
 	 * @return string|null
@@ -1579,8 +1540,6 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	 */
 	public function currentRouteAction()
 	{
-		if ( ! $this->current()) return;
-
 		$action = $this->current()->getAction();
 
 		return isset($action['controller']) ? $action['controller'] : null;
@@ -1670,16 +1629,6 @@ class Router implements HttpKernelInterface, RouteFiltererInterface {
 	public function getInspector()
 	{
 		return $this->inspector ?: $this->inspector = new ControllerInspector;
-	}
-
-	/**
-	 * Get the global "where" patterns.
-	 *
-	 * @return array
-	 */
-	public function getPatterns()
-	{
-		return $this->patterns;
 	}
 
 	/**

@@ -95,7 +95,29 @@ class JsonResponse extends Response
      */
     public function setData($data = array())
     {
-        $this->data = @json_encode($data, $this->encodingOptions);
+        $errorHandler = null;
+        $errorHandler = set_error_handler(function () use (&$errorHandler) {
+            if (JSON_ERROR_NONE !== json_last_error()) {
+                return;
+            }
+
+            if ($errorHandler) {
+                call_user_func_array($errorHandler, func_get_args());
+            }
+        });
+
+        try {
+            // Clear json_last_error()
+            json_encode(null);
+
+            $this->data = json_encode($data, $this->encodingOptions);
+
+            restore_error_handler();
+        } catch (\Exception $exception) {
+            restore_error_handler();
+
+            throw $exception;
+        }
 
         if (JSON_ERROR_NONE !== json_last_error()) {
             throw new \InvalidArgumentException($this->transformJsonError());
@@ -139,7 +161,7 @@ class JsonResponse extends Response
             // Not using application/javascript for compatibility reasons with older browsers.
             $this->headers->set('Content-Type', 'text/javascript');
 
-            return $this->setContent(sprintf('%s(%s);', $this->callback, $this->data));
+            return $this->setContent(sprintf('/**/%s(%s);', $this->callback, $this->data));
         }
 
         // Only set the header when there is none or when it equals 'text/javascript' (from a previous update with callback)

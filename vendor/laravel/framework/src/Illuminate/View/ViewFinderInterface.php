@@ -22,19 +22,10 @@ interface ViewFinderInterface {
 	 * Add a namespace hint to the finder.
 	 *
 	 * @param  string  $namespace
-	 * @param  string|array  $hints
+	 * @param  string  $hint
 	 * @return void
 	 */
-	public function addNamespace($namespace, $hints);
-
-	/**
-	 * Prepend a namespace hint to the finder.
-	 *
-	 * @param  string  $namespace
-	 * @param  string|array  $hints
-	 * @return void
-	 */
-	public function prependNamespace($namespace, $hints);
+	public function addNamespace($namespace, $hint);
 
 	/**
 	 * Add a valid view extension to the finder.

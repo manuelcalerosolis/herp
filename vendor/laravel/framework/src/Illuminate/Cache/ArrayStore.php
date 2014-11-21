@@ -80,13 +80,11 @@ class ArrayStore extends TaggableStore implements StoreInterface {
 	 * Remove an item from the cache.
 	 *
 	 * @param  string  $key
-	 * @return bool
+	 * @return void
 	 */
 	public function forget($key)
 	{
 		unset($this->storage[$key]);
-
-		return true;
 	}
 
 	/**

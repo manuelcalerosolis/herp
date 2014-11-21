@@ -270,36 +270,38 @@ class Response
 
         if ($this->isInformational() || in_array($this->statusCode, array(204, 304))) {
             $this->setContent(null);
-        }
-
-        // Content-type based on the Request
-        if (!$headers->has('Content-Type')) {
-            $format = $request->getRequestFormat();
-            if (null !== $format && $mimeType = $request->getMimeType($format)) {
-                $headers->set('Content-Type', $mimeType);
-            }
-        }
-
-        // Fix Content-Type
-        $charset = $this->charset ?: 'UTF-8';
-        if (!$headers->has('Content-Type')) {
-            $headers->set('Content-Type', 'text/html; charset='.$charset);
-        } elseif (0 === stripos($headers->get('Content-Type'), 'text/') && false === stripos($headers->get('Content-Type'), 'charset')) {
-            // add the charset
-            $headers->set('Content-Type', $headers->get('Content-Type').'; charset='.$charset);
-        }
-
-        // Fix Content-Length
-        if ($headers->has('Transfer-Encoding')) {
+            $headers->remove('Content-Type');
             $headers->remove('Content-Length');
-        }
+        } else {
+            // Content-type based on the Request
+            if (!$headers->has('Content-Type')) {
+                $format = $request->getRequestFormat();
+                if (null !== $format && $mimeType = $request->getMimeType($format)) {
+                    $headers->set('Content-Type', $mimeType);
+                }
+            }
 
-        if ($request->isMethod('HEAD')) {
-            // cf. RFC2616 14.13
-            $length = $headers->get('Content-Length');
-            $this->setContent(null);
-            if ($length) {
-                $headers->set('Content-Length', $length);
+            // Fix Content-Type
+            $charset = $this->charset ?: 'UTF-8';
+            if (!$headers->has('Content-Type')) {
+                $headers->set('Content-Type', 'text/html; charset='.$charset);
+            } elseif (0 === stripos($headers->get('Content-Type'), 'text/') && false === stripos($headers->get('Content-Type'), 'charset')) {
+                // add the charset
+                $headers->set('Content-Type', $headers->get('Content-Type').'; charset='.$charset);
+            }
+
+            // Fix Content-Length
+            if ($headers->has('Transfer-Encoding')) {
+                $headers->remove('Content-Length');
+            }
+
+            if ($request->isMethod('HEAD')) {
+                // cf. RFC2616 14.13
+                $length = $headers->get('Content-Length');
+                $this->setContent(null);
+                if ($length) {
+                    $headers->set('Content-Length', $length);
+                }
             }
         }
 
@@ -1057,7 +1059,7 @@ class Response
     }
 
     /**
-     * Determines if the Response validation (ETag, Last-Modified) match
+     * Determines if the Response validators (ETag, Last-Modified) match
      * a conditional value specified in the Request.
      *
      * If the Response is not modified, it sets the status code to 304 and
@@ -1065,7 +1067,7 @@ class Response
      *
      * @param Request $request A Request instance
      *
-     * @return bool    true if the Response validation match the Request, false otherwise
+     * @return bool    true if the Response validators match the Request, false otherwise
      *
      * @api
      */
@@ -1075,12 +1077,16 @@ class Response
             return false;
         }
 
-        $lastModified = $request->headers->get('If-Modified-Since');
-        $notModified = false;
+        $notModified   = false;
+        $lastModified  = $this->headers->get('Last-Modified');
+        $modifiedSince = $request->headers->get('If-Modified-Since');
+
         if ($etags = $request->getEtags()) {
-            $notModified = (in_array($this->getEtag(), $etags) || in_array('*', $etags)) && (!$lastModified || $this->headers->get('Last-Modified') == $lastModified);
-        } elseif ($lastModified) {
-            $notModified = $lastModified == $this->headers->get('Last-Modified');
+            $notModified = in_array($this->getEtag(), $etags) || in_array('*', $etags);
+        }
+
+        if ($modifiedSince && $lastModified) {
+            $notModified = strtotime($modifiedSince) >= strtotime($lastModified) && (!$etags || $notModified);
         }
 
         if ($notModified) {

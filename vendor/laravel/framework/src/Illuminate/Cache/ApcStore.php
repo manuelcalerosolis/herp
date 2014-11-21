@@ -98,11 +98,11 @@ class ApcStore extends TaggableStore implements StoreInterface {
 	 * Remove an item from the cache.
 	 *
 	 * @param  string  $key
-	 * @return bool
+	 * @return array|bool
 	 */
 	public function forget($key)
 	{
-		return $this->apc->delete($this->prefix.$key);
+		$this->apc->delete($this->prefix.$key);
 	}
 
 	/**

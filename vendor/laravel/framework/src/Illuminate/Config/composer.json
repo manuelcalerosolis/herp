@@ -9,17 +9,16 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/filesystem": "4.3.*",
-        "illuminate/support": "4.3.*"
+        "illuminate/filesystem": "4.2.*",
+        "illuminate/support": "4.2.*"
     },
     "autoload": {
-        "psr-4": {
-            "Illuminate\\Config\\": ""
-        }
+        "psr-0": {"Illuminate\\Config": ""}
     },
+    "target-dir": "Illuminate/Config",
     "extra": {
         "branch-alias": {
-            "dev-master": "4.3-dev"
+            "dev-master": "4.2-dev"
         }
     },
     "minimum-stability": "dev"

@@ -1,7 +1,4 @@
 {
-	"4.3.*": [
-		{"message": "Allow passing a priority to Eloquent event listeners.", "backport": null}
-	],
 	"4.2.*": [
 		{"message": "View and Pagination 'Environment' classes renamed to 'Factory'.", "backport": null},
 		{"message": "Configurable encryption for Iron.io queue messages.", "backport": null},
@@ -26,10 +23,7 @@
 		{"message": "The 'page' query variable is now ignored when calling the paginator 'appends' method.", "backport": null},
 		{"message": "Empty arrays that are 'required' validate as false when empty.", "backport": null},
 		{"message": "Added --daemon option to the queue:work command.", "backport": null},
-		{"message": "Added convenient traits for authentication and password reminding.", "backport": null},
-		{"message": "Added 'reject' method to Collection.", "backport": null},
-		{"message": "Added 'updateOrCreate' method to Eloquent model.", "backport": null},
-		{"message": "Added 'keyBy' method to Collection.", "backport": null}
+		{"message": "Added convenient traits for authentication and password reminding.", "backport": null}
 	],
 	"4.1.*": [
 		{"message": "Added new SSH task runner tools.", "backport": null},

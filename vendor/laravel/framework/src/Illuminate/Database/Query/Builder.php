@@ -214,53 +214,11 @@ class Builder {
 	 * Add a new "raw" select expression to the query.
 	 *
 	 * @param  string  $expression
-	 * @param  array   $bindings
 	 * @return \Illuminate\Database\Query\Builder|static
 	 */
-	public function selectRaw($expression, array $bindings = array())
+	public function selectRaw($expression)
 	{
-		$this->addSelect(new Expression($expression));
-
-		if ($bindings)
-		{
-			$this->addBinding($bindings, 'select');
-		}
-
-		return $this;
-	}
-
-	/**
-	 * Add a subselect expression to the query.
-	 *
-	 * @param  \Closure|\Illuminate\Database\Query\Builder|string $query
-	 * @param  string  $as
-	 * @return \Illuminate\Database\Query\Builder|static
-	 */
-	public function selectSub($query, $as)
-	{
-		if ($query instanceof Closure)
-		{
-			$callback = $query;
-
-			$callback($query = $this->newQuery());
-		}
-
-		if ($query instanceof Builder)
-		{
-			$bindings = $query->getBindings();
-
-			$query = $query->toSql();
-		}
-		elseif (is_string($query))
-		{
-			$bindings = [];
-		}
-		else
-		{
-			throw new \InvalidArgumentException;
-		}
-
-		return $this->selectRaw('('.$query.') as '.$this->grammar->wrap($as), $bindings);
+		return $this->select(new Expression($expression));
 	}
 
 	/**
@@ -385,34 +343,6 @@ class Builder {
 	}
 
 	/**
-	 * Add a right join to the query.
-	 *
-	 * @param  string  $table
-	 * @param  string  $first
-	 * @param  string  $operator
-	 * @param  string  $second
-	 * @return \Illuminate\Database\Query\Builder|static
-	 */
-	public function rightJoin($table, $first, $operator = null, $second = null)
-	{
-		return $this->join($table, $first, $operator, $second, 'right');
-	}
-
-	/**
-	 * Add a "right join where" clause to the query.
-	 *
-	 * @param  string  $table
-	 * @param  string  $first
-	 * @param  string  $operator
-	 * @param  string  $two
-	 * @return \Illuminate\Database\Query\Builder|static
-	 */
-	public function rightJoinWhere($table, $one, $operator, $two)
-	{
-		return $this->joinWhere($table, $one, $operator, $two, 'right');
-	}
-
-	/**
 	 * Add a basic where clause to the query.
 	 *
 	 * @param  string  $column
@@ -425,23 +355,6 @@ class Builder {
 	 */
 	public function where($column, $operator = null, $value = null, $boolean = 'and')
 	{
-		// If the column is an array, we will assume it is an array of key-value pairs
-		// and can add them each as a where clause. We will maintain the boolean we
-		// received when the method was called and pass it into the nested where.
-		if (is_array($column))
-		{
-			return $this->whereNested(function($query) use ($column)
-			{
-				foreach ($column as $key => $value)
-				{
-					$query->where($key, '=', $value);
-				}
-			}, $boolean);
-		}
-
-		// Here we will make some assumptions about the operator. If only 2 values are
-		// passed to the method, we will assume that the operator is an equals sign
-		// and keep going. Otherwise, we'll require the operator to be passed in.
 		if (func_num_args() == 2)
 		{
 			list($value, $operator) = array($operator, '=');
@@ -1016,10 +929,7 @@ class Builder {
 	 */
 	public function groupBy()
 	{
-		foreach(func_get_args() as $arg)
-		{
-			$this->groups = array_merge((array) $this->groups, is_array($arg) ? $arg : [$arg]);
-		}
+		$this->groups = array_merge((array) $this->groups, func_get_args());
 
 		return $this;
 	}
@@ -1052,10 +962,10 @@ class Builder {
 	 * @param  string  $value
 	 * @return \Illuminate\Database\Query\Builder|static
 	 */
-	public function orHaving($column, $operator = null, $value = null)
-	{
-		return $this->having($column, $operator, $value, 'or');
-	}
+    public function orHaving($column, $operator = null, $value = null)
+    {
+        return $this->having($column, $operator, $value, 'or');
+    }
 
 	/**
 	 * Add a raw having clause to the query.
@@ -1866,10 +1776,7 @@ class Builder {
 
 		foreach ($values as $record)
 		{
-			foreach ($record as $value)
-			{
-				$bindings[] = $value;
-			}
+			$bindings = array_merge($bindings, array_values($record));
 		}
 
 		$sql = $this->grammar->compileInsert($this, $values);

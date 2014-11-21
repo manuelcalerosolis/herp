@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class Contact extends Eloquent
 {
@@ -13,14 +14,14 @@ class Contact extends Eloquent
 
 	protected $fillable = array('name', 'fiscal_number', 'user_id');
 
-	public function User()
+    public function User()
     {
         return $this->belongsTo('User', 'user_id');
     }
 
     public function Addreses()
     {
-        return $this->hasMany('Address'); //, 'id', 'address_id');
+        return $this->hasMany('Address');
     }
 
 }

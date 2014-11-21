@@ -68,7 +68,7 @@ class SetupHErpTable extends Migration {
         {
             $table->increments('id');
             $table->string('name');
-            $table->string('address');
+            $table->string('address_main');
             $table->string('city');
             $table->string('state');
             $table->string('postal_code');

@@ -1,5 +1,6 @@
 <?php namespace Illuminate\Routing;
 
+use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Matching\UriValidator;
 use Illuminate\Routing\Matching\HostValidator;
@@ -479,7 +480,7 @@ class Route {
 		// If the action is already a Closure instance, we will just set that instance
 		// as the "uses" property, because there is nothing else we need to do when
 		// it is available. Otherwise we will need to find it in the action list.
-		if (is_callable($action))
+		if ($action instanceof Closure)
 		{
 			return array('uses' => $action);
 		}
@@ -505,7 +506,7 @@ class Route {
 	{
 		return array_first($action, function($key, $value)
 		{
-			return is_callable($value);
+			return $value instanceof Closure;
 		});
 	}
 
@@ -679,11 +680,6 @@ class Route {
 	 */
 	public function methods()
 	{
-		if (in_array('GET', $this->methods) && ! in_array('HEAD', $this->methods))
-		{
-			$this->methods[] = 'HEAD';
-		}
-
 		return $this->methods;
 	}
 

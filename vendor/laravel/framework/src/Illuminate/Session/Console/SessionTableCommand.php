@@ -51,8 +51,6 @@ class SessionTableCommand extends Command {
 		$this->files->put($fullPath, $this->files->get(__DIR__.'/stubs/database.stub'));
 
 		$this->info('Migration created successfully!');
-
-		$this->call('dump-autoload');
 	}
 
 	/**

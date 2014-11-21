@@ -256,11 +256,9 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 */
 	protected function bootIfNotBooted()
 	{
-		$class = get_class($this);
-
-		if ( ! isset(static::$booted[$class]))
+		if ( ! isset(static::$booted[get_class($this)]))
 		{
-			static::$booted[$class] = true;
+			static::$booted[get_class($this)] = true;
 
 			$this->fireModelEvent('booting', false);
 
@@ -304,7 +302,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 */
 	protected static function bootTraits()
 	{
-		foreach (class_uses_recursive(get_called_class()) as $trait)
+		foreach (class_uses(get_called_class()) as $trait)
 		{
 			if (method_exists(get_called_class(), $method = 'boot'.class_basename($trait)))
 			{
@@ -536,7 +534,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 */
 	public static function firstOrCreate(array $attributes)
 	{
-		if ( ! is_null($instance = static::where($attributes)->first()))
+		if ( ! is_null($instance = static::firstByAttributes($attributes)))
 		{
 			return $instance;
 		}
@@ -552,28 +550,12 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 */
 	public static function firstOrNew(array $attributes)
 	{
-		if ( ! is_null($instance = static::where($attributes)->first()))
+		if ( ! is_null($instance = static::firstByAttributes($attributes)))
 		{
 			return $instance;
 		}
 
 		return new static($attributes);
-	}
-
-	/**
-	 * Create or update a record matching the attributes, and fill it with values.
-	 *
-	 * @param array $attributes
-	 * @param array $values
-	 * @return \Illuminate\Database\Eloquent\Model
-	 */
-	public static function updateOrCreate(array $attributes, array $values = array())
-	{
-		$instance = static::firstOrNew($attributes);
-
-		$instance->fill($values)->save();
-
-		return $instance;
 	}
 
 	/**
@@ -584,7 +566,14 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 */
 	protected static function firstByAttributes($attributes)
 	{
-		return static::where($attributes)->first();
+		$query = static::query();
+
+		foreach ($attributes as $key => $value)
+		{
+			$query->where($key, $value);
+		}
+
+		return $query->first() ?: null;
 	}
 
 	/**
@@ -655,7 +644,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	{
 		if ( ! is_null($model = static::find($id, $columns))) return $model;
 
-		return new static;
+		return new static($columns);
 	}
 
 	/**
@@ -829,7 +818,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 			$instance = new $class;
 
 			return new MorphTo(
-				$instance->newQuery(), $this, $id, $instance->getKeyName(), $type, $name
+				with($instance)->newQuery(), $this, $id, $instance->getKeyName(), $type, $name
 			);
 		}
 	}
@@ -870,7 +859,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 
 		$secondKey = $secondKey ?: $through->getForeignKey();
 
-		return new HasManyThrough((new $related)->newQuery(), $this, $through, $firstKey, $secondKey);
+		return new HasManyThrough(with(new $related)->newQuery(), $this, $through, $firstKey, $secondKey);
 	}
 
 	/**
@@ -1081,7 +1070,6 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 * Delete the model from the database.
 	 *
 	 * @return bool|null
-	 * @throws \Exception
 	 */
 	public function delete()
 	{
@@ -1126,96 +1114,88 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 * Register a saving model event with the dispatcher.
 	 *
 	 * @param  \Closure|string  $callback
-	 * @param int $priority
 	 * @return void
 	 */
-	public static function saving($callback, $priority = 0)
+	public static function saving($callback)
 	{
-		static::registerModelEvent('saving', $callback, $priority);
+		static::registerModelEvent('saving', $callback);
 	}
 
 	/**
 	 * Register a saved model event with the dispatcher.
 	 *
 	 * @param  \Closure|string  $callback
-	 * @param int $priority
 	 * @return void
 	 */
-	public static function saved($callback, $priority = 0)
+	public static function saved($callback)
 	{
-		static::registerModelEvent('saved', $callback, $priority);
+		static::registerModelEvent('saved', $callback);
 	}
 
 	/**
 	 * Register an updating model event with the dispatcher.
 	 *
 	 * @param  \Closure|string  $callback
-	 * @param int $priority
 	 * @return void
 	 */
-	public static function updating($callback, $priority = 0)
+	public static function updating($callback)
 	{
-		static::registerModelEvent('updating', $callback, $priority);
+		static::registerModelEvent('updating', $callback);
 	}
 
 	/**
 	 * Register an updated model event with the dispatcher.
 	 *
 	 * @param  \Closure|string  $callback
-	 * @param int $priority
 	 * @return void
 	 */
-	public static function updated($callback, $priority = 0)
+	public static function updated($callback)
 	{
-		static::registerModelEvent('updated', $callback, $priority);
+		static::registerModelEvent('updated', $callback);
 	}
 
 	/**
 	 * Register a creating model event with the dispatcher.
 	 *
 	 * @param  \Closure|string  $callback
-	 * @param int $priority
 	 * @return void
 	 */
-	public static function creating($callback, $priority = 0)
+	public static function creating($callback)
 	{
-		static::registerModelEvent('creating', $callback, $priority);
+		static::registerModelEvent('creating', $callback);
 	}
 
 	/**
 	 * Register a created model event with the dispatcher.
 	 *
 	 * @param  \Closure|string  $callback
-	 * @param int $priority
 	 * @return void
 	 */
-	public static function created($callback, $priority = 0)
+	public static function created($callback)
 	{
-		static::registerModelEvent('created', $callback, $priority);
+		static::registerModelEvent('created', $callback);
 	}
 
 	/**
 	 * Register a deleting model event with the dispatcher.
 	 *
 	 * @param  \Closure|string  $callback
-	 * @param int $priority
 	 * @return void
 	 */
-	public static function deleting($callback, $priority = 0)
+	public static function deleting($callback)
 	{
-		static::registerModelEvent('deleting', $callback, $priority);
+		static::registerModelEvent('deleting', $callback);
 	}
 
 	/**
 	 * Register a deleted model event with the dispatcher.
 	 *
 	 * @param  \Closure|string  $callback
-	 * @param int $priority
 	 * @return void
 	 */
-	public static function deleted($callback, $priority = 0)
+	public static function deleted($callback)
 	{
-		static::registerModelEvent('deleted', $callback, $priority);
+		static::registerModelEvent('deleted', $callback);
 	}
 
 	/**
@@ -1240,16 +1220,15 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 *
 	 * @param  string  $event
 	 * @param  \Closure|string  $callback
-	 * @param  int  $priority
 	 * @return void
 	 */
-	protected static function registerModelEvent($event, $callback, $priority = 0)
+	protected static function registerModelEvent($event, $callback)
 	{
 		if (isset(static::$dispatcher))
 		{
 			$name = get_called_class();
 
-			static::$dispatcher->listen("eloquent.{$event}: {$name}", $callback, $priority);
+			static::$dispatcher->listen("eloquent.{$event}: {$name}", $callback);
 		}
 	}
 
@@ -1400,9 +1379,9 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 */
 	protected function finishSave(array $options)
 	{
-		$this->fireModelEvent('saved', false);
-
 		$this->syncOriginal();
+
+		$this->fireModelEvent('saved', false);
 
 		if (array_get($options, 'touch', true)) $this->touchOwners();
 	}
@@ -1411,7 +1390,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 	 * Perform a model update operation.
 	 *
 	 * @param  \Illuminate\Database\Eloquent\Builder  $query
-	 * @return bool|null
+	 * @return bool
 	 */
 	protected function performUpdate(Builder $query)
 	{
@@ -2865,7 +2844,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
 
 		if (isset(static::$mutatorCache[$class]))
 		{
-			return static::$mutatorCache[$class];
+			return static::$mutatorCache[get_class($this)];
 		}
 
 		return array();
