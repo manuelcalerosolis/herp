@@ -1,15 +1,11 @@
 ## HERP
 
-### Introduction
-HERP es un desarrollo en el framework laravel 4.3, para crear una herramienta de gestión empresarial abierta y potente.
-Es una aplicación multiidioma y con un diseño adaptativo a la mayoria de los dispositivos actuales, desde moviles, tables y ordenadores.
+### Introducción
+HERP es un desarrollo en el framework laravel 4.3, para crear una herramienta de gestión empresarial abierta y potente. Es una aplicación multiidioma y con un diseño adaptativo a la mayoría de los dispositivos actuales, desde móviles, tablets y ordenadores.
 
-### Features
-* El nucleo de la aplicación usa Laravel 4.3
+### Características
+* El núcleo de la aplicación usa Laravel 4.3
 * El diseño del HTML se basa en Bootstrap
-* Integrates with many payment providers
-* Recurring invoices
-* Tax rates and payment terms
 
 ### Paso a paso
 
@@ -24,6 +20,6 @@ Si deseais colaborar, este es nuestro espacio en Git (https://github.com/manuelc
 https://github.com/Chumper/Datatable
 * [barryvdh/laravel-debugbar] (https://github.com/barryvdh/laravel-debugbar) - Laravel 4 Debugbar (Integrates PHP Debug Bar)
 
-### License
+### Licencia
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Laravel framework es un software de código abierto bajo la licencia [MIT license](http://opensource.org/licenses/MIT)
