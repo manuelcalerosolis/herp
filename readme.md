@@ -21,7 +21,8 @@ Si deseais colaborar, este es nuestro espacio en Git (https://github.com/manuelc
 * [jquery/jquery](https://github.com/jquery/jquery)  - jQuery JavaScript Library
 * [webpatser/laravel-countries](https://github.com/webpatser/laravel-countries) - Laravel Countries is a bundle for Laravel, providing Almost ISO 3166_2, 3166_3, currency, Capital and more for all countries.
 * [Chumper/Datatable](https://github.com/Chumper/Datatable) - This is a laravel 4 package for the server and client side of datatables at http://datatables.net/
-https://github.com/Chumper/Datatable 
+https://github.com/Chumper/Datatable
+* [barryvdh/laravel-debugbar] (https://github.com/barryvdh/laravel-debugbar) - Laravel 4 Debugbar (Integrates PHP Debug Bar)
 
 ### License
 
