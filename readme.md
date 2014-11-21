@@ -1,20 +1,27 @@
-## Laravel PHP Framework
+## HERP
 
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
+### Introduction
+HERP es un desarrollo en el framework laravel 4.3, para crear una herramienta de gestión empresarial abierta y potente.
+Es una aplicación multiidioma y con un diseño adaptativo a la mayoria de los dispositivos actuales, desde moviles, tables y ordenadores.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+### Features
+* El nucleo de la aplicación usa Laravel 4.3
+* El diseño del HTML se basa en Bootstrap
+* Integrates with many payment providers
+* Recurring invoices
+* Tax rates and payment terms
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+### Paso a paso
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Si deseais colaborar, este es nuestro espacio en Git (https://github.com/manuelcalerosolis/herp/)
 
-## Official Documentation
-
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
-
-### Contributing To Laravel
-
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+### Frameworks/Librerias
+* [laravel/laravel](https://github.com/laravel/laravel) - A PHP Framework For Web Artisans
+* [twbs/bootstrap](https://github.com/twbs/bootstrap) - Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+* [jquery/jquery](https://github.com/jquery/jquery)  - jQuery JavaScript Library
+* [webpatser/laravel-countries](https://github.com/webpatser/laravel-countries) - Laravel Countries is a bundle for Laravel, providing Almost ISO 3166_2, 3166_3, currency, Capital and more for all countries.
+* [Chumper/Datatable](https://github.com/Chumper/Datatable) - This is a laravel 4 package for the server and client side of datatables at http://datatables.net/
+https://github.com/Chumper/Datatable 
 
 ### License
 

@@ -64,7 +64,7 @@ class SetupHErpSeeder extends Seeder {
         {
             $contacts = Address::create(array(
                 'name' => 'Central',
-                'address_main' => "Cl. Real",
+                'address' => "Cl. Real",
                 'contact_id' => 1
             ));
         }
